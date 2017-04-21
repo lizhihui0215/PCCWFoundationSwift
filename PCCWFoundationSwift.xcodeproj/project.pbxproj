@@ -13,7 +13,8 @@
 		269DFFD11EA7585D0006BAE2 /* RMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269DFFD01EA7585D0006BAE2 /* RMViewController.swift */; };
 		269DFFD91EA75A8F0006BAE2 /* PCCWFoundationSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269DFFD81EA75A8F0006BAE2 /* PCCWFoundationSwift.swift */; };
 		269DFFDD1EA765000006BAE2 /* PFSTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269DFFDC1EA765000006BAE2 /* PFSTableViewCell.swift */; };
-		A19009769287582BE419E4C9 /* Pods_PCCWFoundationSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA46202A4B1FC51026B76472 /* Pods_PCCWFoundationSwift.framework */; };
+		2818F2878B450C70D3BE8587 /* libPods-PCCWFoundationSwift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D57A4A9EC5B058384544B6E /* libPods-PCCWFoundationSwift.a */; };
+		406EDFA1CD1527FEFA3B3F5C /* Pods_Frameworks_PCCWFoundationSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFE64920EAF227694C99F14B /* Pods_Frameworks_PCCWFoundationSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,9 +37,12 @@
 		269DFFD01EA7585D0006BAE2 /* RMViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMViewController.swift; sourceTree = "<group>"; };
 		269DFFD81EA75A8F0006BAE2 /* PCCWFoundationSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PCCWFoundationSwift.swift; sourceTree = "<group>"; };
 		269DFFDC1EA765000006BAE2 /* PFSTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSTableViewCell.swift; sourceTree = "<group>"; };
+		6D57A4A9EC5B058384544B6E /* libPods-PCCWFoundationSwift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PCCWFoundationSwift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D1187364B5253AA75165B39 /* Pods-PCCWFoundationSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PCCWFoundationSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PCCWFoundationSwift/Pods-PCCWFoundationSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		B254F110161625E5623BF62D /* Pods-Frameworks-PCCWFoundationSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Frameworks-PCCWFoundationSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-Frameworks-PCCWFoundationSwift/Pods-Frameworks-PCCWFoundationSwift.release.xcconfig"; sourceTree = "<group>"; };
 		B3CF65104D85724A8CB9E042 /* Pods-PCCWFoundationSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PCCWFoundationSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-PCCWFoundationSwift/Pods-PCCWFoundationSwift.release.xcconfig"; sourceTree = "<group>"; };
-		BA46202A4B1FC51026B76472 /* Pods_PCCWFoundationSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PCCWFoundationSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9E8925903DF7C556CC883AA /* Pods-Frameworks-PCCWFoundationSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Frameworks-PCCWFoundationSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Frameworks-PCCWFoundationSwift/Pods-Frameworks-PCCWFoundationSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		EFE64920EAF227694C99F14B /* Pods_Frameworks_PCCWFoundationSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Frameworks_PCCWFoundationSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +50,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A19009769287582BE419E4C9 /* Pods_PCCWFoundationSwift.framework in Frameworks */,
+				2818F2878B450C70D3BE8587 /* libPods-PCCWFoundationSwift.a in Frameworks */,
+				406EDFA1CD1527FEFA3B3F5C /* Pods_Frameworks_PCCWFoundationSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +142,8 @@
 		34D6451660AD26E4714649D2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BA46202A4B1FC51026B76472 /* Pods_PCCWFoundationSwift.framework */,
+				6D57A4A9EC5B058384544B6E /* libPods-PCCWFoundationSwift.a */,
+				EFE64920EAF227694C99F14B /* Pods_Frameworks_PCCWFoundationSwift.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -147,6 +153,8 @@
 			children = (
 				9D1187364B5253AA75165B39 /* Pods-PCCWFoundationSwift.debug.xcconfig */,
 				B3CF65104D85724A8CB9E042 /* Pods-PCCWFoundationSwift.release.xcconfig */,
+				D9E8925903DF7C556CC883AA /* Pods-Frameworks-PCCWFoundationSwift.debug.xcconfig */,
+				B254F110161625E5623BF62D /* Pods-Frameworks-PCCWFoundationSwift.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -274,7 +282,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PCCWFoundationSwift/Pods-PCCWFoundationSwift-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Frameworks-PCCWFoundationSwift/Pods-Frameworks-PCCWFoundationSwift-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B09A069C53B0A27B6BF8B43E /* [CP] Check Pods Manifest.lock */ = {
@@ -338,7 +346,7 @@
 		};
 		262CF31B1EA752C200ED9F90 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9D1187364B5253AA75165B39 /* Pods-PCCWFoundationSwift.debug.xcconfig */;
+			baseConfigurationReference = D9E8925903DF7C556CC883AA /* Pods-Frameworks-PCCWFoundationSwift.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -385,7 +393,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -406,7 +413,7 @@
 		};
 		262CF31C1EA752C200ED9F90 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B3CF65104D85724A8CB9E042 /* Pods-PCCWFoundationSwift.release.xcconfig */;
+			baseConfigurationReference = B254F110161625E5623BF62D /* Pods-Frameworks-PCCWFoundationSwift.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -447,7 +454,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

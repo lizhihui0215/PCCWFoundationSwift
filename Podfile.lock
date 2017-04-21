@@ -21,7 +21,7 @@ PODS:
     - Moya/Core
     - RxSwift (~> 3.0)
   - NVActivityIndicatorView (3.6.1)
-  - ObjectMapper (2.2.5)
+  - ObjectMapper (2.2.6)
   - ObjectMapper+Realm (0.3):
     - ObjectMapper
     - RealmSwift
@@ -72,7 +72,7 @@ SPEC CHECKSUMS:
   Moya: d3721622e3cc0cc2f038d69a258686f0b66e7252
   Moya-ObjectMapper: 952be2b261d38cf8d973b7e429708eb03d256e23
   NVActivityIndicatorView: 9f52a7f84bf5c6a798722c450fe3c198e01c56ed
-  ObjectMapper: fb30f71e08470d1e5a20b199fafe1246281db898
+  ObjectMapper: 042708195cc46c20871cbcbec0453826398273fd
   ObjectMapper+Realm: 98992926f775a4fdf1c025541b97c78119f15b8a
   Realm: 9abfd4f87519376daa5ae3a4603155de408bf8b3
   RealmSwift: a54d3e8931cf7d3afa5a1fac9c8f88109d7f02b3
@@ -86,6 +86,6 @@ SPEC CHECKSUMS:
   TZImagePickerController: 0a8ff228d287ebdd7d485e8c42a2a932894f1fba
   UIColor_Hex_Swift: 95f718452092a3efc8a827dffd2c04d3237be02d
 
-PODFILE CHECKSUM: 942e91738cc67f7e7e11f2c9783b1e9416bc5708
+PODFILE CHECKSUM: 40f5c00997525c3dd30d89fc26e3dfcc7b842f8d
 
 COCOAPODS: 1.2.0

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		265510A71EAA02BB001A36AA /* PCCWFoundationSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 265510A61EAA02BB001A36AA /* PCCWFoundationSwift.framework */; };
+		265510A81EAA02BB001A36AA /* PCCWFoundationSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 265510A61EAA02BB001A36AA /* PCCWFoundationSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		26573A761EA74C7000BB56D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26573A751EA74C7000BB56D2 /* AppDelegate.swift */; };
 		26573A781EA74C7000BB56D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26573A771EA74C7000BB56D2 /* ViewController.swift */; };
 		26573A7B1EA74C7000BB56D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26573A791EA74C7000BB56D2 /* Main.storyboard */; };
@@ -14,8 +16,7 @@
 		26573A801EA74C7000BB56D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26573A7E1EA74C7000BB56D2 /* LaunchScreen.storyboard */; };
 		26573A8B1EA74C7000BB56D2 /* DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26573A8A1EA74C7000BB56D2 /* DemoTests.swift */; };
 		26573A961EA74C7000BB56D2 /* DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26573A951EA74C7000BB56D2 /* DemoUITests.swift */; };
-		269DFFD21EA7594E0006BAE2 /* Source.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 269DFFCC1EA758240006BAE2 /* Source.framework */; };
-		269DFFD31EA7594E0006BAE2 /* Source.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 269DFFCC1EA758240006BAE2 /* Source.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A7D4486DD2704FD1F5C330B5 /* Pods_Frameworks_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB065CB7DE7E74684F65DCB /* Pods_Frameworks_Demo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,27 +34,6 @@
 			remoteGlobalIDString = 26573A711EA74C7000BB56D2;
 			remoteInfo = Demo;
 		};
-		269DFFCB1EA758240006BAE2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 269DFFC61EA758240006BAE2 /* PCCWFoundationSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 262CF3141EA752C200ED9F90;
-			remoteInfo = Source;
-		};
-		269DFFCD1EA758240006BAE2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 269DFFC61EA758240006BAE2 /* PCCWFoundationSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 269DFFBA1EA757440006BAE2;
-			remoteInfo = Tests;
-		};
-		269DFFD41EA7594E0006BAE2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 269DFFC61EA758240006BAE2 /* PCCWFoundationSwift.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 262CF3131EA752C200ED9F90;
-			remoteInfo = PCCWFouncationSwift;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -63,7 +43,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				269DFFD31EA7594E0006BAE2 /* Source.framework in Embed Frameworks */,
+				265510A81EAA02BB001A36AA /* PCCWFoundationSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,6 +51,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		265510A61EAA02BB001A36AA /* PCCWFoundationSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PCCWFoundationSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		26573A721EA74C7000BB56D2 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26573A751EA74C7000BB56D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26573A771EA74C7000BB56D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -84,7 +65,9 @@
 		26573A911EA74C7000BB56D2 /* DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		26573A951EA74C7000BB56D2 /* DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoUITests.swift; sourceTree = "<group>"; };
 		26573A971EA74C7000BB56D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		269DFFC61EA758240006BAE2 /* PCCWFoundationSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PCCWFoundationSwift.xcodeproj; path = ../PCCWFoundationSwift.xcodeproj; sourceTree = "<group>"; };
+		436C5FFD757EDA2EE8B92045 /* Pods-Frameworks-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Frameworks-Demo.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Frameworks-Demo/Pods-Frameworks-Demo.release.xcconfig"; sourceTree = "<group>"; };
+		9D56E129442A98478A7F1585 /* Pods-Frameworks-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Frameworks-Demo.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Frameworks-Demo/Pods-Frameworks-Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		EAB065CB7DE7E74684F65DCB /* Pods_Frameworks_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Frameworks_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +75,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				269DFFD21EA7594E0006BAE2 /* Source.framework in Frameworks */,
+				265510A71EAA02BB001A36AA /* PCCWFoundationSwift.framework in Frameworks */,
+				A7D4486DD2704FD1F5C330B5 /* Pods_Frameworks_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,14 +97,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22DF6E78B487CD6814E9D1B7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				265510A61EAA02BB001A36AA /* PCCWFoundationSwift.framework */,
+				EAB065CB7DE7E74684F65DCB /* Pods_Frameworks_Demo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		26573A691EA74C7000BB56D2 = {
 			isa = PBXGroup;
 			children = (
-				269DFFC61EA758240006BAE2 /* PCCWFoundationSwift.xcodeproj */,
 				26573A741EA74C7000BB56D2 /* Demo */,
 				26573A891EA74C7000BB56D2 /* DemoTests */,
 				26573A941EA74C7000BB56D2 /* DemoUITests */,
 				26573A731EA74C7000BB56D2 /* Products */,
+				71BD40A33FF229C651DA36E7 /* Pods */,
+				22DF6E78B487CD6814E9D1B7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -165,13 +159,13 @@
 			path = DemoUITests;
 			sourceTree = "<group>";
 		};
-		269DFFC71EA758240006BAE2 /* Products */ = {
+		71BD40A33FF229C651DA36E7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				269DFFCC1EA758240006BAE2 /* Source.framework */,
-				269DFFCE1EA758240006BAE2 /* Tests.xctest */,
+				9D56E129442A98478A7F1585 /* Pods-Frameworks-Demo.debug.xcconfig */,
+				436C5FFD757EDA2EE8B92045 /* Pods-Frameworks-Demo.release.xcconfig */,
 			);
-			name = Products;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,15 +175,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 26573A9A1EA74C7000BB56D2 /* Build configuration list for PBXNativeTarget "Demo" */;
 			buildPhases = (
+				F4A94F30FF76B4C9887F12AC /* [CP] Check Pods Manifest.lock */,
 				26573A6E1EA74C7000BB56D2 /* Sources */,
 				26573A6F1EA74C7000BB56D2 /* Frameworks */,
 				26573A701EA74C7000BB56D2 /* Resources */,
 				269DFFD61EA7594E0006BAE2 /* Embed Frameworks */,
+				873DBCA304AD610E35B958D8 /* [CP] Embed Pods Frameworks */,
+				9C3E69597EC1EA4F309619E6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				269DFFD51EA7594E0006BAE2 /* PBXTargetDependency */,
 			);
 			name = Demo;
 			productName = Demo;
@@ -272,12 +268,6 @@
 			mainGroup = 26573A691EA74C7000BB56D2;
 			productRefGroup = 26573A731EA74C7000BB56D2 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 269DFFC71EA758240006BAE2 /* Products */;
-					ProjectRef = 269DFFC61EA758240006BAE2 /* PCCWFoundationSwift.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				26573A711EA74C7000BB56D2 /* Demo */,
@@ -286,23 +276,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		269DFFCC1EA758240006BAE2 /* Source.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Source.framework;
-			remoteRef = 269DFFCB1EA758240006BAE2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		269DFFCE1EA758240006BAE2 /* Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = Tests.xctest;
-			remoteRef = 269DFFCD1EA758240006BAE2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		26573A701EA74C7000BB56D2 /* Resources */ = {
@@ -330,6 +303,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		873DBCA304AD610E35B958D8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-Frameworks-Demo/Pods-Frameworks-Demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C3E69597EC1EA4F309619E6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-Frameworks-Demo/Pods-Frameworks-Demo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4A94F30FF76B4C9887F12AC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		26573A6E1EA74C7000BB56D2 /* Sources */ = {
@@ -369,11 +390,6 @@
 			isa = PBXTargetDependency;
 			target = 26573A711EA74C7000BB56D2 /* Demo */;
 			targetProxy = 26573A921EA74C7000BB56D2 /* PBXContainerItemProxy */;
-		};
-		269DFFD51EA7594E0006BAE2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = PCCWFouncationSwift;
-			targetProxy = 269DFFD41EA7594E0006BAE2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -494,6 +510,7 @@
 		};
 		26573A9B1EA74C7000BB56D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D56E129442A98478A7F1585 /* Pods-Frameworks-Demo.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -508,6 +525,7 @@
 		};
 		26573A9C1EA74C7000BB56D2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 436C5FFD757EDA2EE8B92045 /* Pods-Frameworks-Demo.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
