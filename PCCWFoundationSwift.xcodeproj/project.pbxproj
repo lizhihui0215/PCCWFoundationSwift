@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26152D561EAA11F8001CEEE7 /* Device+PFS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26152D551EAA11F8001CEEE7 /* Device+PFS.swift */; };
 		262CF3191EA752C200ED9F90 /* PCCWFoundationSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 262CF3171EA752C200ED9F90 /* PCCWFoundationSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		268ECAF51EAA06E400BF55A2 /* PFSModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268ECAF41EAA06E400BF55A2 /* PFSModel.swift */; };
 		269DFFBD1EA757440006BAE2 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269DFFBC1EA757440006BAE2 /* Tests.swift */; };
 		269DFFBF1EA757440006BAE2 /* PCCWFoundationSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 262CF3141EA752C200ED9F90 /* PCCWFoundationSwift.framework */; };
 		269DFFD11EA7585D0006BAE2 /* RMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269DFFD01EA7585D0006BAE2 /* RMViewController.swift */; };
@@ -28,9 +30,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		26152D551EAA11F8001CEEE7 /* Device+PFS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Device+PFS.swift"; sourceTree = "<group>"; };
 		262CF3141EA752C200ED9F90 /* PCCWFoundationSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PCCWFoundationSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		262CF3171EA752C200ED9F90 /* PCCWFoundationSwift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PCCWFoundationSwift.h; sourceTree = "<group>"; };
 		262CF3181EA752C200ED9F90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		268ECAF41EAA06E400BF55A2 /* PFSModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSModel.swift; sourceTree = "<group>"; };
 		269DFFBA1EA757440006BAE2 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		269DFFBC1EA757440006BAE2 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		269DFFBE1EA757440006BAE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -66,6 +70,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		26152D541EAA119A001CEEE7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				26152D551EAA11F8001CEEE7 /* Device+PFS.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		262CF3081EA752AF00ED9F90 = {
 			isa = PBXGroup;
 			children = (
@@ -90,10 +102,21 @@
 			isa = PBXGroup;
 			children = (
 				269DFFD81EA75A8F0006BAE2 /* PCCWFoundationSwift.swift */,
-				269DFFCF1EA7583B0006BAE2 /* Core */,
+				268ECAF31EAA06BC00BF55A2 /* Model */,
+				26152D541EAA119A001CEEE7 /* Extensions */,
+				269DFFDB1EA764B20006BAE2 /* Base Views */,
+				269DFFDA1EA764870006BAE2 /* Base View Controller */,
 				269DFFC51EA757690006BAE2 /* Supporting Files */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		268ECAF31EAA06BC00BF55A2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				268ECAF41EAA06E400BF55A2 /* PFSModel.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		269DFFBB1EA757440006BAE2 /* Tests */ = {
@@ -112,15 +135,6 @@
 				262CF3181EA752C200ED9F90 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		269DFFCF1EA7583B0006BAE2 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				269DFFDB1EA764B20006BAE2 /* Base Views */,
-				269DFFDA1EA764870006BAE2 /* Base View Controller */,
-			);
-			name = Core;
 			sourceTree = "<group>";
 		};
 		269DFFDA1EA764870006BAE2 /* Base View Controller */ = {
@@ -308,8 +322,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				269DFFDD1EA765000006BAE2 /* PFSTableViewCell.swift in Sources */,
+				26152D561EAA11F8001CEEE7 /* Device+PFS.swift in Sources */,
 				269DFFD11EA7585D0006BAE2 /* RMViewController.swift in Sources */,
 				269DFFD91EA75A8F0006BAE2 /* PCCWFoundationSwift.swift in Sources */,
+				268ECAF51EAA06E400BF55A2 /* PFSModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

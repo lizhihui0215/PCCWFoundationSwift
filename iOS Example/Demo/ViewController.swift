@@ -23,3 +23,18 @@ class ViewController: PFSViewController {
 
 }
 
+import ObjectMapper
+
+class Model: PFSModel {
+
+    required convenience public init?(map: Map) {
+        self.init()
+    }
+    
+    override func mapping(map: Map) {
+        
+    }
+    
+    
+}
+
