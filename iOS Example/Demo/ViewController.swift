@@ -45,10 +45,15 @@ enum XXX: PFSTargetType {
 }
 
 
-class ViewController: PFSViewController {
+class XXXViewModel: PFSViewModel {
+    override init(action: PFSViewAction) {
+        super.init(action: action)
+    }
+}
+
+class ViewController: PFSViewController, PFSViewAction {
     
     var disposeBag = DisposeBag()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,6 +68,9 @@ class ViewController: PFSViewController {
         }else {
             print("no")
         }
+        
+        self.viewModel = XXXViewModel(action: self)
+        
         
         a.request(.test).asObservable().subscribe(onNext: { (response) in
             print(response)

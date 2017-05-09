@@ -15,6 +15,10 @@
 		269DFFD11EA7585D0006BAE2 /* PFSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269DFFD01EA7585D0006BAE2 /* PFSViewController.swift */; };
 		269DFFD91EA75A8F0006BAE2 /* PCCWFoundationSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269DFFD81EA75A8F0006BAE2 /* PCCWFoundationSwift.swift */; };
 		269DFFDD1EA765000006BAE2 /* PFSTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269DFFDC1EA765000006BAE2 /* PFSTableViewCell.swift */; };
+		5B875154112FDE6DBD7A698B /* DispatchQueue+PFS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B875AEA35BED91F6285D7C3 /* DispatchQueue+PFS.swift */; };
+		5B8753094E75CA21A0DBC7C8 /* PFSDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B875B1F2BDA1D89DD3BF8C2 /* PFSDataRepository.swift */; };
+		5B875A46A8BE6E6C44554E76 /* PFSDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B87570B71091E919B02607C /* PFSDomain.swift */; };
+		5B875F3735A2AEFC47F07E28 /* PFSViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8758850C85398CD82E6754 /* PFSViewModel.swift */; };
 		5B875FD7C1A7CCD97AEB074C /* PFSNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8754000C5592E676313BE3 /* PFSNetworkService.swift */; };
 		908D3818704E048FD8D3DCE7 /* Pods_PCCWFoundationSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB37DE3953413D8B5AB2C8F /* Pods_PCCWFoundationSwift.framework */; };
 /* End PBXBuildFile section */
@@ -44,6 +48,10 @@
 		269DFFD81EA75A8F0006BAE2 /* PCCWFoundationSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PCCWFoundationSwift.swift; sourceTree = "<group>"; };
 		269DFFDC1EA765000006BAE2 /* PFSTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSTableViewCell.swift; sourceTree = "<group>"; };
 		5B8754000C5592E676313BE3 /* PFSNetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSNetworkService.swift; sourceTree = "<group>"; };
+		5B87570B71091E919B02607C /* PFSDomain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSDomain.swift; sourceTree = "<group>"; };
+		5B8758850C85398CD82E6754 /* PFSViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSViewModel.swift; sourceTree = "<group>"; };
+		5B875AEA35BED91F6285D7C3 /* DispatchQueue+PFS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+PFS.swift"; sourceTree = "<group>"; };
+		5B875B1F2BDA1D89DD3BF8C2 /* PFSDataRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSDataRepository.swift; sourceTree = "<group>"; };
 		ADB37DE3953413D8B5AB2C8F /* Pods_PCCWFoundationSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PCCWFoundationSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDA7F7F48ACFAE918BC6808B /* Pods-PCCWFoundationSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PCCWFoundationSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PCCWFoundationSwift/Pods-PCCWFoundationSwift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,6 +114,9 @@
 				269DFFDB1EA764B20006BAE2 /* Base Views */,
 				269DFFDA1EA764870006BAE2 /* Base View Controller */,
 				269DFFC51EA757690006BAE2 /* Supporting Files */,
+				5B87548AECFAE30E6A494549 /* Domain */,
+				5B8753FAB149504D6BB6DB68 /* Data */,
+				5B875FA6669E8F327D5C2F2F /* View Model */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -114,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				5B8754000C5592E676313BE3 /* PFSNetworkService.swift */,
+				5B875AEA35BED91F6285D7C3 /* DispatchQueue+PFS.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -167,6 +179,30 @@
 				ADB37DE3953413D8B5AB2C8F /* Pods_PCCWFoundationSwift.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5B8753FAB149504D6BB6DB68 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				5B875B1F2BDA1D89DD3BF8C2 /* PFSDataRepository.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		5B87548AECFAE30E6A494549 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				5B87570B71091E919B02607C /* PFSDomain.swift */,
+			);
+			name = Domain;
+			sourceTree = "<group>";
+		};
+		5B875FA6669E8F327D5C2F2F /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				5B8758850C85398CD82E6754 /* PFSViewModel.swift */,
+			);
+			name = "View Model";
 			sourceTree = "<group>";
 		};
 		6C19FB60DCCD89479B4D5AEF /* Pods */ = {
@@ -332,6 +368,10 @@
 				269DFFD91EA75A8F0006BAE2 /* PCCWFoundationSwift.swift in Sources */,
 				268ECAF51EAA06E400BF55A2 /* PFSModel.swift in Sources */,
 				5B875FD7C1A7CCD97AEB074C /* PFSNetworkService.swift in Sources */,
+				5B875154112FDE6DBD7A698B /* DispatchQueue+PFS.swift in Sources */,
+				5B8753094E75CA21A0DBC7C8 /* PFSDataRepository.swift in Sources */,
+				5B875A46A8BE6E6C44554E76 /* PFSDomain.swift in Sources */,
+				5B875F3735A2AEFC47F07E28 /* PFSViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

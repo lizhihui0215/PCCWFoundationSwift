@@ -8,8 +8,24 @@
 
 import UIKit
 
-public extension UIViewController {
-    
+private var viewModelKey: Void?
+
+
+public protocol PFSViewControllerProtocol {
+    associatedtype T: PFSViewModel
+
+    var viewModel: T {get set}
+}
+
+extension UIViewController: PFSViewControllerProtocol {
+    public var viewModel: PFSViewModel {
+        get {
+            return objc_getAssociatedObject(self, &viewModelKey) as! T
+        }
+        set {
+            objc_setAssociatedObject(self, &viewModelKey, newValue, .OBJC_ASSOCIATION_RETAIN)
+        }
+    }
 }
 
 open class PFSViewController: UIViewController {
