@@ -41,9 +41,6 @@ def libraries
     # https://github.com/CoderMJLee/MJRefresh
     pod 'MJRefresh'
     
-    # https://github.com/hackiftekhar/IQKeyboardManager
-    pod 'IQKeyboardManagerSwift'
-    
     # https://github.com/yeahdongcn/UIColor-Hex-Swift
     pod 'UIColor_Hex_Swift'
     
