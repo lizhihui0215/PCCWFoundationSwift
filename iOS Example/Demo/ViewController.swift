@@ -7,11 +7,15 @@
 //
 import PCCWFoundationSwift
 import Moya
+import RxSwift
+import RxCocoa
 
 enum XXX: PFSTargetType {
-
+    
+    case test
+    
     var baseURL: URL {
-        return URL(string: "")!
+        return URL(string: "http://baidu.com")!
     }
     var path: String {
         return ""
@@ -20,7 +24,11 @@ enum XXX: PFSTargetType {
         return .post
     }
     var parameters: [String: Any]? {
-        return nil
+        
+        //        {"currentPage":1,"pageSize":10,"queryObj":{}}
+        return ["page" : ["currentPage" : 1,
+                          "pageSize" : 10,
+                          "queryObj": ""]]
     }
     var parameterEncoding: ParameterEncoding {
         return JSONEncoding.default
@@ -34,18 +42,19 @@ enum XXX: PFSTargetType {
     var validate: Bool {
         return false
     }
-
-
 }
 
 
 class ViewController: PFSViewController {
-
+    
+    var disposeBag = DisposeBag()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-       let a =  PFSNetworkService<XXX>.shared
+        let a =  PFSNetworkService<XXX>.shared
         
         let b = PFSNetworkService<XXX>.shared
         
@@ -55,20 +64,31 @@ class ViewController: PFSViewController {
             print("no")
         }
         
+        a.request(.test).asObservable().subscribe(onNext: { (response) in
+            print(response)
+        }).disposed(by: disposeBag)
+        
+        b.request(.test).asObservable().subscribe(onNext: { (response) in
+            print(response)
+        }).disposed(by: disposeBag)
+        
+        
+        
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 
 import ObjectMapper
 
 class Model: PFSModel {
-
+    
     required convenience public init?(map: Map) {
         self.init()
     }

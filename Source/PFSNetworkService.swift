@@ -114,19 +114,57 @@ public enum PFSNetworkError: Swift.Error {
     case serverError(String)
 }
 
-public class PFSNetworkService<API: PFSTargetType> {
+public extension DispatchQueue {
+    
+    private static var _onceTracker = [String]()
+    
+    /**
+     Executes a block of code, associated with a unique token, only once.  The code is thread safe and will
+     only execute the code once even in the presence of multithreaded calls.
+     
+     - parameter token: A unique reverse DNS style name such as com.vectorform.<name> or a GUID
+     - parameter block: Block to execute once
+     */
+    public class func once(token: String, block:()->Void) {
+        objc_sync_enter(self)
+        defer { objc_sync_exit(self) }
+        
+        if _onceTracker.contains(token) {
+            return
+        }
+        
+        _onceTracker.append(token)
+        block()
+    }
+}
+
+
+public class PFSNetworkServiceStatic{
+    internal static var _onceTracker = [String: Any]()
+
+}
+
+public class PFSNetworkService<API: PFSTargetType>: PFSNetworkServiceStatic {
     
     let provider: RxMoyaProvider<API>
 
-    public static var shared: PFSNetworkService<API> {
+    public static var shared: PFSNetworkService {
         get {
-            let `default` = PFSNetworkService()
+            let token = "com.pccw.foundation.swift.network.service"
+            objc_sync_enter(self)
+            defer { objc_sync_exit(self) }
             
-            return `default`
+            if let shared = _onceTracker[token] {
+                return shared as! PFSNetworkService<API>;
+            }
+            
+            _onceTracker[token] = PFSNetworkService<API>()
+            
+            return _onceTracker[token] as! PFSNetworkService<API>
         }
     }
 
-    public init(){
+    public override init(){
         provider = RxMoyaProvider(plugins: [NetworkLoggerPlugin(verbose: true, responseDataFormatter: JSONResponseDataFormatter)])
     }
     
@@ -149,6 +187,4 @@ public class PFSNetworkService<API: PFSTargetType> {
     public func request(_ token: API) -> Observable<PFSResponseNil> {
         return provider.request(token).mapObject(PFSResponseNil.self)
     }
-
-
 }
