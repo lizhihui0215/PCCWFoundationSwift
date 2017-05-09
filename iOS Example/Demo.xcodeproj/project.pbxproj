@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		265510A71EAA02BB001A36AA /* PCCWFoundationSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 265510A61EAA02BB001A36AA /* PCCWFoundationSwift.framework */; };
-		265510A81EAA02BB001A36AA /* PCCWFoundationSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 265510A61EAA02BB001A36AA /* PCCWFoundationSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		26573A761EA74C7000BB56D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26573A751EA74C7000BB56D2 /* AppDelegate.swift */; };
 		26573A781EA74C7000BB56D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26573A771EA74C7000BB56D2 /* ViewController.swift */; };
 		26573A7B1EA74C7000BB56D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26573A791EA74C7000BB56D2 /* Main.storyboard */; };
@@ -16,7 +14,9 @@
 		26573A801EA74C7000BB56D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26573A7E1EA74C7000BB56D2 /* LaunchScreen.storyboard */; };
 		26573A8B1EA74C7000BB56D2 /* DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26573A8A1EA74C7000BB56D2 /* DemoTests.swift */; };
 		26573A961EA74C7000BB56D2 /* DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26573A951EA74C7000BB56D2 /* DemoUITests.swift */; };
-		A7D4486DD2704FD1F5C330B5 /* Pods_Frameworks_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB065CB7DE7E74684F65DCB /* Pods_Frameworks_Demo.framework */; };
+		26877C061EB86D8500041460 /* PCCWFoundationSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26877C051EB86D8500041460 /* PCCWFoundationSwift.framework */; };
+		26877C071EB86D8500041460 /* PCCWFoundationSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 26877C051EB86D8500041460 /* PCCWFoundationSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EB4B923C081FF214D8649B8B /* Pods_PCCWFoundationSwift_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF0BC64E389AE551A04572C /* Pods_PCCWFoundationSwift_Demo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +43,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				265510A81EAA02BB001A36AA /* PCCWFoundationSwift.framework in Embed Frameworks */,
+				26877C071EB86D8500041460 /* PCCWFoundationSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -51,7 +51,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		265510A61EAA02BB001A36AA /* PCCWFoundationSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PCCWFoundationSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		26573A721EA74C7000BB56D2 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26573A751EA74C7000BB56D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26573A771EA74C7000BB56D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,9 +64,10 @@
 		26573A911EA74C7000BB56D2 /* DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		26573A951EA74C7000BB56D2 /* DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoUITests.swift; sourceTree = "<group>"; };
 		26573A971EA74C7000BB56D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		436C5FFD757EDA2EE8B92045 /* Pods-Frameworks-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Frameworks-Demo.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Frameworks-Demo/Pods-Frameworks-Demo.release.xcconfig"; sourceTree = "<group>"; };
-		9D56E129442A98478A7F1585 /* Pods-Frameworks-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Frameworks-Demo.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Frameworks-Demo/Pods-Frameworks-Demo.debug.xcconfig"; sourceTree = "<group>"; };
-		EAB065CB7DE7E74684F65DCB /* Pods_Frameworks_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Frameworks_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		26877C051EB86D8500041460 /* PCCWFoundationSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PCCWFoundationSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BBA55CD9D15E3E92CF9A9FA /* Pods-PCCWFoundationSwift-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PCCWFoundationSwift-Demo.release.xcconfig"; path = "../Pods/Target Support Files/Pods-PCCWFoundationSwift-Demo/Pods-PCCWFoundationSwift-Demo.release.xcconfig"; sourceTree = "<group>"; };
+		68EC1D82DD78114CDDB675E5 /* Pods-PCCWFoundationSwift-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PCCWFoundationSwift-Demo.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-PCCWFoundationSwift-Demo/Pods-PCCWFoundationSwift-Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		ECF0BC64E389AE551A04572C /* Pods_PCCWFoundationSwift_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PCCWFoundationSwift_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,8 +75,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				265510A71EAA02BB001A36AA /* PCCWFoundationSwift.framework in Frameworks */,
-				A7D4486DD2704FD1F5C330B5 /* Pods_Frameworks_Demo.framework in Frameworks */,
+				26877C061EB86D8500041460 /* PCCWFoundationSwift.framework in Frameworks */,
+				EB4B923C081FF214D8649B8B /* Pods_PCCWFoundationSwift_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,8 +100,8 @@
 		22DF6E78B487CD6814E9D1B7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				265510A61EAA02BB001A36AA /* PCCWFoundationSwift.framework */,
-				EAB065CB7DE7E74684F65DCB /* Pods_Frameworks_Demo.framework */,
+				26877C051EB86D8500041460 /* PCCWFoundationSwift.framework */,
+				ECF0BC64E389AE551A04572C /* Pods_PCCWFoundationSwift_Demo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -162,8 +162,8 @@
 		71BD40A33FF229C651DA36E7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9D56E129442A98478A7F1585 /* Pods-Frameworks-Demo.debug.xcconfig */,
-				436C5FFD757EDA2EE8B92045 /* Pods-Frameworks-Demo.release.xcconfig */,
+				68EC1D82DD78114CDDB675E5 /* Pods-PCCWFoundationSwift-Demo.debug.xcconfig */,
+				3BBA55CD9D15E3E92CF9A9FA /* Pods-PCCWFoundationSwift-Demo.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -317,7 +317,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-Frameworks-Demo/Pods-Frameworks-Demo-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-PCCWFoundationSwift-Demo/Pods-PCCWFoundationSwift-Demo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9C3E69597EC1EA4F309619E6 /* [CP] Copy Pods Resources */ = {
@@ -332,7 +332,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-Frameworks-Demo/Pods-Frameworks-Demo-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-PCCWFoundationSwift-Demo/Pods-PCCWFoundationSwift-Demo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F4A94F30FF76B4C9887F12AC /* [CP] Check Pods Manifest.lock */ = {
@@ -510,7 +510,7 @@
 		};
 		26573A9B1EA74C7000BB56D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9D56E129442A98478A7F1585 /* Pods-Frameworks-Demo.debug.xcconfig */;
+			baseConfigurationReference = 68EC1D82DD78114CDDB675E5 /* Pods-PCCWFoundationSwift-Demo.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -525,7 +525,7 @@
 		};
 		26573A9C1EA74C7000BB56D2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 436C5FFD757EDA2EE8B92045 /* Pods-Frameworks-Demo.release.xcconfig */;
+			baseConfigurationReference = 3BBA55CD9D15E3E92CF9A9FA /* Pods-PCCWFoundationSwift-Demo.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
