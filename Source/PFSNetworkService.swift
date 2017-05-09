@@ -124,7 +124,9 @@ public class PFSNetworkService<API: PFSTargetType>: PFSNetworkServiceStatic {
 
     public static var shared: PFSNetworkService {
         get {
-            let token = "com.pccw.foundation.swift.network.service"
+            let token = "com.pccw.foundation.swift.network.service.token.\(String(describing: PFSNetworkService.self))" 
+            
+
             objc_sync_enter(self)
             defer { objc_sync_exit(self) }
             
