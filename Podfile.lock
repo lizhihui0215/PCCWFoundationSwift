@@ -5,8 +5,8 @@ PODS:
   - KeychainAccess (3.0.2)
   - Kingfisher (3.7.2)
   - MJRefresh (3.1.12)
-  - Moya (8.0.3):
-    - Moya/Core (= 8.0.3)
+  - Moya (8.0.4):
+    - Moya/Core (= 8.0.4)
   - Moya-ObjectMapper/Core (2.3.1):
     - Moya (~> 8.0)
     - ObjectMapper (~> 2.2)
@@ -14,10 +14,10 @@ PODS:
     - Moya-ObjectMapper/Core
     - Moya/RxSwift
     - RxSwift (~> 3.1)
-  - Moya/Core (8.0.3):
+  - Moya/Core (8.0.4):
     - Alamofire (~> 4.1)
     - Result (~> 3.0)
-  - Moya/RxSwift (8.0.3):
+  - Moya/RxSwift (8.0.4):
     - Moya/Core
     - RxSwift (~> 3.0)
   - NVActivityIndicatorView (3.6.1)
@@ -69,10 +69,10 @@ SPEC CHECKSUMS:
   KeychainAccess: a986406022dfc7c634c691ad3bec670cc6a32002
   Kingfisher: 5ddc4ac715615cc200de9fdc54ab1511061ea650
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
-  Moya: d3721622e3cc0cc2f038d69a258686f0b66e7252
+  Moya: a08bc060c7a44eee27447b239ed33a189b641e2b
   Moya-ObjectMapper: 952be2b261d38cf8d973b7e429708eb03d256e23
   NVActivityIndicatorView: 9f52a7f84bf5c6a798722c450fe3c198e01c56ed
-  ObjectMapper: '042708195cc46c20871cbcbec0453826398273fd'
+  ObjectMapper: 042708195cc46c20871cbcbec0453826398273fd
   ObjectMapper+Realm: 98992926f775a4fdf1c025541b97c78119f15b8a
   Realm: 07e5d3a9e0e41d65fd5f9f05150ed6295d0f093b
   RealmSwift: 6d06425d3900c86473c4f323bf6949b43fca22bc
