@@ -3,7 +3,7 @@ PODS:
   - DeviceKit (1.0.1)
   - IQKeyboardManagerSwift (4.0.9)
   - KeychainAccess (3.0.2)
-  - Kingfisher (3.7.2)
+  - Kingfisher (3.9.1)
   - MJRefresh (3.1.12)
   - Moya (8.0.4):
     - Moya/Core (= 8.0.4)
@@ -30,7 +30,7 @@ PODS:
   - Realm/Headers (2.7.0)
   - RealmSwift (2.7.0):
     - Realm (= 2.7.0)
-  - Result (3.2.1)
+  - Result (3.2.2)
   - RSKGrowingTextView (2.0.0):
     - RSKPlaceholderTextView (= 2.0.0)
   - RSKPlaceholderTextView (2.0.0)
@@ -67,7 +67,7 @@ SPEC CHECKSUMS:
   DeviceKit: 461e525867e48e725f41699c1cab3100df1258ff
   IQKeyboardManagerSwift: 2eefe6c429b86aa08bfbc1b5c891164d754adf91
   KeychainAccess: a986406022dfc7c634c691ad3bec670cc6a32002
-  Kingfisher: 5ddc4ac715615cc200de9fdc54ab1511061ea650
+  Kingfisher: 6729a0baaa458245bfb8cd5a1296c71c10d6eb6c
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   Moya: a08bc060c7a44eee27447b239ed33a189b641e2b
   Moya-ObjectMapper: 952be2b261d38cf8d973b7e429708eb03d256e23
@@ -76,7 +76,7 @@ SPEC CHECKSUMS:
   ObjectMapper+Realm: 98992926f775a4fdf1c025541b97c78119f15b8a
   Realm: 07e5d3a9e0e41d65fd5f9f05150ed6295d0f093b
   RealmSwift: 6d06425d3900c86473c4f323bf6949b43fca22bc
-  Result: 2453a22e5c5b11c0c3a478736e82cd02f763b781
+  Result: 4edd39003fdccf281d418ee1b006571f70123250
   RSKGrowingTextView: 1d9c64f1e9f8ed9b47d883548a3fd76dfdfe1353
   RSKPlaceholderTextView: 301f0f30e70e7c42fe4e941e3a08365ab0d890d5
   RxCocoa: a8a5f1d061d0043e28f56976829f31ce63e8eb09
@@ -88,4 +88,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 38a7293800f4024f013090ed442ba588152ca21f
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.2.1

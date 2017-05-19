@@ -21,9 +21,9 @@ public class PFSResponseMappableObject<T: Mappable>: Mappable {
     }
     
     public func mapping(map: Map)  {
-        message <- map[""]
-        code <- map[""]
-        result <- map[""]
+        message <- map[PFSNetworkServiceStatic.__message]
+        code <- map[PFSNetworkServiceStatic.__code]
+        result <- map[PFSNetworkServiceStatic.__result]
     }
 }
 
@@ -36,8 +36,8 @@ public class PFSResponseNil: Mappable {
     }
     
     public func mapping(map: Map) {
-        message <- map[""]
-        code <- map[""]
+        message <- map[PFSNetworkServiceStatic.__message]
+        code <- map[PFSNetworkServiceStatic.__code]
     }
 }
 
@@ -53,9 +53,9 @@ public class PFSResponseObject<T>: Mappable {
     }
     
     public func mapping(map: Map)  {
-        message <- map[""]
-        code <- map[""]
-        result <- map[""]
+        message <- map[PFSNetworkServiceStatic.__message]
+        code <- map[PFSNetworkServiceStatic.__code]
+        result <- map[PFSNetworkServiceStatic.__result]
     }
 }
 
@@ -71,9 +71,9 @@ public class PFSResponseArray<T>: Mappable {
     }
     
     public func mapping(map: Map)  {
-        message <- map[""]
-        code <- map[""]
-        result <- map[""]
+        message <- map[PFSNetworkServiceStatic.__message]
+        code <- map[PFSNetworkServiceStatic.__code]
+        result <- map[PFSNetworkServiceStatic.__result]
     }
 }
 
@@ -89,9 +89,9 @@ public class PFSResponseMappableArray<T: Mappable>: Mappable {
     }
     
     public func mapping(map: Map)  {
-        message <- map[""]
-        code <- map[""]
-        result <- map[""]
+        message <- map[PFSNetworkServiceStatic.__message]
+        code <- map[PFSNetworkServiceStatic.__code]
+        result <- map[PFSNetworkServiceStatic.__result]
     }
 }
 
@@ -116,6 +116,9 @@ public enum PFSNetworkError: Swift.Error {
 
 public class PFSNetworkServiceStatic{
     internal static var _onceTracker = [String: Any]()
+    fileprivate static var __message: String = "message"
+    fileprivate static var __code: String = "code"
+    fileprivate static var __result: String = "result"
 }
 
 public class PFSNetworkService<API: PFSTargetType>: PFSNetworkServiceStatic {
@@ -138,6 +141,12 @@ public class PFSNetworkService<API: PFSTargetType>: PFSNetworkServiceStatic {
             
             return _onceTracker[token] as! PFSNetworkService<API>
         }
+    }
+
+    open static func config(message: String, code: String, result: String) {
+        __message = message
+        __code = code
+        __result = result
     }
 
     public override init(){

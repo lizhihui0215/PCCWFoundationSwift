@@ -17,23 +17,14 @@ public protocol PFSViewControllerProtocol {
     var viewModel: T {get set}
 }
 
-extension UIViewController: PFSViewControllerProtocol {
-    public var viewModel: PFSViewModel {
-        get {
-            return objc_getAssociatedObject(self, &viewModelKey) as! T
-        }
-        set {
-            objc_setAssociatedObject(self, &viewModelKey, newValue, .OBJC_ASSOCIATION_RETAIN)
-        }
-    }
-}
-
 open class PFSViewController: UIViewController {
 
     override open func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+
+
     }
 
     override open func didReceiveMemoryWarning() {
