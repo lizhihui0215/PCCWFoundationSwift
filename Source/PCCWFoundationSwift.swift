@@ -8,8 +8,12 @@
 
 import Foundation
 
+private let token = "com.pccw.foundation.swift.setup.swizzling.token"
+
 public func setup()  {
-    swizzling(target: UIViewController.self,
-              originalSelector:#selector(UIViewController.viewDidLoad),
-              swizzledSelector: #selector(UIViewController.pfs_viewDidLoad))
+    DispatchQueue.once(token: token) { 
+        swizzling(target: UIViewController.self,
+                  originalSelector:#selector(UIViewController.viewDidLoad),
+                  swizzledSelector: #selector(UIViewController.pfs_viewDidLoad))
+    }
 }

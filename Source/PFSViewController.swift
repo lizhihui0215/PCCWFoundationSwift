@@ -10,6 +10,10 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+extension UIViewController: PFSViewAction {
+    
+}
+
 extension UIViewController {
     private struct AssociatedKeys {
         static var disposeBagKey = "com.pccw.foundation.viewcontroller.disposebagkey"
@@ -28,7 +32,6 @@ extension UIViewController {
         self.pfs_viewDidLoad()
         disposeBag = DisposeBag()
     }
-    
 }
 
 open class PFSViewController: UIViewController {

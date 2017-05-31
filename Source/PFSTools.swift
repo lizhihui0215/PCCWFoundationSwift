@@ -8,9 +8,13 @@
 
 import Foundation
 
+class PFSTools {
+    
+}
+
 public func swizzling(target: AnyClass,originalSelector : Selector, swizzledSelector: Selector)  {
     let originalMethod = class_getInstanceMethod(target, originalSelector)
     let swizzledMethod = class_getInstanceMethod(target, swizzledSelector)
-
+    
     method_exchangeImplementations(originalMethod, swizzledMethod)
 }

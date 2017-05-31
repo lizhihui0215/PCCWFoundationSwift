@@ -9,6 +9,7 @@ import PCCWFoundationSwift
 import Moya
 import RxSwift
 import RxCocoa
+import Result
 
 enum XXX: PFSTargetType {
     
@@ -49,20 +50,34 @@ class XXXViewModel: PFSViewModel {
     override init(action: PFSViewAction) {
         super.init(action: action)
     }
+    
+    func test(username: String, password: String) -> Driver<Bool> {
+        
+        let request = Driver.just("xxx")
+                
+        return Driver.just(true)
+    }
 }
 
-class ViewController: PFSViewController, PFSViewAction {
+class ViewController: PFSViewController {
     
     @IBOutlet weak var testLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(disposeBag)
         // Do any additional setup after loading the view, typically from a nib.
         
         let a =  PFSNetworkService<XXX>.shared
         
         let b = PFSNetworkService<XXX>.shared
+        
+        var ss: String? = "qq"
+        print(ss.orEmpty)
+        
+        
+        ss = nil
+        print(ss.orEmpty)
+        
         
         testLabel.text = "xxxx"
         
