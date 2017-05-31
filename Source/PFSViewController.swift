@@ -7,14 +7,28 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
-private var viewModelKey: Void?
-
-
-public protocol PFSViewControllerProtocol {
-    associatedtype T: PFSViewModel
-
-    var viewModel: T {get set}
+extension UIViewController {
+    private struct AssociatedKeys {
+        static var disposeBagKey = "com.pccw.foundation.viewcontroller.disposebagkey"
+    }
+    
+    public var disposeBag: DisposeBag {
+        get {
+            return objc_getAssociatedObject(self, &AssociatedKeys.disposeBagKey) as! DisposeBag
+        }
+        set {
+            objc_setAssociatedObject(self, &AssociatedKeys.disposeBagKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
+    
+    open func pfs_viewDidLoad()  {
+        self.pfs_viewDidLoad()
+        disposeBag = DisposeBag()
+    }
+    
 }
 
 open class PFSViewController: UIViewController {
@@ -23,7 +37,6 @@ open class PFSViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-
 
     }
 

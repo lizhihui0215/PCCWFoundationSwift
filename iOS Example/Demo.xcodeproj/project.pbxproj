@@ -16,6 +16,7 @@
 		26573A961EA74C7000BB56D2 /* DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26573A951EA74C7000BB56D2 /* DemoUITests.swift */; };
 		26877C061EB86D8500041460 /* PCCWFoundationSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26877C051EB86D8500041460 /* PCCWFoundationSwift.framework */; };
 		26877C071EB86D8500041460 /* PCCWFoundationSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 26877C051EB86D8500041460 /* PCCWFoundationSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		26F949B11EDEC9A200E81192 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F949B01EDEC9A200E81192 /* SecondViewController.swift */; };
 		EB4B923C081FF214D8649B8B /* Pods_PCCWFoundationSwift_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF0BC64E389AE551A04572C /* Pods_PCCWFoundationSwift_Demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		26573A951EA74C7000BB56D2 /* DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoUITests.swift; sourceTree = "<group>"; };
 		26573A971EA74C7000BB56D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26877C051EB86D8500041460 /* PCCWFoundationSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PCCWFoundationSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		26F949B01EDEC9A200E81192 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		3BBA55CD9D15E3E92CF9A9FA /* Pods-PCCWFoundationSwift-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PCCWFoundationSwift-Demo.release.xcconfig"; path = "../Pods/Target Support Files/Pods-PCCWFoundationSwift-Demo/Pods-PCCWFoundationSwift-Demo.release.xcconfig"; sourceTree = "<group>"; };
 		68EC1D82DD78114CDDB675E5 /* Pods-PCCWFoundationSwift-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PCCWFoundationSwift-Demo.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-PCCWFoundationSwift-Demo/Pods-PCCWFoundationSwift-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		ECF0BC64E389AE551A04572C /* Pods_PCCWFoundationSwift_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PCCWFoundationSwift_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,6 +135,7 @@
 			children = (
 				26573A751EA74C7000BB56D2 /* AppDelegate.swift */,
 				26573A771EA74C7000BB56D2 /* ViewController.swift */,
+				26F949B01EDEC9A200E81192 /* SecondViewController.swift */,
 				26573A791EA74C7000BB56D2 /* Main.storyboard */,
 				26573A7C1EA74C7000BB56D2 /* Assets.xcassets */,
 				26573A7E1EA74C7000BB56D2 /* LaunchScreen.storyboard */,
@@ -357,6 +360,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26F949B11EDEC9A200E81192 /* SecondViewController.swift in Sources */,
 				26573A781EA74C7000BB56D2 /* ViewController.swift in Sources */,
 				26573A761EA74C7000BB56D2 /* AppDelegate.swift in Sources */,
 			);

@@ -53,23 +53,24 @@ class XXXViewModel: PFSViewModel {
 
 class ViewController: PFSViewController, PFSViewAction {
     
-    var disposeBag = DisposeBag()
+    @IBOutlet weak var testLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(disposeBag)
         // Do any additional setup after loading the view, typically from a nib.
         
         let a =  PFSNetworkService<XXX>.shared
         
         let b = PFSNetworkService<XXX>.shared
         
+        testLabel.text = "xxxx"
+        
         if a === b {
             print("yes")
         }else {
             print("no")
         }
-        
-        self.viewModel = XXXViewModel(action: self)
         
         
         a.request(.test).asObservable().subscribe(onNext: { (response) in
@@ -79,9 +80,6 @@ class ViewController: PFSViewController, PFSViewAction {
         b.request(.test).asObservable().subscribe(onNext: { (response) in
             print(response)
         }).disposed(by: disposeBag)
-        
-        
-        
         
     }
     

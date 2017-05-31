@@ -15,6 +15,8 @@
 		269DFFD11EA7585D0006BAE2 /* PFSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269DFFD01EA7585D0006BAE2 /* PFSViewController.swift */; };
 		269DFFD91EA75A8F0006BAE2 /* PCCWFoundationSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269DFFD81EA75A8F0006BAE2 /* PCCWFoundationSwift.swift */; };
 		269DFFDD1EA765000006BAE2 /* PFSTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269DFFDC1EA765000006BAE2 /* PFSTableViewCell.swift */; };
+		26F949AD1EDEB21F00E81192 /* PFSTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F949AC1EDEB21F00E81192 /* PFSTools.swift */; };
+		26F949AF1EDEC21700E81192 /* SSASideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F949AE1EDEC21700E81192 /* SSASideMenu.swift */; };
 		5B875154112FDE6DBD7A698B /* DispatchQueue+PFS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B875AEA35BED91F6285D7C3 /* DispatchQueue+PFS.swift */; };
 		5B8753094E75CA21A0DBC7C8 /* PFSDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B875B1F2BDA1D89DD3BF8C2 /* PFSDataRepository.swift */; };
 		5B875A46A8BE6E6C44554E76 /* PFSDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B87570B71091E919B02607C /* PFSDomain.swift */; };
@@ -47,6 +49,8 @@
 		269DFFD01EA7585D0006BAE2 /* PFSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSViewController.swift; sourceTree = "<group>"; };
 		269DFFD81EA75A8F0006BAE2 /* PCCWFoundationSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PCCWFoundationSwift.swift; sourceTree = "<group>"; };
 		269DFFDC1EA765000006BAE2 /* PFSTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSTableViewCell.swift; sourceTree = "<group>"; };
+		26F949AC1EDEB21F00E81192 /* PFSTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSTools.swift; sourceTree = "<group>"; };
+		26F949AE1EDEC21700E81192 /* SSASideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSASideMenu.swift; sourceTree = "<group>"; };
 		5B8754000C5592E676313BE3 /* PFSNetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSNetworkService.swift; sourceTree = "<group>"; };
 		5B87570B71091E919B02607C /* PFSDomain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSDomain.swift; sourceTree = "<group>"; };
 		5B8758850C85398CD82E6754 /* PFSViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSViewModel.swift; sourceTree = "<group>"; };
@@ -108,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				269DFFD81EA75A8F0006BAE2 /* PCCWFoundationSwift.swift */,
+				26F949AB1EDEB20E00E81192 /* Common */,
 				268ECAF31EAA06BC00BF55A2 /* Model */,
 				26877C031EB83B9100041460 /* Services */,
 				26152D541EAA119A001CEEE7 /* Extensions */,
@@ -159,6 +164,7 @@
 		269DFFDA1EA764870006BAE2 /* Base View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				26F949AE1EDEC21700E81192 /* SSASideMenu.swift */,
 				269DFFD01EA7585D0006BAE2 /* PFSViewController.swift */,
 			);
 			name = "Base View Controller";
@@ -170,6 +176,14 @@
 				269DFFDC1EA765000006BAE2 /* PFSTableViewCell.swift */,
 			);
 			name = "Base Views";
+			sourceTree = "<group>";
+		};
+		26F949AB1EDEB20E00E81192 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				26F949AC1EDEB21F00E81192 /* PFSTools.swift */,
+			);
+			name = Common;
 			sourceTree = "<group>";
 		};
 		34D6451660AD26E4714649D2 /* Frameworks */ = {
@@ -362,6 +376,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26F949AD1EDEB21F00E81192 /* PFSTools.swift in Sources */,
 				269DFFDD1EA765000006BAE2 /* PFSTableViewCell.swift in Sources */,
 				26152D561EAA11F8001CEEE7 /* Device+PFS.swift in Sources */,
 				269DFFD11EA7585D0006BAE2 /* PFSViewController.swift in Sources */,
@@ -370,6 +385,7 @@
 				5B875FD7C1A7CCD97AEB074C /* PFSNetworkService.swift in Sources */,
 				5B875154112FDE6DBD7A698B /* DispatchQueue+PFS.swift in Sources */,
 				5B8753094E75CA21A0DBC7C8 /* PFSDataRepository.swift in Sources */,
+				26F949AF1EDEC21700E81192 /* SSASideMenu.swift in Sources */,
 				5B875A46A8BE6E6C44554E76 /* PFSDomain.swift in Sources */,
 				5B875F3735A2AEFC47F07E28 /* PFSViewModel.swift in Sources */,
 			);
