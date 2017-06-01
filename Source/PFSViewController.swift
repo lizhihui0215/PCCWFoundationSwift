@@ -9,9 +9,41 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Result
+import Moya
 
 extension UIViewController: PFSViewAction {
-    
+    public func alert(message: String) -> Driver<Bool> {
+        return Observable.create({ element -> Disposable in
+            let  alertView = UIAlertController(title: "", message: message, preferredStyle: .alert)
+            
+            let action = UIAlertAction(title: "", style: .default, handler: { action in
+                element.onNext(true)
+            })
+            
+            alertView.addAction(action)
+            return Disposables.create{
+                alertView.dismiss(animated: true, completion: nil)
+            }
+        }).asDriver(onErrorJustReturn: false)
+    }
+
+    public func alert<T>(result: Result<T, MoyaError>) -> Driver<Result<T, MoyaError>>{
+        return Observable.create({ element -> Disposable in
+            let  alertView = UIAlertController(title: "", message: "", preferredStyle: .alert)
+            switch result {
+            case .failure(let error):
+                alertView.message = error.errorDescription
+                self.present(alertView, animated: true, completion: nil)
+                element.onCompleted()
+            case.success:
+                element.onNext(result)
+            }
+           return Disposables.create{
+                alertView.dismiss(animated: true, completion: nil)
+            }
+        }).asDriver(onErrorJustReturn: result)
+    }
 }
 
 extension UIViewController {

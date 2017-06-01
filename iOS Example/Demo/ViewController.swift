@@ -53,8 +53,24 @@ class XXXViewModel: PFSViewModel {
     
     func test(username: String, password: String) -> Driver<Bool> {
         
-        let request = Driver.just("xxx")
-                
+        
+        
+        var x = PFSValidate(content: "1")
+            .notNull(message: "用户名不能为空")
+            .max(length: 5, message: "最大长度不能超过5")
+        
+        var q = PFSValidate(content: "xxxqqqq")
+            .notNull(message: "密码不能为空")
+            .max(length: 5, message: "最大长度不能超过5")
+        
+        
+        let result = PFSValidate.validate(validates: [x,q])
+        
+        
+        self.action?.alert(result: result)
+        
+        
+        
         return Driver.just(true)
     }
 }
@@ -78,7 +94,6 @@ class ViewController: PFSViewController {
         ss = nil
         print(ss.orEmpty)
         
-        
         testLabel.text = "xxxx"
         
         if a === b {
@@ -86,6 +101,11 @@ class ViewController: PFSViewController {
         }else {
             print("no")
         }
+        
+        
+        let viewModel = XXXViewModel(action: self)
+        
+        viewModel.test(username: "xx", password: "qq")
         
         
         a.request(.test).asObservable().subscribe(onNext: { (response) in

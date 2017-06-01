@@ -10,6 +10,7 @@
 		26152D561EAA11F8001CEEE7 /* Device+PFS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26152D551EAA11F8001CEEE7 /* Device+PFS.swift */; };
 		262CF3191EA752C200ED9F90 /* PCCWFoundationSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 262CF3171EA752C200ED9F90 /* PCCWFoundationSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2688D3911EDF1BEA0072033C /* String+PFS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2688D3901EDF1BEA0072033C /* String+PFS.swift */; };
+		268C8ED21EE014BC00104178 /* PFSError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268C8ED11EE014BC00104178 /* PFSError.swift */; };
 		268ECAF51EAA06E400BF55A2 /* PFSModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268ECAF41EAA06E400BF55A2 /* PFSModel.swift */; };
 		269DFFBD1EA757440006BAE2 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269DFFBC1EA757440006BAE2 /* Tests.swift */; };
 		269DFFBF1EA757440006BAE2 /* PCCWFoundationSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 262CF3141EA752C200ED9F90 /* PCCWFoundationSwift.framework */; };
@@ -44,6 +45,7 @@
 		262CF3181EA752C200ED9F90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26877C041EB86A0500041460 /* PCCWFoundationSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PCCWFoundationSwift.framework; path = "../../Library/Developer/Xcode/DerivedData/PCCWFoundationSwift-enifdoixgszanxcpwhyhmhnfzful/Build/Products/Debug-iphonesimulator/PCCWFoundationSwift.framework"; sourceTree = "<group>"; };
 		2688D3901EDF1BEA0072033C /* String+PFS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+PFS.swift"; sourceTree = "<group>"; };
+		268C8ED11EE014BC00104178 /* PFSError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSError.swift; sourceTree = "<group>"; };
 		268ECAF41EAA06E400BF55A2 /* PFSModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSModel.swift; sourceTree = "<group>"; };
 		269DFFBA1EA757440006BAE2 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		269DFFBC1EA757440006BAE2 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				5B875B1F2BDA1D89DD3BF8C2 /* PFSDataRepository.swift */,
+				268C8ED11EE014BC00104178 /* PFSError.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 				2688D3911EDF1BEA0072033C /* String+PFS.swift in Sources */,
 				269DFFDD1EA765000006BAE2 /* PFSTableViewCell.swift in Sources */,
 				26152D561EAA11F8001CEEE7 /* Device+PFS.swift in Sources */,
+				268C8ED21EE014BC00104178 /* PFSError.swift in Sources */,
 				269DFFD11EA7585D0006BAE2 /* PFSViewController.swift in Sources */,
 				269DFFD91EA75A8F0006BAE2 /* PCCWFoundationSwift.swift in Sources */,
 				268ECAF51EAA06E400BF55A2 /* PFSModel.swift in Sources */,
