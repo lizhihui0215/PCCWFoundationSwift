@@ -45,15 +45,22 @@ enum XXX: PFSTargetType {
     }
 }
 
+class XXXDomain: PFSPageDomain {
+    
+    
+    func list()  {
+        
+    }
+}
 
 class XXXViewModel: PFSViewModel {
     override init(action: PFSViewAction) {
         super.init(action: action)
     }
     
+    
+    
     func test(username: String, password: String) -> Driver<Bool> {
-        
-        
         
         var x = PFSValidate(content: "1")
             .notNull(message: "用户名不能为空")
@@ -64,10 +71,24 @@ class XXXViewModel: PFSViewModel {
             .max(length: 5, message: "最大长度不能超过5")
         
         
+        
+        
         let result = PFSValidate.validate(validates: [x,q])
         
         
-        self.action?.alert(result: result)
+        let ff: Driver<Bool>? = self.action?.alert(result: result).flatMapLatest({ result in
+            switch result {
+            case .success(let qqq):
+                ""
+            case .failure(let error):
+                ""
+            }
+        
+            return Driver.just(true)
+        })
+        
+        let a = self.action?.alert(message: "xxx")
+        
         
         
         

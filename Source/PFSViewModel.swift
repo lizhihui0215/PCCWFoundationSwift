@@ -12,6 +12,14 @@ public protocol PFSViewAction: class {
     func alert<T>(result: Result<T, MoyaError>) -> Driver<Result<T, MoyaError>>
     
     func alert(message: String) -> Driver<Bool>
+    
+    func animation<T>(_ task: (Driver<Result<T, MoyaError>>) -> Void)
+}
+
+extension PFSViewAction {
+    public func animation<T>(_ task: (Driver<Result<T, MoyaError>>) -> Void){
+        
+    }
 }
 
 public class PFSValidate {

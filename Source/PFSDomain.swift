@@ -4,7 +4,7 @@
 
 import Foundation
 
-class PFSDomain {
+open class PFSDomain {
     
        
 }
