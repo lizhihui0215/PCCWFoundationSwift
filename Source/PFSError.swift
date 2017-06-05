@@ -33,6 +33,6 @@ extension PFSError: CustomDebugStringConvertible {
     }
 }
 
-func error(code: Int = 0, message: String?) -> MoyaError {
+public func error(code: Int = 0, message: String?) -> MoyaError {
     return MoyaError.underlying(PFSError(code: code , message: message ?? "unknow"))
 }

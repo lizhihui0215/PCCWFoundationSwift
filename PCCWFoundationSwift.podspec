@@ -152,4 +152,5 @@ Pod::Spec.new do |s|
   s.dependency "Kingfisher"
   s.dependency "TZImagePickerController"
   s.dependency "RSKGrowingTextView"
+  s.dependency "RxCocoa"
 end
