@@ -55,11 +55,11 @@ class XXXViewModel: PFSViewModel {
         
         
         
-        var x = PFSValidate(content: "1")
+        let x = PFSValidate(content: "1")
             .notNull(message: "用户名不能为空")
             .max(length: 5, message: "最大长度不能超过5")
         
-        var q = PFSValidate(content: "xxxqqqq")
+        let q = PFSValidate(content: "xxxqqqq")
             .notNull(message: "密码不能为空")
             .max(length: 5, message: "最大长度不能超过5")
         
