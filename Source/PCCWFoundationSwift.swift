@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import IQKeyboardManagerSwift
 
 private let token = "com.pccw.foundation.swift.setup.swizzling.token"
 
@@ -15,5 +16,6 @@ public func setup()  {
         swizzling(target: UIViewController.self,
                   originalSelector:#selector(UIViewController.viewDidLoad),
                   swizzledSelector: #selector(UIViewController.pfs_viewDidLoad))
+        IQKeyboardManager.sharedManager().enable = true
     }
 }
