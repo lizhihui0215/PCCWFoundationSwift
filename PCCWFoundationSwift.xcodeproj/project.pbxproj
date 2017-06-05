@@ -12,6 +12,7 @@
 		263019F01EE522600002061E /* PFSViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8758850C85398CD82E6754 /* PFSViewModel.swift */; };
 		263019F51EE526C50002061E /* PFSDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263019F31EE526C50002061E /* PFSDataRepository.swift */; };
 		263019F71EE5336B0002061E /* PFSError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263019F41EE526C50002061E /* PFSError.swift */; };
+		263019FD1EE5403E0002061E /* PFSExchageRootSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263019FC1EE5403E0002061E /* PFSExchageRootSegue.swift */; };
 		266A02591EE05E37008D17ED /* PFSPageDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266A02581EE05E37008D17ED /* PFSPageDomain.swift */; };
 		2688D3911EDF1BEA0072033C /* String+PFS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2688D3901EDF1BEA0072033C /* String+PFS.swift */; };
 		268ECAF51EAA06E400BF55A2 /* PFSModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268ECAF41EAA06E400BF55A2 /* PFSModel.swift */; };
@@ -46,6 +47,7 @@
 		262CF3181EA752C200ED9F90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		263019F31EE526C50002061E /* PFSDataRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSDataRepository.swift; sourceTree = "<group>"; };
 		263019F41EE526C50002061E /* PFSError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSError.swift; sourceTree = "<group>"; };
+		263019FC1EE5403E0002061E /* PFSExchageRootSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSExchageRootSegue.swift; sourceTree = "<group>"; };
 		266A02581EE05E37008D17ED /* PFSPageDomain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSPageDomain.swift; sourceTree = "<group>"; };
 		26877C041EB86A0500041460 /* PCCWFoundationSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PCCWFoundationSwift.framework; path = "../../Library/Developer/Xcode/DerivedData/PCCWFoundationSwift-enifdoixgszanxcpwhyhmhnfzful/Build/Products/Debug-iphonesimulator/PCCWFoundationSwift.framework"; sourceTree = "<group>"; };
 		2688D3901EDF1BEA0072033C /* String+PFS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+PFS.swift"; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				269DFFDC1EA765000006BAE2 /* PFSTableViewCell.swift */,
+				263019FC1EE5403E0002061E /* PFSExchageRootSegue.swift */,
 			);
 			name = "Base Views";
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 				26F949AF1EDEC21700E81192 /* SSASideMenu.swift in Sources */,
 				5B875A46A8BE6E6C44554E76 /* PFSDomain.swift in Sources */,
 				263019F01EE522600002061E /* PFSViewModel.swift in Sources */,
+				263019FD1EE5403E0002061E /* PFSExchageRootSegue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
