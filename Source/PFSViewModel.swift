@@ -8,7 +8,7 @@ import Result
 import RxSwift
 import Moya
 
-public protocol PFSViewAction: class {    
+public protocol PFSViewAction: class {
     func alert<T>(result: Result<T, MoyaError>) -> Driver<Result<T, MoyaError>>
     
     func alert(message: String) -> Driver<Bool>
@@ -82,12 +82,12 @@ public class PFSValidate {
     }
 }
 
-open class PFSViewModel {
-    public weak var action: PFSViewAction?
+open class PFSViewModel<T: PFSViewAction> {
+    public weak var action: T?
     
     public let disposeBag = DisposeBag()
 
-    public init(action: PFSViewAction) {
+    public init(action: T?) {
         self.action = action
     }
 }

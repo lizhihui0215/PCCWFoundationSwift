@@ -9,8 +9,7 @@
 import UIKit
 
 class PFSTableViewCell: UITableViewCell {
-    var test: String = ""
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

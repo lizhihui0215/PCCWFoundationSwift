@@ -11,7 +11,7 @@
 		262CF3191EA752C200ED9F90 /* PCCWFoundationSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 262CF3171EA752C200ED9F90 /* PCCWFoundationSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		263019F01EE522600002061E /* PFSViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8758850C85398CD82E6754 /* PFSViewModel.swift */; };
 		263019F51EE526C50002061E /* PFSDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263019F31EE526C50002061E /* PFSDataRepository.swift */; };
-		263019F61EE526C50002061E /* PFSError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263019F41EE526C50002061E /* PFSError.swift */; };
+		263019F71EE5336B0002061E /* PFSError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263019F41EE526C50002061E /* PFSError.swift */; };
 		266A02591EE05E37008D17ED /* PFSPageDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266A02581EE05E37008D17ED /* PFSPageDomain.swift */; };
 		2688D3911EDF1BEA0072033C /* String+PFS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2688D3901EDF1BEA0072033C /* String+PFS.swift */; };
 		268ECAF51EAA06E400BF55A2 /* PFSModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268ECAF41EAA06E400BF55A2 /* PFSModel.swift */; };
@@ -388,7 +388,7 @@
 				26F949AD1EDEB21F00E81192 /* PFSTools.swift in Sources */,
 				2688D3911EDF1BEA0072033C /* String+PFS.swift in Sources */,
 				269DFFDD1EA765000006BAE2 /* PFSTableViewCell.swift in Sources */,
-				263019F61EE526C50002061E /* PFSError.swift in Sources */,
+				263019F71EE5336B0002061E /* PFSError.swift in Sources */,
 				26152D561EAA11F8001CEEE7 /* Device+PFS.swift in Sources */,
 				269DFFD11EA7585D0006BAE2 /* PFSViewController.swift in Sources */,
 				266A02591EE05E37008D17ED /* PFSPageDomain.swift in Sources */,
