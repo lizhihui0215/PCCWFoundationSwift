@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		26573A761EA74C7000BB56D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26573A751EA74C7000BB56D2 /* AppDelegate.swift */; };
-		26573A781EA74C7000BB56D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26573A771EA74C7000BB56D2 /* ViewController.swift */; };
+		26573A781EA74C7000BB56D2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26573A771EA74C7000BB56D2 /* LoginViewController.swift */; };
 		26573A7B1EA74C7000BB56D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26573A791EA74C7000BB56D2 /* Main.storyboard */; };
 		26573A7D1EA74C7000BB56D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26573A7C1EA74C7000BB56D2 /* Assets.xcassets */; };
 		26573A801EA74C7000BB56D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26573A7E1EA74C7000BB56D2 /* LaunchScreen.storyboard */; };
@@ -54,7 +54,7 @@
 /* Begin PBXFileReference section */
 		26573A721EA74C7000BB56D2 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26573A751EA74C7000BB56D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		26573A771EA74C7000BB56D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		26573A771EA74C7000BB56D2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		26573A7A1EA74C7000BB56D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		26573A7C1EA74C7000BB56D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26573A7F1EA74C7000BB56D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -134,7 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				26573A751EA74C7000BB56D2 /* AppDelegate.swift */,
-				26573A771EA74C7000BB56D2 /* ViewController.swift */,
+				26573A771EA74C7000BB56D2 /* LoginViewController.swift */,
 				26F949B01EDEC9A200E81192 /* SecondViewController.swift */,
 				26573A791EA74C7000BB56D2 /* Main.storyboard */,
 				26573A7C1EA74C7000BB56D2 /* Assets.xcassets */,
@@ -238,23 +238,26 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = PCCW;
 				TargetAttributes = {
 					26573A711EA74C7000BB56D2 = {
 						CreatedOnToolsVersion = 8.3.1;
 						DevelopmentTeam = 5F56XN57QC;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					26573A851EA74C7000BB56D2 = {
 						CreatedOnToolsVersion = 8.3.1;
 						DevelopmentTeam = 5F56XN57QC;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 26573A711EA74C7000BB56D2;
 					};
 					26573A901EA74C7000BB56D2 = {
 						CreatedOnToolsVersion = 8.3.1;
 						DevelopmentTeam = 5F56XN57QC;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 26573A711EA74C7000BB56D2;
 					};
@@ -361,7 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26F949B11EDEC9A200E81192 /* SecondViewController.swift in Sources */,
-				26573A781EA74C7000BB56D2 /* ViewController.swift in Sources */,
+				26573A781EA74C7000BB56D2 /* LoginViewController.swift in Sources */,
 				26573A761EA74C7000BB56D2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,7 +430,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -435,7 +440,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -478,7 +487,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -486,7 +497,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -523,7 +538,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pccw.foundation.swift.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -538,7 +554,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pccw.foundation.swift.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -552,7 +569,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pccw.foundation.swift.DemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Demo.app/Demo";
 			};
 			name = Debug;
@@ -567,7 +585,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pccw.foundation.swift.DemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Demo.app/Demo";
 			};
 			name = Release;
@@ -581,7 +600,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pccw.foundation.swift.DemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = Demo;
 			};
 			name = Debug;
@@ -595,7 +615,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pccw.foundation.swift.DemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = Demo;
 			};
 			name = Release;

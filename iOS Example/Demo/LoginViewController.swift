@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 import Result
 
-enum XXX: PFSTargetType {
+enum APITarget: PFSTargetType {
     
     case test
     
@@ -53,12 +53,11 @@ class XXXDomain: PFSPageDomain {
     }
 }
 
-class XXXViewModel: PFSViewModel {
-    override init(action: PFSViewAction) {
-        super.init(action: action)
-    }
+protocol PFSLoginAction: PFSViewAction {
     
-    
+}
+
+class LoginViewModel<T :PFSLoginAction>: PFSViewModel<T> {
     
     func test(username: String, password: String) -> Driver<Bool> {
         
@@ -71,73 +70,39 @@ class XXXViewModel: PFSViewModel {
             .notNull(message: "密码不能为空")
             .max(length: 5, message: "最大长度不能超过5")
         
-        
-        
-        
         let result = PFSValidate.validate(validates: [x,q])
-        
-        
-        let ff: Driver<Bool>? = self.action?.alert(result: result).flatMapLatest({ result in
-            switch result {
-            case .success(let qqq):
-                ""
-            case .failure(let error):
-                ""
-            }
-        
-            return Driver.just(true)
-        })
-        
-        let a = self.action?.alert(message: "xxx")
-        
-        
-        
         
         return Driver.just(true)
     }
 }
 
-class ViewController: PFSViewController {
+extension LoginViewController: PFSLoginAction {
+    
+}
+
+class LoginViewController: PFSViewController  {
     
     @IBOutlet weak var testLabel: UILabel!
+    
+    lazy var viewModel: LoginViewModel<LoginViewController> = {
+        let model = LoginViewModel(action: self)
+        return model
+    }()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let a =  PFSNetworkService<XXX>.shared
+        let model1 = self.viewModel
         
-        let b = PFSNetworkService<XXX>.shared
+        let model2 = self.viewModel
         
-        var ss: String? = "qq"
-        print(ss.orEmpty)
-        
-        
-        ss = nil
-        print(ss.orEmpty)
-        
-        testLabel.text = "xxxx"
-        
-        if a === b {
-            print("yes")
+        if model1 === model2 {
+            print("Yes")
         }else {
-            print("no")
+            print("No")
         }
-        
-        
-        let viewModel = XXXViewModel(action: self)
-        
-        viewModel.test(username: "xx", password: "qq")
-        
-        
-        a.request(.test).asObservable().subscribe(onNext: { (response) in
-            print(response)
-        }).disposed(by: disposeBag)
-        
-        b.request(.test).asObservable().subscribe(onNext: { (response) in
-            print(response)
-        }).disposed(by: disposeBag)
-        
     }
     
     override func didReceiveMemoryWarning() {
