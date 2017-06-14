@@ -55,8 +55,8 @@ def libraries
     
     #  https://github.com/ruslanskorb/RSKGrowingTextView
     pod 'RSKGrowingTextView'
-    
-    pod 'Kanna'
+    # https://github.com/robbiehanson/KissXML
+    pod 'KissXML'
 end
 
 target 'PCCWFoundationSwift' do

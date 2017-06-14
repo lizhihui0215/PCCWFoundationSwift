@@ -9,7 +9,6 @@ import RxSwift
 import ObjectMapper
 import Moya_ObjectMapper
 import Alamofire
-import Kanna
 
 public class PFSResponseMappableObject<T: Mappable>: Mappable {
     var message: String = ""
@@ -178,7 +177,20 @@ public class PFSNetworkService<API: PFSTargetType>: PFSNetworkServiceStatic {
 
 public struct SOAPEncoding: ParameterEncoding {
     
-    public static var `default`: SOAPEncoding { return SOAPEncoding() }
+//    public static var `default`: SOAPEncoding { return SOAPEncoding() }
+    
+    var xml = ""
+    
+    init(_ fileName: String) {
+        let filePath = Bundle.main.path(forResource: fileName, ofType: "xml")
+        xml = try! String(contentsOfFile: filePath!, encoding: .utf8)
+    }
+    
+    
+    func method()  {
+        var doc = Kanna.XML(xml: xml, encoding: .utf8)
+        
+    }
     
     public func encode(_ urlRequest: URLRequestConvertible, with parameters: Parameters?) throws -> URLRequest {
         var urlRequest = try urlRequest.asURLRequest()
