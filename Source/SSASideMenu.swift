@@ -345,7 +345,7 @@ class SSASideMenu: UIViewController, UIGestureRecognizerDelegate {
         showRightMenuViewController()
     }
     
-    func hideMenuViewController() {
+    @objc func hideMenuViewController() {
         hideMenuViewController(true)
     }
     
@@ -929,7 +929,7 @@ class SSASideMenu: UIViewController, UIGestureRecognizerDelegate {
         return true
     }
     
-    func panGestureRecognized(_ recognizer: UIPanGestureRecognizer) {
+    @objc func panGestureRecognized(_ recognizer: UIPanGestureRecognizer) {
         
         delegate?.sideMenuDidRecognizePanGesture?(self, recongnizer: recognizer)
         

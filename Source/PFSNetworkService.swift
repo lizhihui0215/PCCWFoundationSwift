@@ -8,6 +8,8 @@ import Result
 import RxSwift
 import ObjectMapper
 import Moya_ObjectMapper
+import Alamofire
+import Kanna
 
 public class PFSResponseMappableObject<T: Mappable>: Mappable {
     var message: String = ""
@@ -172,6 +174,28 @@ public class PFSNetworkService<API: PFSTargetType>: PFSNetworkServiceStatic {
     public func request(_ token: API) -> Observable<PFSResponseNil> {
         return provider.request(token).mapObject(PFSResponseNil.self)
     }
+}
 
-
+public struct SOAPEncoding: ParameterEncoding {
+    
+    public static var `default`: SOAPEncoding { return SOAPEncoding() }
+    
+    public func encode(_ urlRequest: URLRequestConvertible, with parameters: Parameters?) throws -> URLRequest {
+        var urlRequest = try urlRequest.asURLRequest()
+        
+        guard let parameters = parameters else { return urlRequest }
+        do {
+            if urlRequest.value(forHTTPHeaderField: "Content-Type") == nil {
+                urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            }
+            
+            urlRequest.httpBody = "data".data(using: .utf8)
+        } catch {
+            throw AFError.parameterEncodingFailed(reason: .jsonEncodingFailed(error: error))
+        }
+        
+        return urlRequest
+    }
+    
+    
 }

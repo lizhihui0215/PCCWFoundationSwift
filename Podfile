@@ -55,6 +55,8 @@ def libraries
     
     #  https://github.com/ruslanskorb/RSKGrowingTextView
     pod 'RSKGrowingTextView'
+    
+    pod 'Kanna'
 end
 
 target 'PCCWFoundationSwift' do
@@ -62,6 +64,14 @@ target 'PCCWFoundationSwift' do
     use_frameworks!
 
     libraries
+    
+    post_install do |installer|
+        installer.pods_project.targets.each do |target|
+            target.build_configurations.each do |config|
+                config.build_settings['SWIFT_VERSION'] = '3.0'
+            end
+        end
+    end
     
     target 'Demo' do
         project 'iOS Example/Demo.xcodeproj'
