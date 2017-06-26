@@ -9,6 +9,7 @@ import RxSwift
 import ObjectMapper
 import Moya_ObjectMapper
 import Alamofire
+import KissXML
 
 public class PFSResponseMappableObject<T: Mappable>: Mappable {
     var message: String = ""
@@ -187,8 +188,64 @@ public struct SOAPEncoding: ParameterEncoding {
     }
     
     
-    func method()  {
-        var doc = Kanna.XML(xml: xml, encoding: .utf8)
+    func method(name: String, param: [String : String]) -> String  {
+        let document = try! XMLDocument(xmlString: xml, options: 0)
+        
+        let messages = document.rootElement()?.elements(forName: "message")
+        
+        let types = document.rootElement()?.forName("types")
+        
+        let schema = types?.forName("schema")
+        
+        let targetNamespace = schema?.attribute(forName: "targetNamespace")?.stringValue
+        
+        let namespace = XMLNode.namespace(withName: "ns1", stringValue: targetNamespace!)
+        
+        let message = messages?.filter{ $0.attribute(forName: "name")?.stringValue == name }.first
+        
+        let part = message?.forName("part")
+        
+        let parametersString = part?.attribute(forName: "element")?.stringValue
+        
+        let parameters = parametersString?.components(separatedBy: ":")
+        
+        let parameterName = parameters?.last
+        
+        let messageXX = XMLElement.element(withName: parameterName!) as! XMLElement
+        
+        messageXX.addNamespace(namespace as! DDXMLNode)
+        
+        let complexTypes = schema?.elements(forName: "complexType")
+        
+        let complexType = complexTypes?.filter{ $0.attribute(forName: "name")?.stringValue == name }.first
+        
+        let sequence = complexType?.forName("sequence")
+        
+        let xxxx = sequence?.children as? [XMLElement]?
+        
+        let ffff = xxxx??.map{  $0.attribute(forName: "name")?.stringValue }
+        
+        for f in ffff! {
+            var value = param[f!]
+            messageXX.addChild(XMLElement.element(withName: f!, stringValue: value!) as! DDXMLNode)
+        }
+        
+        var root = XMLElement(name: "soap:Envelope")
+        
+        root.addNamespace(XMLNode.namespace(withName: "soap",
+                                              stringValue: "http://schemas.xmlsoap.org/soap/envelope/") as! DDXMLNode)
+        
+        var header = XMLElement(name: "soap", stringValue: "Header")
+        
+        var body = XMLElement(name: "soap", stringValue: "Body")
+        
+        body.addChild(messageXX)
+        
+        root.addChild(header)
+        
+        root.addChild(body)
+        
+        return root.xmlString
         
     }
     
