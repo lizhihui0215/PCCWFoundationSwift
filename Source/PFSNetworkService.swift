@@ -226,18 +226,18 @@ public struct SOAPEncoding: ParameterEncoding {
         let ffff = xxxx??.map{  $0.attribute(forName: "name")?.stringValue }
         
         for f in ffff! {
-            var value = param[f!]
+            let value = param[f!]
             messageXX.addChild(XMLElement.element(withName: f!, stringValue: value!) as! DDXMLNode)
         }
         
-        var root = XMLElement(name: "soap:Envelope")
+        let root = XMLElement(name: "soap:Envelope")
         
         root.addNamespace(XMLNode.namespace(withName: "soap",
                                               stringValue: "http://schemas.xmlsoap.org/soap/envelope/") as! DDXMLNode)
         
-        var header = XMLElement(name: "soap", stringValue: "Header")
+        let header = XMLElement(name: "soap", stringValue: "Header")
         
-        var body = XMLElement(name: "soap", stringValue: "Body")
+        let body = XMLElement(name: "soap", stringValue: "Body")
         
         body.addChild(messageXX)
         
@@ -252,7 +252,7 @@ public struct SOAPEncoding: ParameterEncoding {
     public func encode(_ urlRequest: URLRequestConvertible, with parameters: Parameters?) throws -> URLRequest {
         var urlRequest = try urlRequest.asURLRequest()
         
-        guard let parameters = parameters else { return urlRequest }
+        guard parameters != nil else { return urlRequest }
         do {
             if urlRequest.value(forHTTPHeaderField: "Content-Type") == nil {
                 urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")

@@ -9,12 +9,11 @@
 /* Begin PBXBuildFile section */
 		26152D561EAA11F8001CEEE7 /* Device+PFS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26152D551EAA11F8001CEEE7 /* Device+PFS.swift */; };
 		262C89C31F03F26B00EBDA0F /* UIView+Inspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262C89C21F03F26B00EBDA0F /* UIView+Inspectable.swift */; };
-		262C89C51F03F2D100EBDA0F /* PCCWFoundationSwift-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 262C89C41F03F2D100EBDA0F /* PCCWFoundationSwift-Bridging-Header.h */; };
 		262C89D81F03F37C00EBDA0F /* FDGapLayoutGuide.h in Headers */ = {isa = PBXBuildFile; fileRef = 262C89C81F03F37C00EBDA0F /* FDGapLayoutGuide.h */; };
 		262C89D91F03F37C00EBDA0F /* FDGapLayoutGuide.m in Sources */ = {isa = PBXBuildFile; fileRef = 262C89C91F03F37C00EBDA0F /* FDGapLayoutGuide.m */; };
 		262C89DA1F03F37C00EBDA0F /* FDLayoutSpacer.h in Headers */ = {isa = PBXBuildFile; fileRef = 262C89CA1F03F37C00EBDA0F /* FDLayoutSpacer.h */; };
 		262C89DB1F03F37C00EBDA0F /* FDLayoutSpacer.m in Sources */ = {isa = PBXBuildFile; fileRef = 262C89CB1F03F37C00EBDA0F /* FDLayoutSpacer.m */; };
-		262C89DC1F03F37C00EBDA0F /* FDStackView.h in Headers */ = {isa = PBXBuildFile; fileRef = 262C89CC1F03F37C00EBDA0F /* FDStackView.h */; };
+		262C89DC1F03F37C00EBDA0F /* FDStackView.h in Headers */ = {isa = PBXBuildFile; fileRef = 262C89CC1F03F37C00EBDA0F /* FDStackView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		262C89DD1F03F37C00EBDA0F /* FDStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 262C89CD1F03F37C00EBDA0F /* FDStackView.m */; };
 		262C89DE1F03F37C00EBDA0F /* FDStackViewAlignmentLayoutArrangement.h in Headers */ = {isa = PBXBuildFile; fileRef = 262C89CE1F03F37C00EBDA0F /* FDStackViewAlignmentLayoutArrangement.h */; };
 		262C89DF1F03F37C00EBDA0F /* FDStackViewAlignmentLayoutArrangement.m in Sources */ = {isa = PBXBuildFile; fileRef = 262C89CF1F03F37C00EBDA0F /* FDStackViewAlignmentLayoutArrangement.m */; };
@@ -61,7 +60,6 @@
 		11B1B8BDEEF632F996326318 /* Pods-PCCWFoundationSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PCCWFoundationSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-PCCWFoundationSwift/Pods-PCCWFoundationSwift.release.xcconfig"; sourceTree = "<group>"; };
 		26152D551EAA11F8001CEEE7 /* Device+PFS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Device+PFS.swift"; sourceTree = "<group>"; };
 		262C89C21F03F26B00EBDA0F /* UIView+Inspectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Inspectable.swift"; sourceTree = "<group>"; };
-		262C89C41F03F2D100EBDA0F /* PCCWFoundationSwift-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PCCWFoundationSwift-Bridging-Header.h"; sourceTree = "<group>"; };
 		262C89C81F03F37C00EBDA0F /* FDGapLayoutGuide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDGapLayoutGuide.h; sourceTree = "<group>"; };
 		262C89C91F03F37C00EBDA0F /* FDGapLayoutGuide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDGapLayoutGuide.m; sourceTree = "<group>"; };
 		262C89CA1F03F37C00EBDA0F /* FDLayoutSpacer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDLayoutSpacer.h; sourceTree = "<group>"; };
@@ -196,9 +194,9 @@
 				26152D541EAA119A001CEEE7 /* Extensions */,
 				269DFFDB1EA764B20006BAE2 /* Base Views */,
 				269DFFDA1EA764870006BAE2 /* Base View Controller */,
-				269DFFC51EA757690006BAE2 /* Supporting Files */,
 				5B87548AECFAE30E6A494549 /* Domain */,
 				5B875FA6669E8F327D5C2F2F /* View Model */,
+				269DFFC51EA757690006BAE2 /* Supporting Files */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -241,7 +239,6 @@
 		269DFFC51EA757690006BAE2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				262C89C41F03F2D100EBDA0F /* PCCWFoundationSwift-Bridging-Header.h */,
 				262CF3171EA752C200ED9F90 /* PCCWFoundationSwift.h */,
 				262CF3181EA752C200ED9F90 /* Info.plist */,
 			);
@@ -318,15 +315,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				262C89E21F03F37C00EBDA0F /* FDStackViewExtensions.h in Headers */,
+				262C89DC1F03F37C00EBDA0F /* FDStackView.h in Headers */,
 				262C89DA1F03F37C00EBDA0F /* FDLayoutSpacer.h in Headers */,
 				262C89E41F03F37C00EBDA0F /* FDStackViewLayoutArrangement.h in Headers */,
 				262C89E01F03F37C00EBDA0F /* FDStackViewDistributionLayoutArrangement.h in Headers */,
 				262C89DE1F03F37C00EBDA0F /* FDStackViewAlignmentLayoutArrangement.h in Headers */,
 				262CF3191EA752C200ED9F90 /* PCCWFoundationSwift.h in Headers */,
-				262C89C51F03F2D100EBDA0F /* PCCWFoundationSwift-Bridging-Header.h in Headers */,
 				262C89E61F03F37C00EBDA0F /* FDTransformLayer.h in Headers */,
 				262C89D81F03F37C00EBDA0F /* FDGapLayoutGuide.h in Headers */,
-				262C89DC1F03F37C00EBDA0F /* FDStackView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,7 +379,6 @@
 				TargetAttributes = {
 					262CF3131EA752C200ED9F90 = {
 						CreatedOnToolsVersion = 8.3.1;
-						DevelopmentTeam = 5F56XN57QC;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
@@ -603,7 +598,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 5F56XN57QC;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -625,7 +620,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -634,10 +629,10 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Source/PCCWFoundationSwift-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -673,7 +668,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 5F56XN57QC;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -689,17 +684,17 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pccw.foundation.swift.PCCWFoundationSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Source/PCCWFoundationSwift-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
