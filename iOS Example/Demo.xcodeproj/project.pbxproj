@@ -539,7 +539,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pccw.foundation.swift.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -555,7 +555,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pccw.foundation.swift.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -570,7 +570,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pccw.foundation.swift.DemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Demo.app/Demo";
 			};
 			name = Debug;
@@ -586,7 +586,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pccw.foundation.swift.DemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Demo.app/Demo";
 			};
 			name = Release;
@@ -601,7 +601,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pccw.foundation.swift.DemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Demo;
 			};
 			name = Debug;
@@ -616,7 +616,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pccw.foundation.swift.DemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Demo;
 			};
 			name = Release;
