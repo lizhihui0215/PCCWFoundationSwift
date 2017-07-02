@@ -72,6 +72,8 @@ class LoginViewModel<T :PFSLoginAction>: PFSViewModel<T> {
         
         let result = PFSValidate.validate(validates: [x,q])
         
+        
+        
         return Driver.just(true)
     }
 }

@@ -155,4 +155,5 @@ Pod::Spec.new do |s|
   s.dependency "RSKGrowingTextView"
   s.dependency "RxCocoa"
   s.dependency "KissXML"
+  s.dependency "Toaster"
 end

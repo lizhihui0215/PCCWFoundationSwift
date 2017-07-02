@@ -259,7 +259,8 @@ public struct SOAPEncoding: ParameterEncoding {
             }
             
             urlRequest.httpBody = "data".data(using: .utf8)
-        } catch {
+        }
+        catch {
             throw AFError.parameterEncodingFailed(reason: .jsonEncodingFailed(error: error))
         }
         

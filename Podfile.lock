@@ -42,6 +42,7 @@ PODS:
     - RxSwift (~> 3.2)
   - RxSwift (3.5.0)
   - SnapKit (3.2.0)
+  - Toaster (2.0.4)
   - TZImagePickerController (1.8.1)
   - UIColor_Hex_Swift (3.0.2)
 
@@ -61,6 +62,7 @@ DEPENDENCIES:
   - RxRealm
   - RxSwift
   - SnapKit
+  - Toaster
   - TZImagePickerController
   - UIColor_Hex_Swift
 
@@ -86,9 +88,10 @@ SPEC CHECKSUMS:
   RxRealm: 323de579b50b5e0f4a3e087d5925021f976ffaf1
   RxSwift: 18ee9d78b45edb3b0b7e79916b47a116e6dbc842
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
+  Toaster: f13031c636ef065281bc11857be9a16c7659e04f
   TZImagePickerController: '086034156913375cb19c8e4103562f15322c3b36'
   UIColor_Hex_Swift: 95f718452092a3efc8a827dffd2c04d3237be02d
 
-PODFILE CHECKSUM: 7a1f36f42f487eac3a618af44d597aba34ec52fd
+PODFILE CHECKSUM: 493197319f68536c0486d473ad4a05b83c05be5e
 
 COCOAPODS: 1.2.1
