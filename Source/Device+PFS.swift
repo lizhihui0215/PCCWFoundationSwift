@@ -9,9 +9,9 @@
 import DeviceKit
 import KeychainAccess
 
-let keychain = Keychain()
+public let keychain = Keychain()
 
-let device = Device()
+public let device = Device()
 
 extension Device {
     public var appVersion: String {
