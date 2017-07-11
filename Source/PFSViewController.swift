@@ -11,6 +11,7 @@ import RxSwift
 import RxCocoa
 import Result
 import Moya
+import Toaster
 
 extension UIViewController: PFSViewAction {
     public func alert(message: String) -> Driver<Bool> {
@@ -45,6 +46,18 @@ extension UIViewController: PFSViewAction {
         }).asDriver(onErrorJustReturn: result)
     }
     
+    
+    public func toast(message: String) -> Driver<Bool> {
+        return Observable.create{ observer in
+            let toast = Toast(text: message, duration: 0.5)
+            toast.show()
+            return Disposables.create{
+                toast.cancel()
+            }
+            }.asDriver(onErrorJustReturn: false)
+    }
+
+    
 }
 
 extension UIViewController {
@@ -73,6 +86,12 @@ open class PFSViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(PFSViewController.backgroundTapped))
+        self.view.addGestureRecognizer(tap)
+        
+        tap.cancelsTouchesInView = false
+
 
     }
 
@@ -80,6 +99,12 @@ open class PFSViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    func backgroundTapped()  {
+        self.view.endEditing(true)
+    }
+
     
 
     /*
