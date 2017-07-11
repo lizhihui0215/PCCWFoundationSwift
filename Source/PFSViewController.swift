@@ -13,6 +13,8 @@ import Result
 import Moya
 import Toaster
 
+
+
 extension UIViewController: PFSViewAction {
     public func alert(message: String) -> Driver<Bool> {
         return Observable.create({ element -> Disposable in
@@ -77,6 +79,19 @@ extension UIViewController {
     open func pfs_viewDidLoad()  {
         self.pfs_viewDidLoad()
         disposeBag = DisposeBag()
+    }
+    
+    func presentPicker<T: PFSPickerViewItem>(items: [T],  completeHandler: @escaping ((_ item: T) -> Void))  {
+        let picker = PFSPickerView<T>(items: items)
+        picker.completeHandler = completeHandler
+        
+        self.view.addSubview(picker)
+        picker.snp.makeConstraints { maker in
+            maker.top.equalToSuperview()
+            maker.leading.equalToSuperview()
+            maker.trailing.equalToSuperview()
+            maker.bottom.equalTo(bottomLayoutGuide.snp.top)
+        }
     }
 }
 

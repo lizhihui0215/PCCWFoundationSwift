@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		26152D561EAA11F8001CEEE7 /* Device+PFS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26152D551EAA11F8001CEEE7 /* Device+PFS.swift */; };
+		26258CE51F15162100FA318F /* PFSPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26258CE41F15162100FA318F /* PFSPickerView.swift */; };
 		262C89C31F03F26B00EBDA0F /* UIView+Inspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262C89C21F03F26B00EBDA0F /* UIView+Inspectable.swift */; };
 		262C89D81F03F37C00EBDA0F /* FDGapLayoutGuide.h in Headers */ = {isa = PBXBuildFile; fileRef = 262C89C81F03F37C00EBDA0F /* FDGapLayoutGuide.h */; };
 		262C89D91F03F37C00EBDA0F /* FDGapLayoutGuide.m in Sources */ = {isa = PBXBuildFile; fileRef = 262C89C91F03F37C00EBDA0F /* FDGapLayoutGuide.m */; };
@@ -59,6 +60,7 @@
 /* Begin PBXFileReference section */
 		11B1B8BDEEF632F996326318 /* Pods-PCCWFoundationSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PCCWFoundationSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-PCCWFoundationSwift/Pods-PCCWFoundationSwift.release.xcconfig"; sourceTree = "<group>"; };
 		26152D551EAA11F8001CEEE7 /* Device+PFS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Device+PFS.swift"; sourceTree = "<group>"; };
+		26258CE41F15162100FA318F /* PFSPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSPickerView.swift; sourceTree = "<group>"; };
 		262C89C21F03F26B00EBDA0F /* UIView+Inspectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Inspectable.swift"; sourceTree = "<group>"; };
 		262C89C81F03F37C00EBDA0F /* FDGapLayoutGuide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDGapLayoutGuide.h; sourceTree = "<group>"; };
 		262C89C91F03F37C00EBDA0F /* FDGapLayoutGuide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDGapLayoutGuide.m; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 				262C89C21F03F26B00EBDA0F /* UIView+Inspectable.swift */,
 				269DFFDC1EA765000006BAE2 /* PFSTableViewCell.swift */,
 				263019FC1EE5403E0002061E /* PFSExchageRootSegue.swift */,
+				26258CE41F15162100FA318F /* PFSPickerView.swift */,
 			);
 			name = "Base Views";
 			sourceTree = "<group>";
@@ -472,6 +475,7 @@
 				262C89E71F03F37C00EBDA0F /* FDTransformLayer.m in Sources */,
 				269DFFD11EA7585D0006BAE2 /* PFSViewController.swift in Sources */,
 				266A02591EE05E37008D17ED /* PFSPageDomain.swift in Sources */,
+				26258CE51F15162100FA318F /* PFSPickerView.swift in Sources */,
 				269DFFD91EA75A8F0006BAE2 /* PCCWFoundationSwift.swift in Sources */,
 				262C89E31F03F37C00EBDA0F /* FDStackViewExtensions.m in Sources */,
 				263019F51EE526C50002061E /* PFSDataRepository.swift in Sources */,
