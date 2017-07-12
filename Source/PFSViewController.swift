@@ -34,6 +34,12 @@ extension UIViewController: PFSViewAction {
     public func alert<T>(result: Result<T, MoyaError>) -> Driver<Result<T, MoyaError>>{
         return Observable.create({ element -> Disposable in
             let  alertView = UIAlertController(title: "", message: "", preferredStyle: .alert)
+            
+            let cancel = UIAlertAction(title: "确定", style: .cancel, handler: { _ in
+                alertView.dismiss(animated: true, completion: nil)
+            })
+            
+            alertView.addAction(cancel)
             switch result {
             case .failure(let error):
                 alertView.message = error.errorDescription
@@ -43,7 +49,7 @@ extension UIViewController: PFSViewAction {
                 element.onNext(result)
             }
            return Disposables.create{
-                alertView.dismiss(animated: true, completion: nil)
+//                alertView.dismiss(animated: true, completion: nil)
             }
         }).asDriver(onErrorJustReturn: result)
     }

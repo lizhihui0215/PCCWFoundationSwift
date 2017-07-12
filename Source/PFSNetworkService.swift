@@ -14,7 +14,7 @@ import KissXML
 public class PFSResponseMappableObject<T: Mappable>: Mappable {
     var message: String = ""
     
-    var code: Int = -1
+    var code: String = "-1"
     
     var result: T?
     
@@ -32,7 +32,7 @@ public class PFSResponseMappableObject<T: Mappable>: Mappable {
 public class PFSResponseNil: Mappable {
     var message: String = ""
     
-    var code: Int = -1
+    var code: String = "-1"
     
     required public init?(map: Map) {
     }
@@ -46,7 +46,7 @@ public class PFSResponseNil: Mappable {
 public class PFSResponseObject<T>: Mappable {
     var message: String = ""
     
-    var code: Int = -1
+    var code: String = "-1"
     
     var result: T?
     
@@ -64,7 +64,7 @@ public class PFSResponseObject<T>: Mappable {
 public class PFSResponseArray<T>: Mappable {
     var message: String = ""
     
-    var code: Int = -1
+    var code: String = "-1"
     
     var result: [T] = []
     
@@ -82,7 +82,7 @@ public class PFSResponseArray<T>: Mappable {
 public class PFSResponseMappableArray<T: Mappable>: Mappable {
     var message: String = ""
     
-    var code: Int = -1
+    var code: String = "-1"
     
     var result: [T] = []
     
