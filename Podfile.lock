@@ -3,7 +3,7 @@ PODS:
   - DeviceKit (1.2.3)
   - IQKeyboardManagerSwift (4.0.10)
   - KeychainAccess (3.0.2)
-  - Kingfisher (3.10.2)
+  - Kingfisher (3.10.3)
   - KissXML (5.2.0)
   - MJRefresh (3.1.12)
   - Moya (8.0.5):
@@ -21,7 +21,9 @@ PODS:
   - Moya/RxSwift (8.0.5):
     - Moya/Core
     - RxSwift (~> 3.0)
-  - NVActivityIndicatorView (3.6.1)
+  - NVActivityIndicatorView (3.7.0):
+    - NVActivityIndicatorView/Presenter (= 3.7.0)
+  - NVActivityIndicatorView/Presenter (3.7.0)
   - ObjectMapper (2.2.7)
   - ObjectMapper+Realm (0.3):
     - ObjectMapper
@@ -71,12 +73,12 @@ SPEC CHECKSUMS:
   DeviceKit: f33cbc6e67d9bb416e42dedc647557c7c2f6d3d7
   IQKeyboardManagerSwift: 75ba21a23794a1e6b6fe6d9a267ea17f80e06771
   KeychainAccess: a986406022dfc7c634c691ad3bec670cc6a32002
-  Kingfisher: 7297492bf8cec9b2e2dee3519f2219948580d98e
+  Kingfisher: a0ac82dc5bcf0388dd74b294cf2cc13730c63436
   KissXML: 1c1eeeb6b94e4522cd2f2373e5d0d03c9227738f
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   Moya: c37eec09a098ba9991b5a963b291fc5704bdb9ef
   Moya-ObjectMapper: 1b05f10bb69fb6c8750d497d2974c1c63c08c3a9
-  NVActivityIndicatorView: 9f52a7f84bf5c6a798722c450fe3c198e01c56ed
+  NVActivityIndicatorView: d3738df7e2e476aca0ba6bf32a8c9fbcfc33d64b
   ObjectMapper: 65abcfd9a61cf7396cbd14a4fb22fddfcc46577e
   ObjectMapper+Realm: 98992926f775a4fdf1c025541b97c78119f15b8a
   Realm: 3601ef091c8c499a31101d8563b991e75546cdce
