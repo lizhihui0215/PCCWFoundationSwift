@@ -112,6 +112,12 @@ class LoginViewController: PFSViewController  {
             print("No")
         }
         
+        let c = Driver.just("")
+        
+        c.drive { cc in
+            print(cc)
+        }
+        
         
     }
     
