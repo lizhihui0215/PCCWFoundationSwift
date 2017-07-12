@@ -87,7 +87,7 @@ extension UIViewController {
         disposeBag = DisposeBag()
     }
     
-    func presentPicker<T: PFSPickerViewItem>(items: [T],  completeHandler: @escaping ((_ item: T) -> Void))  {
+    public func presentPicker<T: PFSPickerViewItem>(items: [T],  completeHandler: @escaping ((_ item: T) -> Void))  {
         let picker = PFSPickerView<T>(items: items)
         picker.completeHandler = completeHandler
         
