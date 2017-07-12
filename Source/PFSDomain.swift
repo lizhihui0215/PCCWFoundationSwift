@@ -6,5 +6,4 @@ import Foundation
 
 open class PFSDomain {
     
-       
 }

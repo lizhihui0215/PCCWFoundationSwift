@@ -82,12 +82,15 @@ public class PFSValidate {
     }
 }
 
-open class PFSViewModel<T: PFSViewAction> {
+open class PFSViewModel<T: PFSViewAction, D: PFSDomain> {
     public weak var action: T?
+    
+    public var domain: D
     
     public let disposeBag = DisposeBag()
 
-    public init(action: T?) {
+    public init(action: T, domain: D) {
         self.action = action
+        self.domain = domain
     }
 }
