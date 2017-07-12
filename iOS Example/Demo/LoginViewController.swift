@@ -57,7 +57,13 @@ protocol PFSLoginAction: PFSViewAction {
     
 }
 
-class LoginViewModel<T :PFSLoginAction>: PFSViewModel<T> {
+class LoginDomain: PFSDomain {
+    override init() {
+        
+    }
+}
+
+class LoginViewModel<T :PFSLoginAction>: PFSViewModel<T, LoginDomain> {
     
     func test(username: String, password: String) -> Driver<Bool> {
         
@@ -87,7 +93,7 @@ class LoginViewController: PFSViewController  {
     @IBOutlet weak var testLabel: UILabel!
     
     lazy var viewModel: LoginViewModel<LoginViewController> = {
-        let model = LoginViewModel(action: self)
+        let model = LoginViewModel(action: self, domain: LoginDomain())
         return model
     }()
     
@@ -105,6 +111,8 @@ class LoginViewController: PFSViewController  {
         }else {
             print("No")
         }
+        
+        
     }
     
     override func didReceiveMemoryWarning() {

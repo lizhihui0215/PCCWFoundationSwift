@@ -8,9 +8,11 @@ import Result
 import Moya
 import ObjectMapper
 
-class PFSDataRepository {
+open class PFSDataRepository {
     
-    func handlerError<T>(response: Observable<PFSResponseObject<T>>) -> Observable<Result<T, MoyaError>>  {
+    
+    
+    public func handlerError<T>(response: Observable<PFSResponseObject<T>>) -> Observable<Result<T, MoyaError>>  {
         return response.map{ response in
             if response.code == 0 {
                 return Result(value: response.result!)
@@ -20,7 +22,7 @@ class PFSDataRepository {
         }
     }
     
-    func handlerError<T: Mappable>(response: Observable<PFSResponseMappableObject<T>>) -> Observable<Result<T, MoyaError>>  {
+    public func handlerError<T: Mappable>(response: Observable<PFSResponseMappableObject<T>>) -> Observable<Result<T, MoyaError>>  {
         return response.map{ response in
             if response.code == 0 {
                 return Result(value: response.result!)
@@ -30,7 +32,7 @@ class PFSDataRepository {
         }
     }
     
-    func handlerError<T>(response: Observable<PFSResponseArray<T>>) -> Observable<Result<[T], MoyaError>>  {
+    public func handlerError<T>(response: Observable<PFSResponseArray<T>>) -> Observable<Result<[T], MoyaError>>  {
         return response.map{ response in
             if response.code == 0 {
                 return Result(value: response.result)
@@ -40,7 +42,7 @@ class PFSDataRepository {
         }
     }
     
-    func handlerError<T: Mappable>(response: Observable<PFSResponseMappableArray<T>>) -> Observable<Result<[T], MoyaError>>  {
+    public func handlerError<T: Mappable>(response: Observable<PFSResponseMappableArray<T>>) -> Observable<Result<[T], MoyaError>>  {
         return response.map{ response in
             if response.code == 0 {
                 return Result(value: response.result)
@@ -50,7 +52,7 @@ class PFSDataRepository {
         }
     }
     
-    func handlerError(response: Observable<PFSResponseNil>) -> Observable<Result<String, MoyaError>>  {
+    public func handlerError(response: Observable<PFSResponseNil>) -> Observable<Result<String, MoyaError>>  {
         return response.map{ response in
             if response.code == 0 {
                 return Result(value: response.message)
