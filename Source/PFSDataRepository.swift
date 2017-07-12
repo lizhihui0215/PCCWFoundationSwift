@@ -10,7 +10,9 @@ import ObjectMapper
 
 open class PFSDataRepository {
     
-    
+    public init() {
+        
+    }
     
     public func handlerError<T>(response: Observable<PFSResponseObject<T>>) -> Observable<Result<T, MoyaError>>  {
         return response.map{ response in
