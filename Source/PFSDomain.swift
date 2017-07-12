@@ -5,5 +5,7 @@
 import Foundation
 
 open class PFSDomain {
-    
+    public init() {
+        
+    }
 }
