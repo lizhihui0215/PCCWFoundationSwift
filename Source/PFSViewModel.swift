@@ -22,64 +22,67 @@ extension PFSViewAction {
     }
 }
 
-public class PFSValidate {
-    let content: String?
-    
-    private var status: Bool = true
-    
-    public var message = ""
-    
-    public init(content: String?) {
-        self.content = content
+public class PFSValidate<T> {
+
+    private var result: Result<T?, MoyaError> = Result(value: nil)
+
+    public init(content: T?) {
+        self.result = Result(value: content)
     }
     
     public func notNull(message: String) -> Self{
-        guard let content = self.content, status else {
-            return self
-        }
+
+
         
-        if !(content.characters.count > 0) {
-            status = false
-            self.message = message
-        }
+//        guard let content = self.content, status else {
+//            return self
+//        }
+//        
+//        if !(content.characters.count > 0) {
+//            status = false
+//            self.message = message
+//        }
         
         return self
     }
     
     public func max(length: Int, message: String) -> Self {
-        guard let content = self.content, status else {
-            return self
-        }
-        
-        if content.characters.count > length {
-            status = false
-            self.message = message
-        }
+//        guard let content = self.content, status else {
+//            return self
+//        }
+//        
+//        if content.characters.count > length {
+//            status = false
+//            self.message = message
+//        }
         return self
     }
     
     public func min(length: Int, message: String) -> Self {
-        guard let content = self.content, status else {
-            return self
-        }
-        
-        if content.characters.count < length {
-            status = false
-            self.message = message
-        }
+//        guard let content = self.content, status else {
+//            return self
+//        }
+//        
+//        if content.characters.count < length {
+//            status = false
+//            self.message = message
+//        }
         return self
     }
+
+//    public func validate() -> Result<T?, MoyaError> {
+//        if status { return Result(value: Void) }
+//
+//        return Result(error: error(message: self.message))
+//    }
     
-    public class func validate(validates: [PFSValidate]) -> Result<[PFSValidate], MoyaError> {
-        var result = Result<[PFSValidate], MoyaError>(value: validates)
-        for validate in validates {
-            if !validate.status {
-                result = Result(error: error(message: validate.message))
-                break
-            }
-        }
-        return result
-    }
+//    public class func validate(validates: [PFSValidate]) -> Result<[PFSValidate], MoyaError> {
+//        var result = Result<[PFSValidate], MoyaError>(value: validates)
+//        for validate in validates {
+//            validate.validate().debugDescription
+//        }
+//        return result
+//    }
 }
 
 open class PFSViewModel<T: PFSViewAction, D: PFSDomain> {

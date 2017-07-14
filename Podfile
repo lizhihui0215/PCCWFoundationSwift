@@ -60,6 +60,10 @@ def libraries
     
     # https://github.com/devxoul/Toaster
     pod 'Toaster'
+    
+    # https://github.com/krzyzanowskim/CryptoSwift 未添加
+    pod 'CryptoSwift'
+
 
 end
 

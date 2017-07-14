@@ -76,7 +76,7 @@ class LoginViewModel<T :PFSLoginAction>: PFSViewModel<T, LoginDomain> {
             .notNull(message: "密码不能为空")
             .max(length: 5, message: "最大长度不能超过5")
         
-        let result = PFSValidate.validate(validates: [x,q])
+//        let result = PFSValidate.validate(validates: [x,q])
         
         
         
