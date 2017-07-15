@@ -17,7 +17,7 @@ open class PFSDataRepository {
     public func handlerError<T>(response: Observable<PFSResponseObject<T>>) -> Observable<Result<T?, MoyaError>>  {
         return response.map{ response in
             return Result {
-                if response.code == "0" {
+                if response.code != "0" {
                     throw MoyaError.underlying(Result<T, MoyaError>.error(response.message))
                 }
                 
@@ -29,7 +29,7 @@ open class PFSDataRepository {
     public func handlerError<T: Mappable>(response: Observable<PFSResponseMappableObject<T>>) -> Observable<Result<T?, MoyaError>>  {
         return response.map{ response in
             return Result {
-                if response.code == "0" {
+                if response.code != "0" {
                     throw MoyaError.underlying(Result<T, MoyaError>.error(response.message))
                 }
                 
@@ -41,7 +41,7 @@ open class PFSDataRepository {
     public func handlerError<T>(response: Observable<PFSResponseArray<T>>) -> Observable<Result<[T], MoyaError>>  {
         return response.map{ response in
             return Result {
-                if response.code == "0" {
+                if response.code != "0" {
                     throw MoyaError.underlying(Result<[T], MoyaError>.error(response.message))
                 }
                 
@@ -53,7 +53,7 @@ open class PFSDataRepository {
     public func handlerError<T: Mappable>(response: Observable<PFSResponseMappableArray<T>>) -> Observable<Result<[T], MoyaError>>  {
         return response.map{ response in
             return Result {
-                if response.code == "0" {
+                if response.code != "0" {
                     throw MoyaError.underlying(Result<[T], MoyaError>.error(response.message))
                 }
                 
@@ -66,7 +66,7 @@ open class PFSDataRepository {
         
         return response.map{ response in
             return Result {
-                if response.code == "0" {
+                if response.code != "0" {
                     throw MoyaError.underlying(Result<String, MoyaError>.error(response.message))
                 }
                 
