@@ -47,6 +47,7 @@ extension UIViewController: PFSViewAction {
                 element.onCompleted()
             case.success:
                 element.onNext(result)
+                element.onCompleted()
             }
            return Disposables.create{
 //                alertView.dismiss(animated: true, completion: nil)
