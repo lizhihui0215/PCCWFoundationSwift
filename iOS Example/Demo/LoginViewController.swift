@@ -63,71 +63,45 @@ class LoginDomain: PFSDomain {
     }
 }
 
+
 class LoginViewModel<T :PFSLoginAction>: PFSViewModel<T, LoginDomain> {
     
     func test(username: String, password: String) -> Driver<Bool> {
         
-
-        let a = username.rx.notNul(message: "用户名不能为空")
         
-        let b = username.rx.min(length: 3, message: "用户名不能小于3位")
+        let a = username.notNul(message: "用户名不能为空")
         
-        let c = username.rx.max(length: 8, message: "用户名不能大于8位")
+        let b = username.min(length: 3, message: "用户名不能小于3位")
+        
+        let c = username.max(length: 8, message: "用户名不能大于8位")
         
         
-        let d = password.rx.notNul(message: "密码不能为空")
+        let d = password.notNul(message: "密码不能为空")
         
-        let e = password.rx.min(length: 3, message: "密码不能小于3位")
+        let e = password.min(length: 3, message: "密码不能小于3位")
         
-        let f = password.rx.max(length: 8, message: "密码不能大于8位")
-
+        let f = password.max(length: 8, message: "密码不能大于8位")
+        
         
         let h = Observable.just("hhhhhh")
         
-       
-        let j = Observable.just("jjjjjj")
         
-        let fff = Observable.of(a,b,c,d,e,f).filter{
-            switch $0 {
-            case .success(_):
-                return false
-            case .failure(_):
-                return true
-            }
-            }.single().asDriver(onErrorJustReturn: Result(value: ""))
+        let j = Driver.just("jjjjjj")
         
-        .flatMapLatest {
+        
+        let fff = PFSValidate.of(a,b,c,d,e,f)
+        
+        fff.flatMapLatest {
             return (self.action?.alert(result: $0))!
-        }.drive { (result) in
-            print(result)
+            }.flatMapLatest { _ in
+                return j
+            }.drive(onNext: {
+                print($0)
+            }, onCompleted: {
+                
+            }) {
+                
         }
-//        fff.flatMapLatest { tt  in
-//            return Observable.just("ccc")
-//        }.subscribe(onNext: {
-//            print("next \($0)")
-//        }, onError: {
-//            print($0)
-//        }, onCompleted: {
-//            print("completed")
-//        }) {
-//            print("dispose")
-//        }
-        
-        
-//        Observable.of(a,b,c,d,e,f).flatMapLatest({ (t) -> Observable<String> in
-//            return Observable.just("ccccccccc")
-//        }).subscribe(onNext: {
-//            print($0)
-//        }, onError: {
-//            print($0)
-//        }, onCompleted: {
-//            print("completed")
-//        }) {
-//            print("dispose")
-//        }
-
-        
-        
         
         return Driver.just(true)
     }
@@ -167,7 +141,7 @@ class LoginViewController: PFSViewController  {
             print(cc)
         }
         
-        self.viewModel.test(username: "1234567", password: "xxxx")
+        self.viewModel.test(username: "123456789", password: "xxxx")
         
     }
     
