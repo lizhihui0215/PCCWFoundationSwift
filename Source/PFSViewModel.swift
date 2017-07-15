@@ -22,28 +22,76 @@ extension PFSViewAction {
     }
 }
 
-public class PFSValidate<T> {
 
-    private var result: Result<T?, MoyaError> = Result(value: nil)
 
-    public init(content: T?) {
-        self.result = Result(value: content)
+extension String: ReactiveCompatible {}
+
+extension Reactive where Base == String {
+    
+    public typealias VResult = Result<String?, MoyaError>
+
+
+    public func notNul(message: String) -> VResult {
+        let result: VResult = VResult {
+            if (self.base.characters.count) < 0 {
+                throw VResult.error(message)
+            }
+            
+            return self.base
+        }
+        
+        return result
     }
     
-    public func notNull(message: String) -> Self{
-
-
+    public func min(length: Int, message: String) -> VResult {
+        let result: VResult = VResult {
+            if (self.base.characters.count) < length {
+                throw VResult.error(message)
+            }
+            
+            return self.base
+        }
         
-//        guard let content = self.content, status else {
-//            return self
-//        }
-//        
-//        if !(content.characters.count > 0) {
-//            status = false
-//            self.message = message
-//        }
+        return result
+    }
+    
+    public func max(length: Int, message: String) -> VResult {
+        let result: VResult = VResult {
+            if (self.base.characters.count) > length {
+                throw VResult.error(message)
+            }
+            
+            return self.base
+        }
         
-        return self
+        return result
+    }
+
+}
+
+public class PFSValidate<T> {
+    
+    typealias VResult = Result<T?, MoyaError>
+    
+    private var content: T?
+
+    public init(content: T?) {
+        self.content = content
+    }
+    
+    public func notNull(message: String) -> Observable<T?>{
+                
+        return Observable<T?>.create({[weak self] element -> Disposable in
+            
+            if let string = self?.content as? String, string.characters.count > 0{
+                element.onNext(self?.content)
+            }else{
+                element.onError(VResult.error(message))
+            }
+            
+            return Disposables.create{
+            }
+        })
     }
     
     public func max(length: Int, message: String) -> Self {

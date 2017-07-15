@@ -68,15 +68,64 @@ class LoginViewModel<T :PFSLoginAction>: PFSViewModel<T, LoginDomain> {
     func test(username: String, password: String) -> Driver<Bool> {
         
 
-        var x = PFSValidate(content: "1")
-            .notNull(message: "用户名不能为空")
-            .max(length: 5, message: "最大长度不能超过5")
+        let a = username.rx.notNul(message: "用户名不能为空")
         
-        let q = PFSValidate(content: "xxxqqqq")
-            .notNull(message: "密码不能为空")
-            .max(length: 5, message: "最大长度不能超过5")
+        let b = username.rx.min(length: 3, message: "用户名不能小于3位")
         
-//        let result = PFSValidate.validate(validates: [x,q])
+        let c = username.rx.max(length: 8, message: "用户名不能大于8位")
+        
+        
+        let d = password.rx.notNul(message: "密码不能为空")
+        
+        let e = password.rx.min(length: 3, message: "密码不能小于3位")
+        
+        let f = password.rx.max(length: 8, message: "密码不能大于8位")
+
+        
+        let h = Observable.just("hhhhhh")
+        
+       
+        let j = Observable.just("jjjjjj")
+        
+        let fff = Observable.of(a,b,c,d,e,f).filter{
+            switch $0 {
+            case .success(_):
+                return false
+            case .failure(_):
+                return true
+            }
+            }.single().asDriver(onErrorJustReturn: Result(value: ""))
+        
+        .flatMapLatest {
+            return (self.action?.alert(result: $0))!
+        }.drive { (result) in
+            print(result)
+        }
+//        fff.flatMapLatest { tt  in
+//            return Observable.just("ccc")
+//        }.subscribe(onNext: {
+//            print("next \($0)")
+//        }, onError: {
+//            print($0)
+//        }, onCompleted: {
+//            print("completed")
+//        }) {
+//            print("dispose")
+//        }
+        
+        
+//        Observable.of(a,b,c,d,e,f).flatMapLatest({ (t) -> Observable<String> in
+//            return Observable.just("ccccccccc")
+//        }).subscribe(onNext: {
+//            print($0)
+//        }, onError: {
+//            print($0)
+//        }, onCompleted: {
+//            print("completed")
+//        }) {
+//            print("dispose")
+//        }
+
         
         
         
@@ -118,6 +167,7 @@ class LoginViewController: PFSViewController  {
             print(cc)
         }
         
+        self.viewModel.test(username: "1234567", password: "xxxx")
         
     }
     
