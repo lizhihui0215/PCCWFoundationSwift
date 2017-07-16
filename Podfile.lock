@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.5.0)
+  - CryptoSwift (0.6.9)
   - DeviceKit (1.2.3)
   - IQKeyboardManagerSwift (4.0.10)
   - KeychainAccess (3.0.2)
@@ -49,6 +50,7 @@ PODS:
   - UIColor_Hex_Swift (3.0.2)
 
 DEPENDENCIES:
+  - CryptoSwift
   - DeviceKit
   - IQKeyboardManagerSwift
   - KeychainAccess
@@ -70,6 +72,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  CryptoSwift: a22f6ba238e9ce4d26ee7bf45b9ed82e7122d4a0
   DeviceKit: f33cbc6e67d9bb416e42dedc647557c7c2f6d3d7
   IQKeyboardManagerSwift: 75ba21a23794a1e6b6fe6d9a267ea17f80e06771
   KeychainAccess: a986406022dfc7c634c691ad3bec670cc6a32002
@@ -94,6 +97,6 @@ SPEC CHECKSUMS:
   TZImagePickerController: '086034156913375cb19c8e4103562f15322c3b36'
   UIColor_Hex_Swift: 95f718452092a3efc8a827dffd2c04d3237be02d
 
-PODFILE CHECKSUM: 493197319f68536c0486d473ad4a05b83c05be5e
+PODFILE CHECKSUM: b75d331697949f7722dab28cd5513cbc36bf21c3
 
 COCOAPODS: 1.2.1

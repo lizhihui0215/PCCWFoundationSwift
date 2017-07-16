@@ -98,7 +98,7 @@ public class PFSResponseMappableArray<T: Mappable>: Mappable {
 }
 
 public protocol PFSTargetType: TargetType {
-    
+    var headers: [String : String] { get }
 }
 
 
@@ -152,13 +152,17 @@ public class PFSNetworkService<API: PFSTargetType>: PFSNetworkServiceStatic {
     }
     
     public final class func defaultEndpointMapping(for target: API) -> Endpoint<API> {
-        let defaultEndpoint = MoyaProvider.defaultEndpointMapping(for: target)
-
-        let headers = defaultEndpoint.httpHeaderFields
         
-        defaultEndpoint.adding(newHTTPHeaderFields: ["APP_NAME": "MY_AWESOME_APP"])
+        let endpoint: Endpoint<API> = Endpoint<API>(
+            url: url(for: target).absoluteString,
+            sampleResponseClosure: { .networkResponse(200, target.sampleData) },
+            method: target.method,
+            parameters: target.parameters,
+            parameterEncoding: target.parameterEncoding,
+            httpHeaderFields: [:]
+        )
         
-        return defaultEndpoint
+        return endpoint.adding(newHTTPHeaderFields: target.headers)
     }
 
 

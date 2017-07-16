@@ -12,6 +12,10 @@ import RxCocoa
 import Result
 
 enum APITarget: PFSTargetType {
+    var headers: [String : String] {
+        return ["xx" : "xx"]
+    }
+
     
     case test
     
