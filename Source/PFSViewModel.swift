@@ -38,7 +38,7 @@ extension String {
     public func notNul(message: String) -> VResult {
         let result: VResult = VResult {
             if self.characters.count <= 0 {
-                throw MoyaError.underlying(VResult.error(message))
+                throw error(message: message)
             }
             
             return self
@@ -50,9 +50,9 @@ extension String {
     public func min(length: Int, message: String, isContain: Bool = false) -> VResult {
         let result: VResult = VResult {
             if isContain, self.characters.count <= length {
-                throw MoyaError.underlying(VResult.error(message))
+                throw error(message: message)
             }else if self.characters.count < length {
-                throw MoyaError.underlying(VResult.error(message))
+                throw error(message: message)
             }
             
             return self
@@ -64,9 +64,9 @@ extension String {
     public func max(length: Int, message: String, isContain: Bool = false) -> VResult {
         let result: VResult = VResult {
             if isContain, self.characters.count >= length {
-                throw MoyaError.underlying(VResult.error(message))
+                throw error(message: message)
             }else if self.characters.count > length {
-                throw MoyaError.underlying(VResult.error(message))
+                throw error(message: message)
             }
             
             return self

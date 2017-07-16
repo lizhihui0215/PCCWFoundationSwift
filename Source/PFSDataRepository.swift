@@ -18,7 +18,7 @@ open class PFSDataRepository {
         return response.map{ response in
             return Result {
                 if response.code != "0" {
-                    throw MoyaError.underlying(Result<T, MoyaError>.error(response.message))
+                    throw error(message: response.message)
                 }
                 
                 return response.result
@@ -30,7 +30,7 @@ open class PFSDataRepository {
         return response.map{ response in
             return Result {
                 if response.code != "0" {
-                    throw MoyaError.underlying(Result<T, MoyaError>.error(response.message))
+                    throw error(message: response.message)
                 }
                 
                 return response.result
@@ -42,7 +42,7 @@ open class PFSDataRepository {
         return response.map{ response in
             return Result {
                 if response.code != "0" {
-                    throw MoyaError.underlying(Result<[T], MoyaError>.error(response.message))
+                    throw error(message: response.message)
                 }
                 
                 return response.result
@@ -54,7 +54,7 @@ open class PFSDataRepository {
         return response.map{ response in
             return Result {
                 if response.code != "0" {
-                    throw MoyaError.underlying(Result<[T], MoyaError>.error(response.message))
+                    throw error(message: response.message)
                 }
                 
                 return response.result
@@ -67,7 +67,7 @@ open class PFSDataRepository {
         return response.map{ response in
             return Result {
                 if response.code != "0" {
-                    throw MoyaError.underlying(Result<String, MoyaError>.error(response.message))
+                    throw error(message: response.message)
                 }
                 
                 return response.message

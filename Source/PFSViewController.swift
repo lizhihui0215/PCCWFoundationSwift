@@ -25,7 +25,7 @@ extension UIViewController: PFSViewAction {
                     element.onNext(true)
                     element.onCompleted()
                 }else {
-                    element.onError(MoyaError.underlying(Result<String, MoyaError>.error(message)))
+                    element.onError(error(message: message))
                 }
             })
             
