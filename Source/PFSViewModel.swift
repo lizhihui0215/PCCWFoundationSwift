@@ -11,7 +11,7 @@ import Moya
 public protocol PFSViewAction: class {
     func alert<T>(result: Result<T, MoyaError>) -> Driver<Result<T, MoyaError>>
     
-    func alert(message: String) -> Driver<Bool>
+    func alert(message: String, success: Bool) -> Driver<Bool>
     
     func animation<T>(_ task: (Driver<Result<T, MoyaError>>) -> Void)
 }
@@ -19,6 +19,10 @@ public protocol PFSViewAction: class {
 extension PFSViewAction {
     public func animation<T>(_ task: (Driver<Result<T, MoyaError>>) -> Void){
         
+    }
+    
+    func alert(message: String) -> Driver<Bool> {
+       return self.alert(message: message, success: true)
     }
 }
 

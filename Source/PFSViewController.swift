@@ -16,15 +16,21 @@ import Toaster
 
 
 extension UIViewController: PFSViewAction {
-    public func alert(message: String) -> Driver<Bool> {
+    public func alert(message: String, success: Bool = true) -> Driver<Bool> {
         return Observable.create({ element -> Disposable in
             let  alertView = UIAlertController(title: "", message: message, preferredStyle: .alert)
             
             let action = UIAlertAction(title: "", style: .default, handler: { action in
-                element.onNext(true)
+                if success {
+                    element.onNext(true)
+                    element.onCompleted()
+                }else {
+                    element.onError(MoyaError.underlying(Result<String, MoyaError>.error(message)))
+                }
             })
             
             alertView.addAction(action)
+            self.present(alertView, animated: true)
             return Disposables.create{
                 alertView.dismiss(animated: true, completion: nil)
             }
