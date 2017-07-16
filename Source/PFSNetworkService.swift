@@ -150,9 +150,35 @@ public class PFSNetworkService<API: PFSTargetType>: PFSNetworkServiceStatic {
         __code = code
         __result = result
     }
+    
+    public final class func defaultEndpointMapping(for target: API) -> Endpoint<API> {
+        let defaultEndpoint = MoyaProvider.defaultEndpointMapping(for: target)
+
+        let headers = defaultEndpoint.httpHeaderFields
+        
+        defaultEndpoint.adding(newHTTPHeaderFields: ["APP_NAME": "MY_AWESOME_APP"])
+        
+        return defaultEndpoint
+    }
+
 
     public override init(){
-        provider = RxMoyaProvider(plugins: [NetworkLoggerPlugin(verbose: true, responseDataFormatter: JSONResponseDataFormatter)])
+        provider = RxMoyaProvider<API>(endpointClosure: PFSNetworkService.defaultEndpointMapping,
+                                       requestClosure: MoyaProvider.defaultRequestMapping,
+                                       plugins: [NetworkLoggerPlugin(verbose: true, responseDataFormatter: JSONResponseDataFormatter)],
+                                       trackInflights: false)
+        
+    }
+    
+    // When a TargetType's path is empty, URL.appendingPathComponent may introduce trailing /, which may not be wanted in some cases
+    // See: https://github.com/Moya/Moya/pull/1053
+    // And: https://github.com/Moya/Moya/issues/1049
+    public final class func url(for target: PFSTargetType) -> URL {
+        if target.path.isEmpty {
+            return target.baseURL
+        }
+        
+        return target.baseURL.appendingPathComponent(target.path)
     }
     
     public func request<T>(_ token: API) -> Observable<PFSResponseObject<T>> {
