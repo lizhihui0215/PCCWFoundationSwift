@@ -20,7 +20,7 @@ extension UIViewController: PFSViewAction {
         return Observable.create({ element -> Disposable in
             let  alertView = UIAlertController(title: "", message: message, preferredStyle: .alert)
             
-            let action = UIAlertAction(title: "", style: .default, handler: { action in
+            let action = UIAlertAction(title: "确定", style: .default, handler: { action in
                 if success {
                     element.onNext(true)
                     element.onCompleted()
