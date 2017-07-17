@@ -134,6 +134,14 @@ open class PFSViewController: UIViewController {
     }
 
     
+    #if DEBUG
+
+    deinit {
+        debug("DEBUG", content: "deinit")
+    }
+    
+    #endif
+    
 
     /*
     // MARK: - Navigation

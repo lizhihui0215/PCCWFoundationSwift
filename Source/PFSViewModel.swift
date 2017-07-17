@@ -74,9 +74,6 @@ extension String {
         
         return result
     }
-    
-    
-
 }
 
 
@@ -92,4 +89,10 @@ open class PFSViewModel<T: PFSViewAction, D: PFSDomain> {
         self.action = action
         self.domain = domain
     }
+    
+    #if DEBUG
+    deinit {
+        debug("DEBUG", content: "deinit")
+    }
+    #endif
 }
