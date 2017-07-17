@@ -137,7 +137,7 @@ open class PFSViewController: UIViewController {
     #if DEBUG
 
     deinit {
-        debug("DEBUG", content: "deinit")
+        debug("DEBUG", model: self, content: "deinit")
     }
     
     #endif

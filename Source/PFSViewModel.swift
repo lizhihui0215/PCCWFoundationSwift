@@ -92,7 +92,7 @@ open class PFSViewModel<T: PFSViewAction, D: PFSDomain> {
     
     #if DEBUG
     deinit {
-        debug("DEBUG", content: "deinit")
+        debug("DEBUG", model: self, content: "deinit")
     }
     #endif
 }
