@@ -32,10 +32,13 @@ open class PFSDataRepository {
                 return false
             }
             
-            UserDefaults.standard.set(value.toJSON(), forKey: key)
+            guard let _ = try? PFSRealm.realm.write({
+                UserDefaults.standard.set(value.toJSON(), forKey: key)
+            })else{
+                return false
+            }
         }
         
-
         return UserDefaults.standard.synchronize()
     }
     

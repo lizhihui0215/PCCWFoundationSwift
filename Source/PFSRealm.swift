@@ -13,10 +13,16 @@ import Moya
 
 
 open class PFSRealm {
+    
+    public static var config: Realm.Configuration?
 
-    private var realm: Realm {
+    public static var realm: Realm {
         get {
-            return try! Realm()
+            guard let config = PFSRealm.config else {
+                return try! Realm()
+            }
+            
+            return try! Realm(configuration: config)
         }
     }
     
@@ -27,7 +33,7 @@ open class PFSRealm {
     
     public func save<T: Object>(obj: T) -> Result<T, MoyaError> {
         do {
-            try realm.write { realm.add(obj) }
+            try PFSRealm.realm.write { PFSRealm.realm.add(obj) }
         } catch let error {
             return Result(error: MoyaError.underlying(error))
         }
@@ -37,7 +43,7 @@ open class PFSRealm {
     
     public func update<T: Object>(obj: T, _ handler: @escaping (T) -> Void) -> Result<T, MoyaError> {
         do {
-            try realm.write { handler(obj) }
+            try PFSRealm.realm.write { handler(obj) }
         } catch let error {
             return Result(error: MoyaError.underlying(error))
         }
@@ -46,10 +52,10 @@ open class PFSRealm {
     }
 
     public func object<T: Object>() -> T? {
-        return realm.objects(T.self).first
+        return PFSRealm.realm.objects(T.self).first
     }
     
     public func object<T: Object, K>(_ forPrimaryKey: K) -> T? {
-        return realm.object(ofType: T.self, forPrimaryKey: forPrimaryKey)
+        return PFSRealm.realm.object(ofType: T.self, forPrimaryKey: forPrimaryKey)
     }
 }
