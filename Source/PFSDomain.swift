@@ -9,6 +9,7 @@ import Result
 import RxCocoa
 
 open class PFSDomain {
+    
     public init() {
         
     }
