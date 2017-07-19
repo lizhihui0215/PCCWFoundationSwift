@@ -27,13 +27,14 @@ open class PFSDataRepository {
     public func save<T>(key: String, value: T) -> Bool{
         if basicType(value) {
             UserDefaults.standard.set(value, forKey: key)
+        }else {
+            guard let value = value as? Mappable else {
+                return false
+            }
+            
+            UserDefaults.standard.set(value.toJSON(), forKey: key)
         }
         
-        guard let value = value as? Mappable else {
-            return false
-        }
-        
-        UserDefaults.standard.set(value.toJSON(), forKey: key)
 
         return UserDefaults.standard.synchronize()
     }
