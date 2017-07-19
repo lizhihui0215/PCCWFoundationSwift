@@ -27,25 +27,33 @@ open class PFSDataRepository {
     public func save<T>(key: String, value: T) -> Bool{
         if basicType(value) {
             UserDefaults.standard.set(value, forKey: key)
-        }else {
-            let data = NSKeyedArchiver.archivedData(withRootObject: value)
-            UserDefaults.standard.set(data, forKey: key)
         }
+        
+        guard let value = value as? Mappable else {
+            return false
+        }
+        
+        UserDefaults.standard.set(value.toJSON(), forKey: key)
+
         return UserDefaults.standard.synchronize()
     }
     
     public func fetch<T>(key: String) -> T? {
         if basicType(T.self) {
-            return UserDefaults.value(forKey: key) as? T
-        }else {
-            let data = UserDefaults.value(forKey: key) as? Data
-            
-            guard let dataT = data else {
-                return nil
-            }
-            
-            return NSKeyedUnarchiver.unarchiveObject(with: dataT) as? T
+            return UserDefaults.standard.value(forKey: key) as? T
         }
+        
+        return nil
+    }
+    
+    
+    public func fetch<T: Mappable>(key: String) -> T? {
+        
+        guard let JSON = UserDefaults.standard.dictionary(forKey: key)  else {
+            return nil
+        }
+            
+        return Mapper<T>().map(JSON: JSON)
     }
     
     public func handlerError<T>(response: Observable<PFSResponseObject<T>>) -> Observable<Result<T?, MoyaError>>  {
