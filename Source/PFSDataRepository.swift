@@ -28,15 +28,9 @@ open class PFSDataRepository {
         if basicType(value) {
             UserDefaults.standard.set(value, forKey: key)
         }else {
-            guard let value = value as? Mappable else {
-                return false
-            }
+            let data = NSKeyedArchiver.archivedData(withRootObject: value)
             
-            guard let _ = try? PFSRealm.realm.write({
-                UserDefaults.standard.set(value.toJSON(), forKey: key)
-            })else{
-                return false
-            }
+            UserDefaults.standard.set(data, forKey: key)
         }
         
         return UserDefaults.standard.synchronize()
@@ -45,9 +39,15 @@ open class PFSDataRepository {
     public func fetch<T>(key: String) -> T? {
         if basicType(T.self) {
             return UserDefaults.standard.value(forKey: key) as? T
+        }else {
+            let value = UserDefaults.standard.value(forKey: key)
+            
+            guard let data = value as? Data else {
+                return nil
+            }
+            
+            return NSKeyedUnarchiver.unarchiveObject(with: data) as? T
         }
-        
-        return nil
     }
     
     
