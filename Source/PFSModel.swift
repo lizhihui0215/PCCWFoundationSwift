@@ -13,7 +13,7 @@ open class PFSModel: Object, Mappable, NSCoding {
 
     dynamic var uuid = UUID().uuidString
 
-    public convenience required init?(map: Map) {
+    public required convenience  init?(map: Map) {
         self.init()
     }
     
@@ -23,8 +23,13 @@ open class PFSModel: Object, Mappable, NSCoding {
 
     public func encode(with aCoder: NSCoder) {
     }
+    
+    override open static func primaryKey() -> String? {
+        return "uuid"
+    }
 
-    public required init?(coder aDecoder: NSCoder) {
+
+    public required convenience init?(coder aDecoder: NSCoder) {
         self.init()
     }
 
