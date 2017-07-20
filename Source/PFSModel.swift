@@ -27,7 +27,7 @@ open class PFSModel: Object, Mappable, NSCoding {
         
     }
 
-    public func encode(with aCoder: NSCoder) {
+    open func encode(with aCoder: NSCoder) {
         aCoder.encode(uuid, forKey: "uuid")
     }
     
