@@ -24,5 +24,4 @@ open class PFSModel: Object, Mappable {
     override open static func primaryKey() -> String? {
         return "uuid"
     }
-
 }
