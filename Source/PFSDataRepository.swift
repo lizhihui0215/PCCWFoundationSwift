@@ -27,27 +27,16 @@ open class PFSDataRepository {
     public func save<T>(key: String, value: T) -> Bool{
         if basicType(value) {
             UserDefaults.standard.set(value, forKey: key)
-        }else {
-            let data = NSKeyedArchiver.archivedData(withRootObject: value)
-            
-            UserDefaults.standard.set(data, forKey: key)
         }
-        
         return UserDefaults.standard.synchronize()
     }
     
     public func fetch<T>(key: String) -> T? {
         if basicType(T.self) {
             return UserDefaults.standard.value(forKey: key) as? T
-        }else {
-            let value = UserDefaults.standard.value(forKey: key)
-            
-            guard let data = value as? Data else {
-                return nil
-            }
-            
-            return NSKeyedUnarchiver.unarchiveObject(with: data) as? T
         }
+        
+        return nil
     }
     
     
