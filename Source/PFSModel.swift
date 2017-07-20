@@ -9,13 +9,23 @@
 import RealmSwift
 import ObjectMapper
 
-open class PFSModel: Object, Mappable {
-    
-    required convenience public init?(map: Map) {
+open class PFSModel: Object, Mappable, NSCoding {
+
+    dynamic var uuid = UUID().uuidString
+
+    public convenience required init?(map: Map) {
         self.init()
     }
     
     open func mapping(map: Map) {
         
     }
+
+    public func encode(with aCoder: NSCoder) {
+    }
+
+    public required init?(coder aDecoder: NSCoder) {
+        self.init()
+    }
+
 }

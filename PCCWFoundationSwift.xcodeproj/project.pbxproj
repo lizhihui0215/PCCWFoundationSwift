@@ -51,7 +51,7 @@
 		5B875154112FDE6DBD7A698B /* DispatchQueue+PFS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B875AEA35BED91F6285D7C3 /* DispatchQueue+PFS.swift */; };
 		5B875A46A8BE6E6C44554E76 /* PFSDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B87570B71091E919B02607C /* PFSDomain.swift */; };
 		5B875FD7C1A7CCD97AEB074C /* PFSNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8754000C5592E676313BE3 /* PFSNetworkService.swift */; };
-		908D3818704E048FD8D3DCE7 /* Pods_PCCWFoundationSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB37DE3953413D8B5AB2C8F /* Pods_PCCWFoundationSwift.framework */; };
+		7012F462D7200DD162A39714 /* Pods_PCCWFoundationSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DB5F5034CD51581F386560 /* Pods_PCCWFoundationSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +65,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		11B1B8BDEEF632F996326318 /* Pods-PCCWFoundationSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PCCWFoundationSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-PCCWFoundationSwift/Pods-PCCWFoundationSwift.release.xcconfig"; sourceTree = "<group>"; };
+		0B9F5F6B5496A03F14D8847E /* Pods-PCCWFoundationSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PCCWFoundationSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PCCWFoundationSwift/Pods-PCCWFoundationSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		2606F2F41F1FA34C002477E2 /* PFSTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSTableViewController.swift; sourceTree = "<group>"; };
 		2606F2F61F1FA369002477E2 /* PFSCheckbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSCheckbox.swift; sourceTree = "<group>"; };
 		2606F2F81F1FA38A002477E2 /* PFSFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSFileManager.swift; sourceTree = "<group>"; };
@@ -114,8 +114,8 @@
 		5B87570B71091E919B02607C /* PFSDomain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSDomain.swift; sourceTree = "<group>"; };
 		5B8758850C85398CD82E6754 /* PFSViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSViewModel.swift; sourceTree = "<group>"; };
 		5B875AEA35BED91F6285D7C3 /* DispatchQueue+PFS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+PFS.swift"; sourceTree = "<group>"; };
-		ADB37DE3953413D8B5AB2C8F /* Pods_PCCWFoundationSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PCCWFoundationSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EDA7F7F48ACFAE918BC6808B /* Pods-PCCWFoundationSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PCCWFoundationSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PCCWFoundationSwift/Pods-PCCWFoundationSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		AE326F53674AF27688CA9DC6 /* Pods-PCCWFoundationSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PCCWFoundationSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-PCCWFoundationSwift/Pods-PCCWFoundationSwift.release.xcconfig"; sourceTree = "<group>"; };
+		D0DB5F5034CD51581F386560 /* Pods_PCCWFoundationSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PCCWFoundationSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				908D3818704E048FD8D3DCE7 /* Pods_PCCWFoundationSwift.framework in Frameworks */,
+				7012F462D7200DD162A39714 /* Pods_PCCWFoundationSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,7 +186,7 @@
 				269DFFBB1EA757440006BAE2 /* Tests */,
 				262CF3151EA752C200ED9F90 /* Products */,
 				34D6451660AD26E4714649D2 /* Frameworks */,
-				6C19FB60DCCD89479B4D5AEF /* Pods */,
+				9DF0D510D2884EDF52E2CE64 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -300,7 +300,7 @@
 			isa = PBXGroup;
 			children = (
 				26877C041EB86A0500041460 /* PCCWFoundationSwift.framework */,
-				ADB37DE3953413D8B5AB2C8F /* Pods_PCCWFoundationSwift.framework */,
+				D0DB5F5034CD51581F386560 /* Pods_PCCWFoundationSwift.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -322,11 +322,11 @@
 			name = "View Model";
 			sourceTree = "<group>";
 		};
-		6C19FB60DCCD89479B4D5AEF /* Pods */ = {
+		9DF0D510D2884EDF52E2CE64 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				EDA7F7F48ACFAE918BC6808B /* Pods-PCCWFoundationSwift.debug.xcconfig */,
-				11B1B8BDEEF632F996326318 /* Pods-PCCWFoundationSwift.release.xcconfig */,
+				0B9F5F6B5496A03F14D8847E /* Pods-PCCWFoundationSwift.debug.xcconfig */,
+				AE326F53674AF27688CA9DC6 /* Pods-PCCWFoundationSwift.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -357,12 +357,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 262CF31A1EA752C200ED9F90 /* Build configuration list for PBXNativeTarget "PCCWFoundationSwift" */;
 			buildPhases = (
-				E1B1609D71EC24C2DC24FD66 /* [CP] Check Pods Manifest.lock */,
+				73E36CF6627D1AEA66F56C90 /* [CP] Check Pods Manifest.lock */,
 				262CF30F1EA752C200ED9F90 /* Sources */,
 				262CF3101EA752C200ED9F90 /* Frameworks */,
 				262CF3111EA752C200ED9F90 /* Headers */,
 				262CF3121EA752C200ED9F90 /* Resources */,
-				68B12F93490BAD3EB6AB348D /* [CP] Copy Pods Resources */,
+				1666CD2C564D2181F5F2A887 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -449,7 +449,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		68B12F93490BAD3EB6AB348D /* [CP] Copy Pods Resources */ = {
+		1666CD2C564D2181F5F2A887 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -464,7 +464,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PCCWFoundationSwift/Pods-PCCWFoundationSwift-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E1B1609D71EC24C2DC24FD66 /* [CP] Check Pods Manifest.lock */ = {
+		73E36CF6627D1AEA66F56C90 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -605,7 +605,7 @@
 		};
 		262CF31B1EA752C200ED9F90 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EDA7F7F48ACFAE918BC6808B /* Pods-PCCWFoundationSwift.debug.xcconfig */;
+			baseConfigurationReference = 0B9F5F6B5496A03F14D8847E /* Pods-PCCWFoundationSwift.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -675,7 +675,7 @@
 		};
 		262CF31C1EA752C200ED9F90 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 11B1B8BDEEF632F996326318 /* Pods-PCCWFoundationSwift.release.xcconfig */;
+			baseConfigurationReference = AE326F53674AF27688CA9DC6 /* Pods-PCCWFoundationSwift.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
