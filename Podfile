@@ -64,6 +64,9 @@ def libraries
     # https://github.com/krzyzanowskim/CryptoSwift 未添加
     pod 'CryptoSwift'
 
+    # https://github.com/marcuswestin/WebViewJavascriptBridge
+    pod 'WebViewJavascriptBridge'
+
 
 end
 

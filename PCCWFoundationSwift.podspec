@@ -156,4 +156,6 @@ Pod::Spec.new do |s|
   s.dependency "RxCocoa"
   s.dependency "KissXML"
   s.dependency "Toaster"
+  s.dependency "CryptoSwift"
+  s.dependency "WebViewJavascriptBridge"
 end
