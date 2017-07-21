@@ -55,7 +55,12 @@ open class PFSRealm {
         return PFSRealm.realm.objects(T.self).first
     }
     
-    public func object<T: Object>(_ forPrimaryKey: String) -> T? {
+    public func object<T: Object>(forPrimaryKey: String) -> T? {
         return PFSRealm.realm.object(ofType: T.self, forPrimaryKey: forPrimaryKey)
     }
+    
+    public func object<T: Object>(_ predicateFormat: String, _ args: Any...) -> T? {
+        return PFSRealm.realm.objects(T.self).filter(predicateFormat, args).first
+    }
+    
 }
