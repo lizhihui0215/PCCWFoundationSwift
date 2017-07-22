@@ -40,26 +40,26 @@ open class PFSDataRepository {
         return nil
     }
 
-    public func handlerError<T>(response: Observable<PFSResponseObject<T>>) -> Driver<Result<T?, MoyaError>> {
+    public func handlerError<T>(response: Observable<PFSResponseObject<T>>) -> Driver<Result<T, MoyaError>> {
         return response.map { response in
             return Result {
                 if response.code != "0" {
                     throw error(message: response.message, code: response.code)
                 }
-                return response.result
+                return response.result!
             }
         }.asDriver { error in
             return Driver.just(Result(error: MoyaError.underlying(error)))
         }
     }
 
-    public func handlerError<T:Mappable>(response: Observable<PFSResponseMappableObject<T>>) -> Driver<Result<T?, MoyaError>> {
+    public func handlerError<T:Mappable>(response: Observable<PFSResponseMappableObject<T>>) -> Driver<Result<T, MoyaError>> {
         return response.map { response in
             return Result {
                 if response.code != "0" {
                     throw error(message: response.message, code: response.code)
                 }
-                return response.result
+                return response.result!
             }
         }.asDriver { error in
             return Driver.just(Result(error: MoyaError.underlying(error)))
