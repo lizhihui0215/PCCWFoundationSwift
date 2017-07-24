@@ -21,28 +21,28 @@ public func swizzling(target: AnyClass,originalSelector : Selector, swizzledSele
 
 public func basicType<N>(_ field: N) -> Bool {
     if let x = field as Any? , false
-        || x is NSNumber // Basic types
-        || x is Bool
-        || x is Int
-        || x is Double
-        || x is Float
-        || x is String
-        || x is NSNull
-        || x is Array<NSNumber> // Arrays
-        || x is Array<Bool>
-        || x is Array<Int>
-        || x is Array<Double>
-        || x is Array<Float>
-        || x is Array<String>
-        || x is Array<Any>
-        || x is Array<Dictionary<String, Any>>
-        || x is Dictionary<String, NSNumber> // Dictionaries
-        || x is Dictionary<String, Bool>
-        || x is Dictionary<String, Int>
-        || x is Dictionary<String, Double>
-        || x is Dictionary<String, Float>
-        || x is Dictionary<String, String>
-        || x is Dictionary<String, Any>
+        || x is NSNumber.Type // Basic types
+        || x is Bool.Type
+        || x is Int.Type
+        || x is Double.Type
+        || x is Float.Type
+        || x is String.Type
+        || x is NSNull.Type
+        || x is Array<NSNumber>.Type // Arrays
+        || x is Array<Bool>.Type
+        || x is Array<Int>.Type
+        || x is Array<Double>.Type
+        || x is Array<Float>.Type
+        || x is Array<String>.Type
+        || x is Array<Any>.Type
+        || x is Array<Dictionary<String, Any>>.Type
+        || x is Dictionary<String, NSNumber>.Type// Dictionaries
+        || x is Dictionary<String, Bool>.Type
+        || x is Dictionary<String, Int>.Type
+        || x is Dictionary<String, Double>.Type
+        || x is Dictionary<String, Float>.Type
+        || x is Dictionary<String, String>.Type
+        || x is Dictionary<String, Any>.Type
     {
         return true
     }

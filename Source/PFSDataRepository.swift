@@ -33,6 +33,7 @@ open class PFSDataRepository {
     }
 
     public func cache<T>(key: String) -> T? {
+        print(T.self)
         if optionalBasicType(T.self) {
             return UserDefaults.standard.value(forKey: key) as? T
         }
