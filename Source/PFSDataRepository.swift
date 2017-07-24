@@ -26,15 +26,14 @@ open class PFSDataRepository {
 
     @discardableResult
     public func cache<T>(key: String, value: T) -> Bool {
-        if basicType(value) {
+        if basicType(T.self) {
             UserDefaults.standard.set(value, forKey: key)
         }
         return UserDefaults.standard.synchronize()
     }
 
     public func cache<T>(key: String) -> T? {
-        print(T.self)
-        if optionalBasicType(T.self) {
+        if basicType(T.self) {
             return UserDefaults.standard.value(forKey: key) as? T
         }
 
