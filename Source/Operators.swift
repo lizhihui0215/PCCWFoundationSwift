@@ -106,6 +106,25 @@ public func <-> <T>(property: ControlProperty<T>, variable: Variable<T>) -> Disp
     return Disposables.create(bindToUIDisposable, bindToVariable)
 }
 
+public extension Reactive where Base: UISwitch {
+    public var isOn: ControlProperty<Bool> {
+        return value
+    }
+    
+    public var value: ControlProperty<Bool> {
+        return UIControl.valuePublic(
+            base,
+            getter: { `switch`  in
+                `switch`.isOn
+        },
+            setter: { `switch`, value in
+                `switch`.isOn = value
+        },
+            controlEvents: [.valueChanged ])
+    }
+
+}
+
 public extension Reactive where Base: UIButton {
     /// Reactive wrapper for `text` property.
     public var isSelected: ControlProperty<Bool> {
