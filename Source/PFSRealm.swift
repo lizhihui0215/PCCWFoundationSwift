@@ -31,6 +31,7 @@ open class PFSRealm {
     init() {
     }
     
+    @discardableResult
     public func save<T: Object>(obj: T) -> Result<T, MoyaError> {
         do {
             try PFSRealm.realm.write { PFSRealm.realm.add(obj) }
@@ -41,6 +42,7 @@ open class PFSRealm {
         return Result(value: obj)
     }
     
+    @discardableResult
     public func update<T: Object>(obj: T, _ handler: @escaping (T) -> Void) -> Result<T, MoyaError> {
         do {
             try PFSRealm.realm.write { handler(obj) }
@@ -48,6 +50,16 @@ open class PFSRealm {
             return Result(error: MoyaError.underlying(error))
         }
         
+        return Result(value: obj)
+    }
+    
+    @discardableResult
+    public func update<T: Object>(obj: T) -> Result<T, MoyaError> {
+        do {
+            try PFSRealm.realm.write { PFSRealm.realm.add(obj, update: true) }
+        } catch let error {
+            return Result(error: MoyaError.underlying(error))
+        }
         return Result(value: obj)
     }
 
