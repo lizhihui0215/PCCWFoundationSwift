@@ -75,10 +75,13 @@ open class PFSRealm {
         return PFSRealm.realm.objects(T.self).filter(predicateFormat, args).first
     }
     
-    public func clean() {
-        PFSRealm.realm.write {
-            PFSRealm.realm.deleteAll()
+    public func clean() throws{
+        do {
+            try PFSRealm.realm.write { PFSRealm.realm.deleteAll() }
+        } catch let error {
+            throw error
         }
+       
 
 //        let realmURL = Realm.Configuration.defaultConfiguration.fileURL!
 //        let realmURLs = [
