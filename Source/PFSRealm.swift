@@ -75,21 +75,23 @@ open class PFSRealm {
         return PFSRealm.realm.objects(T.self).filter(predicateFormat, args).first
     }
     
-    public func clean() throws {
-        let realmURL = Realm.Configuration.defaultConfiguration.fileURL!
-        let realmURLs = [
-            realmURL,
-            realmURL.appendingPathExtension("lock"),
-            realmURL.appendingPathExtension("note"),
-            realmURL.appendingPathExtension("management")
-        ]
-        for URL in realmURLs {
-            do {
-                try FileManager.default.removeItem(at: URL)
-            } catch {
-                throw error
-            }
-        }
+    public func clean() {
+        PFSRealm.realm.deleteAll()
+
+//        let realmURL = Realm.Configuration.defaultConfiguration.fileURL!
+//        let realmURLs = [
+//            realmURL,
+//            realmURL.appendingPathExtension("lock"),
+//            realmURL.appendingPathExtension("note"),
+//            realmURL.appendingPathExtension("management")
+//        ]
+//        for URL in realmURLs {
+//            do {
+//                try FileManager.default.removeItem(at: URL)
+//            } catch {
+//                throw error
+//            }
+//        }
     }
     
 }
