@@ -16,6 +16,7 @@ import Toaster
 
 
 extension UIViewController: PFSViewAction {
+
     public func alert(message: String, success: Bool = true) -> Driver<Bool> {
         return Observable.create({ element -> Disposable in
             let  alertView = UIAlertController(title: "", message: message, preferredStyle: .alert)
