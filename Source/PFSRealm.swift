@@ -76,7 +76,9 @@ open class PFSRealm {
     }
     
     public func clean() {
-        PFSRealm.realm.deleteAll()
+        PFSRealm.realm.write {
+            PFSRealm.realm.deleteAll()
+        }
 
 //        let realmURL = Realm.Configuration.defaultConfiguration.fileURL!
 //        let realmURLs = [
