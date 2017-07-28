@@ -14,6 +14,8 @@ public protocol PFSViewAction: class {
     func alert(message: String, success: Bool) -> Driver<Bool>
     
     func animation<T>(_ task: (Driver<Result<T, MoyaError>>) -> Void)
+    
+    func confirm<T>(message: String, content: T) -> Driver<T?>
 }
 
 extension PFSViewAction {
@@ -23,6 +25,10 @@ extension PFSViewAction {
     
     func alert(message: String) -> Driver<Bool> {
        return self.alert(message: message, success: true)
+    }
+    
+    func confirm<T>(message: String) -> Driver<T?> {
+        return self.confirm(message: message)
     }
 }
 

@@ -36,6 +36,29 @@ extension UIViewController: PFSViewAction {
             }
         }).asDriver(onErrorJustReturn: false)
     }
+    
+    public func confirm<T>(message: String, content: T? = nil) -> Driver<T?> {
+        return Observable.create({ element -> Disposable in
+            let  alertView = UIAlertController(title: "", message: message, preferredStyle: .alert)
+            
+            let action = UIAlertAction(title: "确定", style: .default, handler: { action in
+                element.onNext(content)
+                element.onCompleted()
+            })
+            
+            let cancel = UIAlertAction(title: "取消", style: .cancel, handler: { action in
+                element.onError(error(message: "cancel"))
+                element.onCompleted()
+            })
+            
+            alertView.addAction(action)
+            alertView.addAction(cancel)
+            self.present(alertView, animated: true)
+            return Disposables.create{
+                alertView.dismiss(animated: true, completion: nil)
+            }
+        }).asDriver(onErrorJustReturn: content)
+    }
 
     public func alert<T>(result: Result<T, MoyaError>) -> Driver<Result<T, MoyaError>>{
         return Observable.create({ element -> Disposable in
