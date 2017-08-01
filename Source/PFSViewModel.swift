@@ -53,6 +53,18 @@ extension String {
         return result
     }
     
+    public func same(message: String, _ same: String) -> VResult {
+        let result: VResult = VResult {
+            if self.characters.count <= 0, self != same {
+                throw error(message: message)
+            }
+            
+            return self
+        }
+        
+        return result
+    }
+    
     public func min(length: Int, message: String, isContain: Bool = false) -> VResult {
         let result: VResult = VResult {
             if isContain, self.characters.count <= length {
