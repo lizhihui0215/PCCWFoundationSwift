@@ -66,13 +66,6 @@ def libraries
 
     # https://github.com/marcuswestin/WebViewJavascriptBridge
     pod 'WebViewJavascriptBridge'
-    
-    
-    pod 'AMap3DMap'  #3D地图SDK
-    
-    pod 'AMapSearch' #搜索功能
-    
-    pod 'AMapLocation'
 
 end
 
