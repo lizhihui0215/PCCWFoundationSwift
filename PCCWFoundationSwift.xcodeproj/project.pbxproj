@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2600002E1F320E2D00FB8E26 /* PFSLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600002D1F320E2D00FB8E26 /* PFSLocationManager.swift */; };
 		2606F2F51F1FA34C002477E2 /* PFSTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2606F2F41F1FA34C002477E2 /* PFSTableViewController.swift */; };
 		2606F2F71F1FA369002477E2 /* PFSCheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2606F2F61F1FA369002477E2 /* PFSCheckbox.swift */; };
 		2606F2F91F1FA38A002477E2 /* PFSFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2606F2F81F1FA38A002477E2 /* PFSFileManager.swift */; };
@@ -66,6 +67,7 @@
 
 /* Begin PBXFileReference section */
 		0B9F5F6B5496A03F14D8847E /* Pods-PCCWFoundationSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PCCWFoundationSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PCCWFoundationSwift/Pods-PCCWFoundationSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		2600002D1F320E2D00FB8E26 /* PFSLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSLocationManager.swift; sourceTree = "<group>"; };
 		2606F2F41F1FA34C002477E2 /* PFSTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSTableViewController.swift; sourceTree = "<group>"; };
 		2606F2F61F1FA369002477E2 /* PFSCheckbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSCheckbox.swift; sourceTree = "<group>"; };
 		2606F2F81F1FA38A002477E2 /* PFSFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSFileManager.swift; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 		26877C031EB83B9100041460 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				2600002D1F320E2D00FB8E26 /* PFSLocationManager.swift */,
 				2606F2FA1F1FA391002477E2 /* PFSRealm.swift */,
 				2606F2F81F1FA38A002477E2 /* PFSFileManager.swift */,
 				5B8754000C5592E676313BE3 /* PFSNetworkService.swift */,
@@ -492,6 +495,7 @@
 				2606F2FB1F1FA391002477E2 /* PFSRealm.swift in Sources */,
 				26DAEA9E1F1D064200FC8306 /* PFSDebug.swift in Sources */,
 				2688D3911EDF1BEA0072033C /* String+PFS.swift in Sources */,
+				2600002E1F320E2D00FB8E26 /* PFSLocationManager.swift in Sources */,
 				269DFFDD1EA765000006BAE2 /* PFSTableViewCell.swift in Sources */,
 				263019F71EE5336B0002061E /* PFSError.swift in Sources */,
 				262C89DF1F03F37C00EBDA0F /* FDStackViewAlignmentLayoutArrangement.m in Sources */,
