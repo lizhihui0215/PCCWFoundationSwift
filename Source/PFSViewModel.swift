@@ -41,7 +41,7 @@ extension String {
     public typealias VResult = Result<String?, MoyaError>
 
 
-    public func notNul(message: String) -> VResult {
+    public func notNull(message: String) -> VResult {
         let result: VResult = VResult {
             if self.characters.count <= 0 {
                 throw error(message: message)
@@ -56,6 +56,20 @@ extension String {
     public func same(message: String, _ same: String) -> VResult {
         let result: VResult = VResult {
             if self.characters.count <= 0, self != same {
+                throw error(message: message)
+            }
+            
+            return self
+        }
+        
+        return result
+    }
+    
+    public func phone(message: String) -> VResult {
+        let regex  = NSPredicate(format: "SELF MATCHES %@", "^(((0\\d{2,3}-)?\\d{7,8})|(1[123456789]\\d{9}))$")
+        
+        let result: VResult = VResult {
+            if regex.evaluate(with: self) {
                 throw error(message: message)
             }
             
