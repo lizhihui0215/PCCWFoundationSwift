@@ -12,7 +12,7 @@ import RxCocoa
 import Result
 import Moya
 import Toaster
-
+import NVActivityIndicatorView
 
 
 extension UIViewController: PFSViewAction {
@@ -33,6 +33,7 @@ extension UIViewController: PFSViewAction {
             alertView.addAction(action)
             self.present(alertView, animated: true)
             return Disposables.create{
+                self.stopAnimating()
                 alertView.dismiss(animated: true, completion: nil)
             }
         }).asDriver(onErrorJustReturn: false)
@@ -73,6 +74,7 @@ extension UIViewController: PFSViewAction {
             switch result {
             case .failure(let error):
                 alertView.message = error.errorDescription
+                self.stopAnimating()
                 self.present(alertView, animated: true, completion: nil)
                 element.onCompleted()
             case.success:
@@ -95,11 +97,9 @@ extension UIViewController: PFSViewAction {
             }
             }.asDriver(onErrorJustReturn: false)
     }
-
-    
 }
 
-extension UIViewController {
+extension UIViewController: NVActivityIndicatorViewable {
     private struct AssociatedKeys {
         static var disposeBagKey = "com.pccw.foundation.viewcontroller.disposebagkey"
     }
