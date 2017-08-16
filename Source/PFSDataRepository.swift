@@ -44,7 +44,7 @@ open class PFSDataRepository {
         return response.map { response in
             return Result {
                 if response.code != "0" {
-                    throw error(message: response.message, code: response.code)
+                    throw error(message: response.message, code: response.code, userInfo: ["response" : response])
                 }
                 return response.result!
             }
@@ -57,7 +57,7 @@ open class PFSDataRepository {
         return response.map { response in
             return Result {
                 if response.code != "0" {
-                    throw error(message: response.message, code: response.code)
+                    throw error(message: response.message, code: response.code, userInfo: ["response" : response])
                 }
                 return response.result!
             }
@@ -70,7 +70,7 @@ open class PFSDataRepository {
         return response.map { response in
             return Result {
                 if response.code != "0" {
-                    throw error(message: response.message, code: response.code)
+                    throw error(message: response.message, code: response.code, userInfo: ["response" : response])
                 }
 
                 return response.result
@@ -84,7 +84,7 @@ open class PFSDataRepository {
         return response.map { response in
             return Result {
                 if response.code != "0" {
-                    throw error(message: response.message, code: response.code)
+                    throw error(message: response.message, code: response.code, userInfo: ["response" : response])
                 }
 
                 return response.result
@@ -99,7 +99,7 @@ open class PFSDataRepository {
         return response.map { response in
             return Result {
                 if response.code != "0" {
-                    throw error(message: response.message, code: response.code)
+                    throw error(message: response.message, code: response.code, userInfo: ["response" : response])
                 }
 
                 return response.message

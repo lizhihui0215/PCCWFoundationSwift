@@ -9,20 +9,21 @@
 import Moya
 import Result
 
-public func error(message: String, code: String? = "0") -> MoyaError {
+public func error(message: String, code: String? = "0", userInfo: [String: Any] = [:]) -> MoyaError {
     return MoyaError.underlying(Result<String, MoyaError>.error(message, code: code))
 }
 
+public var PFSServerErrorDomain: String { return "com.pccw.foundation.swift.server.response.error" }
+
 
 extension Result {
-    public static func error(_ message: String? = nil, code: String?, function: String = #function, file: String = #file, line: Int = #line) -> NSError {
+    public static func error(_ message: String? = nil, code: String?, userInfo: [String: Any] = [:], function: String = #function, file: String = #file, line: Int = #line) -> NSError {
 
-        var userInfo: [String: Any] = [
-            functionKey: function,
-            fileKey: file,
-            lineKey: line,
-            ]
-        
+        var userInfo = userInfo
+        userInfo[functionKey] = function
+        userInfo[fileKey] = file
+        userInfo[lineKey] = line
+                
         if let message = message {
             userInfo[NSLocalizedDescriptionKey] = message
         }
@@ -33,7 +34,7 @@ extension Result {
             errorCode = Int(code)!
         }
         
-        return NSError(domain: errorDomain, code: errorCode, userInfo: userInfo)
+        return NSError(domain: PFSServerErrorDomain, code: errorCode, userInfo: userInfo)
 
     }
 }
