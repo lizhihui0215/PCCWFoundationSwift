@@ -12,11 +12,11 @@ import Alamofire
 import KissXML
 
 public class PFSResponseMappableObject<T: Mappable>: Mappable {
-    var message: String = ""
+    public var message: String = ""
     
-    var code: String = "-1"
+    public var code: String = "-1"
     
-    var result: T?
+    public var result: T?
     
     required public init?(map: Map){
         
@@ -30,9 +30,9 @@ public class PFSResponseMappableObject<T: Mappable>: Mappable {
 }
 
 public class PFSResponseNil: Mappable {
-    var message: String = ""
+    public var message: String = ""
     
-    var code: String = "-1"
+    public var code: String = "-1"
     
     required public init?(map: Map) {
     }
@@ -44,11 +44,11 @@ public class PFSResponseNil: Mappable {
 }
 
 public class PFSResponseObject<T>: Mappable {
-    var message: String = ""
+    public var message: String = ""
     
-    var code: String = "-1"
+    public var code: String = "-1"
     
-    var result: T?
+    public var result: T?
     
     required public init?(map: Map){
         
@@ -62,11 +62,11 @@ public class PFSResponseObject<T>: Mappable {
 }
 
 public class PFSResponseArray<T>: Mappable {
-    var message: String = ""
+    public var message: String = ""
     
-    var code: String = "-1"
+    public var code: String = "-1"
     
-    var result: [T] = []
+    public var result: [T] = []
     
     required public init?(map: Map){
         
@@ -80,11 +80,11 @@ public class PFSResponseArray<T>: Mappable {
 }
 
 public class PFSResponseMappableArray<T: Mappable>: Mappable {
-    var message: String = ""
+    public var message: String = ""
     
-    var code: String = "-1"
+    public var code: String = "-1"
     
-    var result: [T] = []
+    public var result: [T] = []
     
     required public init?(map: Map){
         
