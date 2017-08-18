@@ -10,7 +10,7 @@ import Moya
 import Result
 
 public func error(message: String, code: String? = "0", userInfo: [String: Any] = [:]) -> MoyaError {
-    return MoyaError.underlying(Result<String, MoyaError>.error(message, code: code))
+    return MoyaError.underlying(Result<String, MoyaError>.error(message, code: code, userInfo: userInfo))
 }
 
 public var PFSServerErrorDomain: String { return "com.pccw.foundation.swift.server.response.error" }

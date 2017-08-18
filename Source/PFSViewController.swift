@@ -97,6 +97,26 @@ extension UIViewController: PFSViewAction {
             }
             }.asDriver(onErrorJustReturn: false)
     }
+    
+    public func toast<T>(result: Result<T, MoyaError>) -> Driver<Result<T, MoyaError>>{
+        return Observable.create({ element -> Disposable in
+
+            switch result {
+            case .failure(let error):
+                self.stopAnimating()
+                let toast = Toast(text: error.errorDescription, duration: 0.5)
+                toast.show()
+                element.onCompleted()
+            case.success:
+                element.onNext(result)
+                element.onCompleted()
+            }
+            return Disposables.create{
+            }
+        }).asDriver(onErrorJustReturn: result)
+    }
+
+
 }
 
 extension UIViewController: NVActivityIndicatorViewable {
