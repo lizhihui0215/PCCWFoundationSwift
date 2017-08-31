@@ -18,7 +18,7 @@ import UIKit
 
 infix operator <-> : DefaultPrecedence
 
-func nonMarkedText(_ textInput: UITextInput) -> String? {
+public func nonMarkedText(_ textInput: UITextInput) -> String? {
     let start = textInput.beginningOfDocument
     let end = textInput.endOfDocument
 
@@ -39,6 +39,7 @@ func nonMarkedText(_ textInput: UITextInput) -> String? {
     return (textInput.text(in: startRange) ?? "") + (textInput.text(in: endRange) ?? "")
 }
 
+@discardableResult
 public func <-> <Base: UITextInput>(textInput: TextInput<Base>, variable: Variable<String>) -> Disposable {
     let bindToUIDisposable = variable.asObservable()
         .bind(to: textInput.text)
@@ -71,6 +72,7 @@ public func <-> <Base: UITextInput>(textInput: TextInput<Base>, variable: Variab
     return Disposables.create(bindToUIDisposable, bindToVariable)
 }
 
+@discardableResult
 public func <-> <T>(property: ControlProperty<T>, variable: Variable<T>) -> Disposable {
     if T.self == String.self {
 #if DEBUG
@@ -146,7 +148,3 @@ public extension UIControl {
         }))
     }
 }
-
-
-// }
-
