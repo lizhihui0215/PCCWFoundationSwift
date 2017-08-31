@@ -57,9 +57,9 @@ extension PFSTableViewController: RMTableViewRefresh{
 
 open class PFSTableViewController: PFSViewController {
     
-    @IBOutlet var tableViews: [UITableView]!
+    @IBOutlet public var tableViews: [UITableView]!
     
-    var tableView: UITableView {
+    public var tableView: UITableView {
         return tableViews[0]
     }
     
