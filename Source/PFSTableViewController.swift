@@ -11,10 +11,10 @@ import RxCocoa
 import RxSwift
 import MJRefresh
 
-open protocol RMTableViewRefresh: class {
-    open func headerRefreshingFor(tableView: UITableView)
+public protocol RMTableViewRefresh: class {
+    func headerRefreshingFor(tableView: UITableView)
     
-    open func footerRefreshingFor(tableView: UITableView)
+    func footerRefreshingFor(tableView: UITableView)
 }
 
 extension UITableView {
@@ -46,23 +46,9 @@ extension UITableView {
     }
 }
 
-open class PFSTableViewCell: UITableViewCell {
-    
-    private(set) var disposeBag = DisposeBag()
-    
-    open override func awakeFromNib() {
-        self.layoutMargins = UIEdgeInsetsZero //or UIEdgeInsetsMake(top, left, bottom, right)
-        self.separatorInset = UIEdgeInsetsZero //if you also want to adjust separatorInset
-    }
-    
-    open override func prepareForReuse() {
-        super.prepareForReuse()
-        disposeBag = DisposeBag() // because life cicle of every cell ends on prepare for reuse
-    }
-    
-}
 
-extension PFSTableviewController: RMTableViewRefresh{
+
+extension PFSTableViewController: RMTableViewRefresh{
     
    open func footerRefreshingFor(tableView: UITableView) {}
     

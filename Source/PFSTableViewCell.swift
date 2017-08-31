@@ -7,18 +7,21 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 
-class PFSTableViewCell: UITableViewCell {
+open class PFSTableViewCell: UITableViewCell {
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    private(set) var disposeBag = DisposeBag()
+    
+    open override func awakeFromNib() {
+        self.layoutMargins = UIEdgeInsets.zero //or UIEdgeInsetsMake(top, left, bottom, right)
+        self.separatorInset = UIEdgeInsets.zero //if you also want to adjust separatorInset
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    open override func prepareForReuse() {
+        super.prepareForReuse()
+        disposeBag = DisposeBag() // because life cicle of every cell ends on prepare for reuse
     }
-
+    
 }
