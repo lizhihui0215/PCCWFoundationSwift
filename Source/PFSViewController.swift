@@ -59,7 +59,7 @@ extension UIViewController: PFSViewAction {
             return Disposables.create{
                 alertView.dismiss(animated: true, completion: nil)
             }
-        }).asDriver(onErrorJustReturn: content)
+        }).asDriver(onErrorJustReturn: nil)
     }
 
     public func alert<T>(result: Result<T, MoyaError>) -> Driver<Result<T, MoyaError>>{
