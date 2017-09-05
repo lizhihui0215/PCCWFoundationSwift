@@ -16,8 +16,10 @@ import NVActivityIndicatorView
 
 
 extension UIViewController: PFSViewAction {
+    
+    typealias PFSAlertPair<T> = (message: String, content: T)
 
-    public func alert(message: String, success: Bool = true) -> Observable<Bool> {
+    public func alert(message: String, success: Bool = true) -> Driver<Bool> {
         return Observable.create({ element -> Disposable in
             let  alertView = UIAlertController(title: "", message: message, preferredStyle: .alert)
             
@@ -37,15 +39,15 @@ extension UIViewController: PFSViewAction {
                 self.stopAnimating()
                 alertView.dismiss(animated: true, completion: nil)
             }
-        })
+        }).asDriver(onErrorJustReturn: false)
     }
     
-    public func confirm<T>(message: String, content: T? = nil) -> Observable<T?> {
+    public func confirm<T>(content: (String, T)) -> Driver<(String, Bool, T)> {
         return Observable.create({ element -> Disposable in
-            let  alertView = UIAlertController(title: "", message: message, preferredStyle: .alert)
+            let  alertView = UIAlertController(title: "", message: content.0, preferredStyle: .alert)
             
             let action = UIAlertAction(title: "确定", style: .default, handler: { action in
-                element.onNext(content)
+                element.onNext((content.0, true, content.1))
                 element.onCompleted()
             })
             
@@ -60,7 +62,7 @@ extension UIViewController: PFSViewAction {
             return Disposables.create{
                 alertView.dismiss(animated: true, completion: nil)
             }
-        })
+        }).asDriver(onErrorJustReturn: (content.0, false, content.1))
     }
 
     public func alert<T>(result: Result<T, MoyaError>) -> Driver<Result<T, MoyaError>>{

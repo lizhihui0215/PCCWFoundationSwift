@@ -11,11 +11,11 @@ import Moya
 public protocol PFSViewAction: class {
     func alert<T>(result: Result<T, MoyaError>) -> Driver<Result<T, MoyaError>>
     
-    func alert(message: String, success: Bool) -> Observable<Bool>
+    func alert(message: String, success: Bool) -> Driver<Bool>
     
     func animation<T>(_ task: (Driver<Result<T, MoyaError>>) -> Void)
     
-    func confirm<T>(message: String, content: T?) -> Observable<T?>
+    func confirm<T>(content: (String, T)) -> Driver<(String,  Bool, T)>
 }
 
 extension PFSViewAction {
@@ -23,13 +23,10 @@ extension PFSViewAction {
         
     }
     
-    func alert(message: String) -> Observable<Bool> {
+    func alert(message: String) -> Driver<Bool> {
        return self.alert(message: message, success: true)
     }
     
-    func confirm<T>(message: String) -> Observable<T?> {
-        return self.confirm(message: message)
-    }
 }
 
 
