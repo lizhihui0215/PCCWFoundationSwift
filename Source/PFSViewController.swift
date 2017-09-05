@@ -17,7 +17,7 @@ import NVActivityIndicatorView
 
 extension UIViewController: PFSViewAction {
 
-    public func alert(message: String, success: Bool = true) -> Driver<Bool> {
+    public func alert(message: String, success: Bool = true) -> Observable<Bool> {
         return Observable.create({ element -> Disposable in
             let  alertView = UIAlertController(title: "", message: message, preferredStyle: .alert)
             
@@ -27,6 +27,7 @@ extension UIViewController: PFSViewAction {
                     element.onCompleted()
                 }else {
                     element.onError(error(message: message))
+                    element.onCompleted()
                 }
             })
             
@@ -36,10 +37,10 @@ extension UIViewController: PFSViewAction {
                 self.stopAnimating()
                 alertView.dismiss(animated: true, completion: nil)
             }
-        }).asDriver(onErrorJustReturn: false)
+        })
     }
     
-    public func confirm<T>(message: String, content: T? = nil) -> Driver<T?> {
+    public func confirm<T>(message: String, content: T? = nil) -> Observable<T?> {
         return Observable.create({ element -> Disposable in
             let  alertView = UIAlertController(title: "", message: message, preferredStyle: .alert)
             
@@ -59,7 +60,7 @@ extension UIViewController: PFSViewAction {
             return Disposables.create{
                 alertView.dismiss(animated: true, completion: nil)
             }
-        }).asDriver(onErrorJustReturn: nil)
+        })
     }
 
     public func alert<T>(result: Result<T, MoyaError>) -> Driver<Result<T, MoyaError>>{
