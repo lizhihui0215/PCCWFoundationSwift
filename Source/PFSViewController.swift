@@ -17,8 +17,6 @@ import NVActivityIndicatorView
 
 extension UIViewController: PFSViewAction {
     
-    typealias PFSAlertPair<T> = (message: String, content: T)
-
     public func alert(message: String, success: Bool = true) -> Driver<Bool> {
         return Observable.create({ element -> Disposable in
             let  alertView = UIAlertController(title: "", message: message, preferredStyle: .alert)
@@ -42,7 +40,7 @@ extension UIViewController: PFSViewAction {
         }).asDriver(onErrorJustReturn: false)
     }
     
-    public func confirm<T>(content: (String, T)) -> Driver<(String, Bool, T)> {
+    public func confirm<T>(content: (String, T?)) -> Driver<(String, Bool, T?)> {
         return Observable.create({ element -> Disposable in
             let  alertView = UIAlertController(title: "", message: content.0, preferredStyle: .alert)
             
