@@ -19,7 +19,7 @@ extension URL {
                 
                 let key = keyValue[0]
                 
-                let value = keyValue[1]
+                let value = keyValue[1].removingPercentEncoding!
                 
                 parameters += [key : value]
             }
