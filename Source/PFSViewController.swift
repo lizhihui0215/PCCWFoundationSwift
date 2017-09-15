@@ -30,7 +30,7 @@ extension UIViewController: PFSViewAction {
                     element.onCompleted()
                 }
             })
-            
+            self.stopAnimating()
             alertView.addAction(action)
             self.present(alertView, animated: true)
             return Disposables.create{
@@ -75,13 +75,13 @@ extension UIViewController: PFSViewAction {
             switch result {
             case .failure(let error):
                 alertView.message = error.errorDescription
-                self.stopAnimating()
                 self.present(alertView, animated: true, completion: nil)
                 element.onCompleted()
             case.success:
                 element.onNext(result)
                 element.onCompleted()
             }
+            self.stopAnimating()
            return Disposables.create{
 //                alertView.dismiss(animated: true, completion: nil)
             }
