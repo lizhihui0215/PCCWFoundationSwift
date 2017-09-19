@@ -18,6 +18,11 @@ public protocol PFSViewAction: class {
     func confirm<T>(content: (String, T?)) -> Driver<(String, Bool, T?)>
     
     var animation: Variable<Bool> { get }
+    
+    func toast<T>(result: Result<T, MoyaError>) -> Driver<Result<T, MoyaError>>
+    
+    func toast(message: String) -> Driver<Bool>
+    
 }
 
 extension PFSViewAction {
