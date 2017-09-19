@@ -17,6 +17,18 @@ import NVActivityIndicatorView
 
 extension UIViewController: PFSViewAction {
     
+    var animation: Variable<Bool> {
+        if let animation = objc_getAssociatedObject(self, &animationContext) as? Variable<Bool> {
+            return animation
+        }
+        
+        let animation = Variable(false)
+        
+        objc_setAssociatedObject(self, &animationContext, animation, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        
+        return animation
+    }
+    
     public func alert(message: String, success: Bool = true) -> Driver<Bool> {
         return Observable.create({ element -> Disposable in
             let  alertView = UIAlertController(title: "", message: message, preferredStyle: .alert)
@@ -52,7 +64,7 @@ extension UIViewController: PFSViewAction {
                 element.onError(error(message: "cancel"))
                 element.onCompleted()
             })
-            
+            self.stopAnimating()
             alertView.addAction(action)
             alertView.addAction(cancel)
             self.present(alertView, animated: true)
@@ -61,7 +73,7 @@ extension UIViewController: PFSViewAction {
             }
         }).asDriver(onErrorJustReturn: (content.0, false, content.1))
     }
-
+    
     public func alert<T>(result: Result<T, MoyaError>) -> Driver<Result<T, MoyaError>>{
         return Observable.create({ element -> Disposable in
             let  alertView = UIAlertController(title: "", message: "", preferredStyle: .alert)
@@ -81,8 +93,8 @@ extension UIViewController: PFSViewAction {
                 element.onNext(result)
                 element.onCompleted()
             }
-           return Disposables.create{
-//                alertView.dismiss(animated: true, completion: nil)
+            return Disposables.create{
+                //                alertView.dismiss(animated: true, completion: nil)
             }
         }).asDriver(onErrorJustReturn: result)
     }
@@ -100,7 +112,7 @@ extension UIViewController: PFSViewAction {
     
     public func toast<T>(result: Result<T, MoyaError>) -> Driver<Result<T, MoyaError>>{
         return Observable.create({ element -> Disposable in
-
+            
             switch result {
             case .failure(let error):
                 self.stopAnimating()
@@ -115,8 +127,8 @@ extension UIViewController: PFSViewAction {
             }
         }).asDriver(onErrorJustReturn: result)
     }
-
-
+    
+    
 }
 
 extension UIViewController: NVActivityIndicatorViewable {
@@ -153,20 +165,30 @@ extension UIViewController: NVActivityIndicatorViewable {
 }
 
 open class PFSViewController: UIViewController {
-
+    
     override open func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(PFSViewController.backgroundTapped))
         self.view.addGestureRecognizer(tap)
         
         tap.cancelsTouchesInView = false
-
-
+        
+        self.animation.asObservable().subscribe(onNext: {[weak self] flag in
+            if let strongSelf = self ,flag {
+                strongSelf.startAnimating()
+            }else if let strongSelf = self{
+                strongSelf.stopAnimating()
+            }
+            },onDisposed: {[weak self] in
+                if let strongSelf = self {
+                    strongSelf.stopAnimating()
+                }
+        }).disposed(by: disposeBag)
     }
-
+    
     override open func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -176,25 +198,25 @@ open class PFSViewController: UIViewController {
     func backgroundTapped()  {
         self.view.endEditing(true)
     }
-
+    
     
     #if DEBUG
-
+    
     deinit {
         debug("DEBUG", model: type(of: self), content: "deinit")
     }
     
     #endif
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

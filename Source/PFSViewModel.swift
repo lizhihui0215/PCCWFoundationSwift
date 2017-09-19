@@ -16,6 +16,8 @@ public protocol PFSViewAction: class {
     func animation<T>(_ task: (Driver<Result<T, MoyaError>>) -> Void)
     
     func confirm<T>(content: (String, T?)) -> Driver<(String, Bool, T?)>
+    
+    var animation: Variable<Bool> { get }
 }
 
 extension PFSViewAction {
