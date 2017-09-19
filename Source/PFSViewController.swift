@@ -17,17 +17,7 @@ import NVActivityIndicatorView
 
 extension UIViewController: PFSViewAction {
     
-    var animation: Variable<Bool> {
-        if let animation = objc_getAssociatedObject(self, &animationContext) as? Variable<Bool> {
-            return animation
-        }
-        
-        let animation = Variable(false)
-        
-        objc_setAssociatedObject(self, &animationContext, animation, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-        
-        return animation
-    }
+    
     
     public func alert(message: String, success: Bool = true) -> Driver<Bool> {
         return Observable.create({ element -> Disposable in
@@ -134,6 +124,19 @@ extension UIViewController: PFSViewAction {
 extension UIViewController: NVActivityIndicatorViewable {
     private struct AssociatedKeys {
         static var disposeBagKey = "com.pccw.foundation.viewcontroller.disposebagkey"
+        static var animationContextKey = "com.pccw.foundation.viewcontroller.animationContextKey"
+    }
+    
+    public var animation: Variable<Bool> {
+        if let animation = objc_getAssociatedObject(self, &AssociatedKeys.animationContextKey) as? Variable<Bool> {
+            return animation
+        }
+        
+        let animation = Variable(false)
+        
+        objc_setAssociatedObject(self, &AssociatedKeys.animationContextKey, animation, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        
+        return animation
     }
     
     public var disposeBag: DisposeBag {
