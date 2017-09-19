@@ -34,6 +34,14 @@ extension PFSViewAction {
        return self.alert(message: message, success: true)
     }
     
+    func toast<T>(message: Result<T, MoyaError>) -> Driver<Bool> {
+        switch message {
+        case .failure(let error):
+            return toast(message: error.errorDescription!)
+        case.success:
+            return Driver.just(true)
+        }
+    }
 }
 
 
