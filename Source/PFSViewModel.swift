@@ -54,13 +54,25 @@ extension PFSViewAction {
 }
 
 
-
 extension String: ReactiveCompatible {}
 
-extension String {
-    
-    public typealias VResult = Result<String?, MoyaError>
+extension Array {
+    public typealias VResult = Result<Array?, MoyaError>
 
+    public func notEmpty(message: String) -> VResult {
+        let result: VResult = VResult {
+            if self.isEmpty {
+                throw error(message: message)
+            }
+            
+            return self
+        }
+        return result
+    }
+}
+
+extension String {
+    public typealias VResult = Result<String?, MoyaError>
 
     public func notNull(message: String) -> VResult {
         let result: VResult = VResult {
