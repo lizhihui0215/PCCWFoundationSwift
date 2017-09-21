@@ -40,7 +40,7 @@ open class PFSDataRepository {
         return nil
     }
 
-    public func handlerError<T>(response: Observable<PFSResponseObject<T>>) -> Driver<Result<T, MoyaError>> {
+    public func handlerError<T>(response: Single<PFSResponseObject<T>>) -> Driver<Result<T, MoyaError>> {
         return response.map { response in
             return Result {
                 if response.code != "0" {
@@ -53,7 +53,7 @@ open class PFSDataRepository {
         }
     }
 
-    public func handlerError<T:Mappable>(response: Observable<PFSResponseMappableObject<T>>) -> Driver<Result<T, MoyaError>> {
+    public func handlerError<T:Mappable>(response: Single<PFSResponseMappableObject<T>>) -> Driver<Result<T, MoyaError>> {
         return response.map { response in
             return Result {
                 if response.code != "0" {
@@ -66,7 +66,7 @@ open class PFSDataRepository {
         }
     }
 
-    public func handlerError<T>(response: Observable<PFSResponseArray<T>>) -> Driver<Result<[T], MoyaError>> {
+    public func handlerError<T>(response: Single<PFSResponseArray<T>>) -> Driver<Result<[T], MoyaError>> {
         return response.map { response in
             return Result {
                 if response.code != "0" {
@@ -80,7 +80,7 @@ open class PFSDataRepository {
         }
     }
 
-    public func handlerError<T:Mappable>(response: Observable<PFSResponseMappableArray<T>>) -> Driver<Result<[T], MoyaError>> {
+    public func handlerError<T:Mappable>(response: Single<PFSResponseMappableArray<T>>) -> Driver<Result<[T], MoyaError>> {
         return response.map { response in
             return Result {
                 if response.code != "0" {
@@ -94,7 +94,7 @@ open class PFSDataRepository {
         }
     }
 
-    public func handlerError(response: Observable<PFSResponseNil>) -> Driver<Result<String, MoyaError>> {
+    public func handlerError(response: Single<PFSResponseNil>) -> Driver<Result<String, MoyaError>> {
 
         return response.map { response in
             return Result {

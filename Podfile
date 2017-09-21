@@ -90,6 +90,22 @@ target 'PCCWFoundationSwift' do
     
 end
 
+
+#post_install do |installer|
+#    installer.pods_project.targets.each do |target|
+#        swift4 = Array['CryptoSwift', 'SnapKit', 'Kingfisher']
+#        if swift4.include? target.name then
+#            target.build_configurations.each do |config|
+#                config.build_settings['SWIFT_VERSION'] = '4.0'
+#            end
+#            else
+#            target.build_configurations.each do |config|
+#                config.build_settings['SWIFT_VERSION'] = '3.2'
+#            end
+#        end
+#    end
+#end
+
 #abstract_target 'Shared' do
 #    inhibit_all_warnings!
 #    use_frameworks!
