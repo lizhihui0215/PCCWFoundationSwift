@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "PCCWFoundationSwift"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "PCCWFoundationSwift Basic."
 
   # This description is used to generate tags and improve search results.
@@ -138,10 +138,10 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '3.0' }
+  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '3.2' }
   s.dependency "RealmSwift"
   s.dependency "NVActivityIndicatorView"
-  s.dependency "SnapKit"
+  s.dependency "SnapKit", '~> 3.2.0'
   s.dependency "IQKeyboardManagerSwift"
   s.dependency "ObjectMapper+Realm"
   s.dependency "Moya-ObjectMapper/RxSwift"
@@ -150,7 +150,7 @@ Pod::Spec.new do |s|
   s.dependency "RxRealm"
   s.dependency "MJRefresh"
   s.dependency "UIColor_Hex_Swift"
-  s.dependency "Kingfisher"
+  s.dependency "Kingfisher", '~> 3.13.1'
   s.dependency "TZImagePickerController"
   s.dependency "RSKGrowingTextView"
   s.dependency "RxCocoa"

@@ -49,7 +49,7 @@ open class PFSDataRepository {
                 return response.result!
             }
         }.asDriver { error in
-            return Driver.just(Result(error: MoyaError.underlying(error)))
+            return Driver.just(Result(error: MoyaError.underlying(error, nil)))
         }
     }
 
@@ -62,7 +62,7 @@ open class PFSDataRepository {
                 return response.result!
             }
         }.asDriver { error in
-            return Driver.just(Result(error: MoyaError.underlying(error)))
+            return Driver.just(Result(error: MoyaError.underlying(error, nil)))
         }
     }
 
@@ -76,7 +76,7 @@ open class PFSDataRepository {
                 return response.result
             }
         }.asDriver { error in
-            return Driver.just(Result(error: MoyaError.underlying(error)))
+            return Driver.just(Result(error: MoyaError.underlying(error, nil)))
         }
     }
 
@@ -90,7 +90,7 @@ open class PFSDataRepository {
                 return response.result
             }
         }.asDriver { error in
-            return Driver.just(Result(error: MoyaError.underlying(error)))
+            return Driver.just(Result(error: MoyaError.underlying(error, nil)))
         }
     }
 
@@ -105,7 +105,7 @@ open class PFSDataRepository {
                 return response.message
             }
         }.asDriver { error in
-            return Driver.just(Result(error: MoyaError.underlying(error)))
+            return Driver.just(Result(error: MoyaError.underlying(error, nil)))
         }
     }
 }

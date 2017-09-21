@@ -36,7 +36,7 @@ open class PFSRealm {
         do {
             try PFSRealm.realm.write { PFSRealm.realm.add(obj) }
         } catch let error {
-            return Result(error: MoyaError.underlying(error))
+            return Result(error: MoyaError.underlying(error, nil))
         }
         
         return Result(value: obj)
@@ -47,7 +47,7 @@ open class PFSRealm {
         do {
             try PFSRealm.realm.write { handler(obj) }
         } catch let error {
-            return Result(error: MoyaError.underlying(error))
+            return Result(error: MoyaError.underlying(error, nil))
         }
         
         return Result(value: obj)
@@ -58,7 +58,7 @@ open class PFSRealm {
         do {
             try PFSRealm.realm.write { PFSRealm.realm.add(obj, update: true) }
         } catch let error {
-            return Result(error: MoyaError.underlying(error))
+            return Result(error: MoyaError.underlying(error, nil))
         }
         return Result(value: obj)
     }

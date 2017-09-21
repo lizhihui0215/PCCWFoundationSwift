@@ -11,7 +11,7 @@ def libraries
     pod 'NVActivityIndicatorView'
     
     # https://github.com/SnapKit/SnapKit
-    pod 'SnapKit'
+    pod 'SnapKit', '~> 3.2.0'
     
     # https://github.com/hackiftekhar/IQKeyboardManager
     pod 'IQKeyboardManagerSwift'
@@ -48,7 +48,7 @@ def libraries
     #  pod 'SKPhotoBrowser'
     
     # https://github.com/onevcat/Kingfisher
-    pod 'Kingfisher'
+    pod 'Kingfisher', '~> 3.13.1'
     
     #  https://github.com/banchichen/TZImagePickerController
     pod 'TZImagePickerController'
@@ -78,7 +78,7 @@ target 'PCCWFoundationSwift' do
     post_install do |installer|
         installer.pods_project.targets.each do |target|
             target.build_configurations.each do |config|
-                config.build_settings['SWIFT_VERSION'] = '3.0'
+                config.build_settings['SWIFT_VERSION'] = '3.2'
             end
         end
     end

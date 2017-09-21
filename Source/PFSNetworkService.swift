@@ -98,7 +98,7 @@ public class PFSResponseMappableArray<T: Mappable>: Mappable {
 }
 
 public protocol PFSTargetType: TargetType {
-    var headers: [String : String] { get }
+    
 }
 
 
@@ -157,12 +157,11 @@ public class PFSNetworkService<API: PFSTargetType>: PFSNetworkServiceStatic {
             url: url(for: target).absoluteString,
             sampleResponseClosure: { .networkResponse(200, target.sampleData) },
             method: target.method,
-            parameters: target.parameters,
-            parameterEncoding: target.parameterEncoding,
-            httpHeaderFields: [:]
+            task: target.task,
+            httpHeaderFields: target.headers
         )
         
-        return endpoint.adding(newHTTPHeaderFields: target.headers)
+        return endpoint
     }
 
 
@@ -185,24 +184,24 @@ public class PFSNetworkService<API: PFSTargetType>: PFSNetworkServiceStatic {
         return target.baseURL.appendingPathComponent(target.path)
     }
     
-    public func request<T>(_ token: API) -> Observable<PFSResponseObject<T>> {
-        return provider.request(token).mapObject(PFSResponseObject<T>.self)
+    public func request<T>(_ token: API) -> Single<PFSResponseObject<T>> {
+        return provider.rx.request(token).mapObject(PFSResponseObject<T>.self)
     }
     
-    public func request<T>(_ token: API) -> Observable<PFSResponseMappableArray<T>> {
-        return provider.request(token).mapObject(PFSResponseMappableArray<T>.self)
+    public func request<T>(_ token: API) -> Single<PFSResponseMappableArray<T>> {
+        return provider.rx.request(token).mapObject(PFSResponseMappableArray<T>.self)
     }
     
-    public func request<T>(_ token: API) -> Observable<PFSResponseArray<T>> {
-        return provider.request(token).mapObject(PFSResponseArray<T>.self)
+    public func request<T>(_ token: API) -> Single<PFSResponseArray<T>> {
+        return provider.rx.request(token).mapObject(PFSResponseArray<T>.self)
     }
     
-    public func request<T>(_ token: API) -> Observable<PFSResponseMappableObject<T>> {
-        return provider.request(token).mapObject(PFSResponseMappableObject<T>.self)
+    public func request<T>(_ token: API) -> Single<PFSResponseMappableObject<T>> {
+        return provider.rx.request(token).mapObject(PFSResponseMappableObject<T>.self)
     }
     
-    public func request(_ token: API) -> Observable<PFSResponseNil> {
-        return provider.request(token).mapObject(PFSResponseNil.self)
+    public func request(_ token: API) -> Single<PFSResponseNil> {
+        return provider.rx.request(token).mapObject(PFSResponseNil.self)
     }
 }
 
