@@ -94,7 +94,7 @@ open class PFSRealm {
 //        }
     }
     
-    func deleteAll<T: Object>(typeOf obj: T.Type) throws  {
+    public func deleteAll<T: Object>(typeOf obj: T.Type) throws  {
         try PFSRealm.realm.write { PFSRealm.realm.delete(PFSRealm.realm.objects(obj)) }
     }
     
