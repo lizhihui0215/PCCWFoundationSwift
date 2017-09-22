@@ -117,7 +117,7 @@ public class PFSPickerView<T :PFSPickerViewItem>: UIView, UIPickerViewDelegate, 
         super.updateConstraints()
     }
     
-    func done()  {
+    @objc func done()  {
         self.removeFromSuperview()
         let index = self.pickerView.selectedRow(inComponent: 0)
         if let completeHandler = self.completeHandler {
@@ -125,7 +125,7 @@ public class PFSPickerView<T :PFSPickerViewItem>: UIView, UIPickerViewDelegate, 
         }
     }
     
-    func cancel()  {
+    @objc func cancel()  {
         self.removeFromSuperview()
     }
     

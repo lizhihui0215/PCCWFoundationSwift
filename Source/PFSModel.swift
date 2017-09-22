@@ -11,7 +11,7 @@ import ObjectMapper
 
 open class PFSModel: Object, Mappable {
 
-    dynamic public var uuid: String = UUID().uuidString
+    @objc dynamic public var uuid: String = UUID().uuidString
 
     public required convenience  init?(map: Map) {
         self.init()

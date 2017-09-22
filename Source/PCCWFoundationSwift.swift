@@ -19,3 +19,4 @@ public func setup()  {
         IQKeyboardManager.sharedManager().enable = true
     }
 }
+@objc 

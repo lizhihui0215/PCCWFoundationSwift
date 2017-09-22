@@ -18,7 +18,7 @@ open class PFSCheckbox: UIButton {
         self.addTarget(self, action: #selector(PFSCheckbox.checkboxTapped), for: .touchUpInside)
     }
     
-    func checkboxTapped(_ sender: UIButton)  {
+    @objc func checkboxTapped(_ sender: UIButton)  {
         sender.isSelected = !sender.isSelected
     }
     

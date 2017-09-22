@@ -198,7 +198,7 @@ open class PFSViewController: UIViewController {
     }
     
     
-    func backgroundTapped()  {
+    @objc func backgroundTapped()  {
         self.view.endEditing(true)
     }
     

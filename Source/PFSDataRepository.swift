@@ -53,7 +53,7 @@ open class PFSDataRepository {
         }
     }
 
-    public func handlerError<T:Mappable>(response: Single<PFSResponseMappableObject<T>>) -> Driver<Result<T, MoyaError>> {
+    public func handlerError<T>(response: Single<PFSResponseMappableObject<T>>) -> Driver<Result<T, MoyaError>> {
         return response.map { response in
             return Result {
                 if response.code != "0" {
@@ -80,7 +80,7 @@ open class PFSDataRepository {
         }
     }
 
-    public func handlerError<T:Mappable>(response: Single<PFSResponseMappableArray<T>>) -> Driver<Result<[T], MoyaError>> {
+    public func handlerError<T>(response: Single<PFSResponseMappableArray<T>>) -> Driver<Result<[T], MoyaError>> {
         return response.map { response in
             return Result {
                 if response.code != "0" {

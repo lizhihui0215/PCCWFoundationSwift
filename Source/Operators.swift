@@ -40,7 +40,7 @@ public func nonMarkedText(_ textInput: UITextInput) -> String? {
 }
 
 @discardableResult
-public func <-> <Base: UITextInput>(textInput: TextInput<Base>, variable: Variable<String>) -> Disposable {
+public func <-> <Base>(textInput: TextInput<Base>, variable: Variable<String>) -> Disposable {
     let bindToUIDisposable = variable.asObservable()
         .bind(to: textInput.text)
     let bindToVariable = textInput.text
