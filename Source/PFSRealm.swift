@@ -76,13 +76,8 @@ open class PFSRealm {
     }
     
     public func clean() throws{
-        do {
-            try PFSRealm.realm.write { PFSRealm.realm.deleteAll() }
-        } catch let error {
-            throw error
-        }
+        try PFSRealm.realm.write { PFSRealm.realm.deleteAll() }
        
-
 //        let realmURL = Realm.Configuration.defaultConfiguration.fileURL!
 //        let realmURLs = [
 //            realmURL,
@@ -97,6 +92,10 @@ open class PFSRealm {
 //                throw error
 //            }
 //        }
+    }
+    
+    func deleteAll<T: Object>(typeOf obj: T.Type) throws  {
+        try PFSRealm.realm.write { PFSRealm.realm.delete(PFSRealm.realm.objects(obj)) }
     }
     
 }
