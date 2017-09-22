@@ -17,6 +17,8 @@
 #endif
 #endif
 
+#define LBXScan_Define_UI     //包含界面库
+
 #import "LBXScanNative.h"
 #import "LBXScanTypes.h"
 #import "LBXScanLineAnimation.h"
