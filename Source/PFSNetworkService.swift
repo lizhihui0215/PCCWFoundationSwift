@@ -11,6 +11,8 @@ import Moya_ObjectMapper
 import Alamofire
 import KissXML
 
+let transform = TransformOf<String, Int>(fromJSON: { String($0!) }, toJSON: { $0.map { Int($0) ?? 0 } })
+
 public class PFSResponseMappableObject<T: Mappable>: Mappable {
     public var message: String = ""
     
@@ -24,7 +26,7 @@ public class PFSResponseMappableObject<T: Mappable>: Mappable {
     
     public func mapping(map: Map)  {
         message <- map[PFSNetworkServiceStatic.__message]
-        code <- map[PFSNetworkServiceStatic.__code]
+        code <- (map[PFSNetworkServiceStatic.__code], transform)
         result <- map[PFSNetworkServiceStatic.__result]
     }
 }
@@ -39,9 +41,10 @@ public class PFSResponseNil: Mappable {
     
     public func mapping(map: Map) {
         message <- map[PFSNetworkServiceStatic.__message]
-        code <- map[PFSNetworkServiceStatic.__code]
+        code <- (map[PFSNetworkServiceStatic.__code], transform)
     }
 }
+
 
 public class PFSResponseObject<T>: Mappable {
     public var message: String = ""
@@ -56,7 +59,7 @@ public class PFSResponseObject<T>: Mappable {
     
     public func mapping(map: Map)  {
         message <- map[PFSNetworkServiceStatic.__message]
-        code <- map[PFSNetworkServiceStatic.__code]
+        code <- (map[PFSNetworkServiceStatic.__code], transform)
         result <- map[PFSNetworkServiceStatic.__result]
     }
 }
@@ -74,7 +77,7 @@ public class PFSResponseArray<T>: Mappable {
     
     public func mapping(map: Map)  {
         message <- map[PFSNetworkServiceStatic.__message]
-        code <- map[PFSNetworkServiceStatic.__code]
+        code <- (map[PFSNetworkServiceStatic.__code], transform)
         result <- map[PFSNetworkServiceStatic.__result]
     }
 }
@@ -92,7 +95,7 @@ public class PFSResponseMappableArray<T: Mappable>: Mappable {
     
     public func mapping(map: Map)  {
         message <- map[PFSNetworkServiceStatic.__message]
-        code <- map[PFSNetworkServiceStatic.__code]
+        code <- (map[PFSNetworkServiceStatic.__code], transform)
         result <- map[PFSNetworkServiceStatic.__result]
     }
 }

@@ -61,6 +61,8 @@
 		26AE6A9B1F75839C0079A36A /* LBXScanViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 26AE6A8E1F75839C0079A36A /* LBXScanViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		26AE6A9C1F7583F50079A36A /* LBXScanTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 26FB9DC31F75790600C659DB /* LBXScanTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		26AE6A9D1F7583F50079A36A /* LBXScan.h in Headers */ = {isa = PBXBuildFile; fileRef = 26AE6A751F757EE00079A36A /* LBXScan.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		26AE6AA01F758DBE0079A36A /* LBXTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 26AE6A9E1F758DBE0079A36A /* LBXTest.h */; };
+		26AE6AA11F758DBE0079A36A /* LBXTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AE6A9F1F758DBE0079A36A /* LBXTest.m */; };
 		26D37AA61F62E9EE00A81930 /* URL+PFS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D37AA51F62E9EE00A81930 /* URL+PFS.swift */; };
 		26D37AA81F62EA1200A81930 /* Dictionary+PFS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D37AA71F62EA1200A81930 /* Dictionary+PFS.swift */; };
 		26DAEA9E1F1D064200FC8306 /* PFSDebug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DAEA9D1F1D064200FC8306 /* PFSDebug.swift */; };
@@ -142,6 +144,8 @@
 		26AE6A8C1F75839C0079A36A /* LBXScanViewStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanViewStyle.m; sourceTree = "<group>"; };
 		26AE6A8D1F75839C0079A36A /* LBXScanLineAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanLineAnimation.m; sourceTree = "<group>"; };
 		26AE6A8E1F75839C0079A36A /* LBXScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanViewController.h; sourceTree = "<group>"; };
+		26AE6A9E1F758DBE0079A36A /* LBXTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LBXTest.h; sourceTree = "<group>"; };
+		26AE6A9F1F758DBE0079A36A /* LBXTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LBXTest.m; sourceTree = "<group>"; };
 		26D37AA51F62E9EE00A81930 /* URL+PFS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+PFS.swift"; sourceTree = "<group>"; };
 		26D37AA71F62EA1200A81930 /* Dictionary+PFS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+PFS.swift"; sourceTree = "<group>"; };
 		26DAEA9D1F1D064200FC8306 /* PFSDebug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSDebug.swift; sourceTree = "<group>"; };
@@ -197,6 +201,8 @@
 				26FB9DC31F75790600C659DB /* LBXScanTypes.h */,
 				26FB9DC41F75790600C659DB /* LBXScanTypes.m */,
 				26AE6A751F757EE00079A36A /* LBXScan.h */,
+				26AE6A9E1F758DBE0079A36A /* LBXTest.h */,
+				26AE6A9F1F758DBE0079A36A /* LBXTest.m */,
 				262C89C71F03F35D00EBDA0F /* FDStackView */,
 			);
 			name = SDK;
@@ -432,6 +438,7 @@
 				26AE6A9C1F7583F50079A36A /* LBXScanTypes.h in Headers */,
 				26AE6A9D1F7583F50079A36A /* LBXScan.h in Headers */,
 				262C89E21F03F37C00EBDA0F /* FDStackViewExtensions.h in Headers */,
+				26AE6AA01F758DBE0079A36A /* LBXTest.h in Headers */,
 				262C89DC1F03F37C00EBDA0F /* FDStackView.h in Headers */,
 				262C89DA1F03F37C00EBDA0F /* FDLayoutSpacer.h in Headers */,
 				262C89E41F03F37C00EBDA0F /* FDStackViewLayoutArrangement.h in Headers */,
@@ -585,6 +592,7 @@
 			files = (
 				2606F2F91F1FA38A002477E2 /* PFSFileManager.swift in Sources */,
 				2606F2F71F1FA369002477E2 /* PFSCheckbox.swift in Sources */,
+				26AE6AA11F758DBE0079A36A /* LBXTest.m in Sources */,
 				26F949AD1EDEB21F00E81192 /* PFSTools.swift in Sources */,
 				2606F2FB1F1FA391002477E2 /* PFSRealm.swift in Sources */,
 				26DAEA9E1F1D064200FC8306 /* PFSDebug.swift in Sources */,
