@@ -44,29 +44,28 @@
 		269DFFD11EA7585D0006BAE2 /* PFSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269DFFD01EA7585D0006BAE2 /* PFSViewController.swift */; };
 		269DFFD91EA75A8F0006BAE2 /* PCCWFoundationSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269DFFD81EA75A8F0006BAE2 /* PCCWFoundationSwift.swift */; };
 		269DFFDD1EA765000006BAE2 /* PFSTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269DFFDC1EA765000006BAE2 /* PFSTableViewCell.swift */; };
-		26AE6A741F757EB40079A36A /* CodeScan.bundle in Sources */ = {isa = PBXBuildFile; fileRef = 26FB9DAC1F7578D700C659DB /* CodeScan.bundle */; };
-		26AE6A771F757F210079A36A /* LBXScan.h in Headers */ = {isa = PBXBuildFile; fileRef = 26AE6A751F757EE00079A36A /* LBXScan.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		26AE6A7F1F7583540079A36A /* LBXScanNative.h in Headers */ = {isa = PBXBuildFile; fileRef = 26AE6A7D1F7583530079A36A /* LBXScanNative.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		26AE6A801F7583540079A36A /* LBXScanNative.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AE6A7E1F7583530079A36A /* LBXScanNative.m */; };
+		26AE6A8F1F75839C0079A36A /* LBXScanNetAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 26AE6A821F75839A0079A36A /* LBXScanNetAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		26AE6A901F75839C0079A36A /* LBXScanVideoZoomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AE6A831F75839A0079A36A /* LBXScanVideoZoomView.m */; };
+		26AE6A911F75839C0079A36A /* LBXScanView.h in Headers */ = {isa = PBXBuildFile; fileRef = 26AE6A841F75839B0079A36A /* LBXScanView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		26AE6A921F75839C0079A36A /* LBXScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AE6A851F75839B0079A36A /* LBXScanView.m */; };
+		26AE6A931F75839C0079A36A /* LBXScanNetAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AE6A861F75839B0079A36A /* LBXScanNetAnimation.m */; };
+		26AE6A941F75839C0079A36A /* LBXScanViewStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 26AE6A871F75839B0079A36A /* LBXScanViewStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		26AE6A951F75839C0079A36A /* LBXScanLineAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 26AE6A881F75839B0079A36A /* LBXScanLineAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		26AE6A961F75839C0079A36A /* CodeScan.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 26AE6A891F75839B0079A36A /* CodeScan.bundle */; };
+		26AE6A971F75839C0079A36A /* LBXScanVideoZoomView.h in Headers */ = {isa = PBXBuildFile; fileRef = 26AE6A8A1F75839C0079A36A /* LBXScanVideoZoomView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		26AE6A981F75839C0079A36A /* LBXScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AE6A8B1F75839C0079A36A /* LBXScanViewController.m */; };
+		26AE6A991F75839C0079A36A /* LBXScanViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AE6A8C1F75839C0079A36A /* LBXScanViewStyle.m */; };
+		26AE6A9A1F75839C0079A36A /* LBXScanLineAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AE6A8D1F75839C0079A36A /* LBXScanLineAnimation.m */; };
+		26AE6A9B1F75839C0079A36A /* LBXScanViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 26AE6A8E1F75839C0079A36A /* LBXScanViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		26AE6A9C1F7583F50079A36A /* LBXScanTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 26FB9DC31F75790600C659DB /* LBXScanTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		26AE6A9D1F7583F50079A36A /* LBXScan.h in Headers */ = {isa = PBXBuildFile; fileRef = 26AE6A751F757EE00079A36A /* LBXScan.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		26D37AA61F62E9EE00A81930 /* URL+PFS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D37AA51F62E9EE00A81930 /* URL+PFS.swift */; };
 		26D37AA81F62EA1200A81930 /* Dictionary+PFS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D37AA71F62EA1200A81930 /* Dictionary+PFS.swift */; };
 		26DAEA9E1F1D064200FC8306 /* PFSDebug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DAEA9D1F1D064200FC8306 /* PFSDebug.swift */; };
 		26F949AD1EDEB21F00E81192 /* PFSTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F949AC1EDEB21F00E81192 /* PFSTools.swift */; };
 		26F949AF1EDEC21700E81192 /* SSASideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F949AE1EDEC21700E81192 /* SSASideMenu.swift */; };
-		26FB9DB21F7578D800C659DB /* LBXScanNetAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 26FB9DA51F7578D600C659DB /* LBXScanNetAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		26FB9DB31F7578D800C659DB /* LBXScanVideoZoomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26FB9DA61F7578D600C659DB /* LBXScanVideoZoomView.m */; };
-		26FB9DB41F7578D800C659DB /* LBXScanView.h in Headers */ = {isa = PBXBuildFile; fileRef = 26FB9DA71F7578D600C659DB /* LBXScanView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		26FB9DB51F7578D800C659DB /* LBXScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26FB9DA81F7578D600C659DB /* LBXScanView.m */; };
-		26FB9DB61F7578D800C659DB /* LBXScanNetAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 26FB9DA91F7578D700C659DB /* LBXScanNetAnimation.m */; };
-		26FB9DB71F7578D800C659DB /* LBXScanViewStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 26FB9DAA1F7578D700C659DB /* LBXScanViewStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		26FB9DB81F7578D800C659DB /* LBXScanLineAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 26FB9DAB1F7578D700C659DB /* LBXScanLineAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		26FB9DB91F7578D800C659DB /* CodeScan.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 26FB9DAC1F7578D700C659DB /* CodeScan.bundle */; };
-		26FB9DBA1F7578D800C659DB /* LBXScanVideoZoomView.h in Headers */ = {isa = PBXBuildFile; fileRef = 26FB9DAD1F7578D700C659DB /* LBXScanVideoZoomView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		26FB9DBB1F7578D800C659DB /* LBXScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26FB9DAE1F7578D700C659DB /* LBXScanViewController.m */; };
-		26FB9DBC1F7578D800C659DB /* LBXScanViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 26FB9DAF1F7578D700C659DB /* LBXScanViewStyle.m */; };
-		26FB9DBD1F7578D800C659DB /* LBXScanLineAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 26FB9DB01F7578D700C659DB /* LBXScanLineAnimation.m */; };
-		26FB9DBE1F7578D800C659DB /* LBXScanViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 26FB9DB11F7578D800C659DB /* LBXScanViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		26FB9DC11F7578EB00C659DB /* LBXScanNative.h in Headers */ = {isa = PBXBuildFile; fileRef = 26FB9DBF1F7578EB00C659DB /* LBXScanNative.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		26FB9DC21F7578EB00C659DB /* LBXScanNative.m in Sources */ = {isa = PBXBuildFile; fileRef = 26FB9DC01F7578EB00C659DB /* LBXScanNative.m */; };
-		26FB9DC61F75790600C659DB /* LBXScanTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 26FB9DC31F75790600C659DB /* LBXScanTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		26FB9DC71F75790600C659DB /* LBXScanTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 26FB9DC41F75790600C659DB /* LBXScanTypes.m */; };
 		26FE23831F164A63007A53DF /* Rx+PFS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FE23821F164A63007A53DF /* Rx+PFS.swift */; };
 		5B875154112FDE6DBD7A698B /* DispatchQueue+PFS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B875AEA35BED91F6285D7C3 /* DispatchQueue+PFS.swift */; };
@@ -128,28 +127,28 @@
 		269DFFD81EA75A8F0006BAE2 /* PCCWFoundationSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PCCWFoundationSwift.swift; sourceTree = "<group>"; };
 		269DFFDC1EA765000006BAE2 /* PFSTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSTableViewCell.swift; sourceTree = "<group>"; };
 		26AE6A751F757EE00079A36A /* LBXScan.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LBXScan.h; sourceTree = "<group>"; };
+		26AE6A7D1F7583530079A36A /* LBXScanNative.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanNative.h; sourceTree = "<group>"; };
+		26AE6A7E1F7583530079A36A /* LBXScanNative.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanNative.m; sourceTree = "<group>"; };
+		26AE6A821F75839A0079A36A /* LBXScanNetAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanNetAnimation.h; sourceTree = "<group>"; };
+		26AE6A831F75839A0079A36A /* LBXScanVideoZoomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanVideoZoomView.m; sourceTree = "<group>"; };
+		26AE6A841F75839B0079A36A /* LBXScanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanView.h; sourceTree = "<group>"; };
+		26AE6A851F75839B0079A36A /* LBXScanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanView.m; sourceTree = "<group>"; };
+		26AE6A861F75839B0079A36A /* LBXScanNetAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanNetAnimation.m; sourceTree = "<group>"; };
+		26AE6A871F75839B0079A36A /* LBXScanViewStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanViewStyle.h; sourceTree = "<group>"; };
+		26AE6A881F75839B0079A36A /* LBXScanLineAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanLineAnimation.h; sourceTree = "<group>"; };
+		26AE6A891F75839B0079A36A /* CodeScan.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CodeScan.bundle; sourceTree = "<group>"; };
+		26AE6A8A1F75839C0079A36A /* LBXScanVideoZoomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanVideoZoomView.h; sourceTree = "<group>"; };
+		26AE6A8B1F75839C0079A36A /* LBXScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanViewController.m; sourceTree = "<group>"; };
+		26AE6A8C1F75839C0079A36A /* LBXScanViewStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanViewStyle.m; sourceTree = "<group>"; };
+		26AE6A8D1F75839C0079A36A /* LBXScanLineAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanLineAnimation.m; sourceTree = "<group>"; };
+		26AE6A8E1F75839C0079A36A /* LBXScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanViewController.h; sourceTree = "<group>"; };
 		26D37AA51F62E9EE00A81930 /* URL+PFS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+PFS.swift"; sourceTree = "<group>"; };
 		26D37AA71F62EA1200A81930 /* Dictionary+PFS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+PFS.swift"; sourceTree = "<group>"; };
 		26DAEA9D1F1D064200FC8306 /* PFSDebug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSDebug.swift; sourceTree = "<group>"; };
 		26F949AC1EDEB21F00E81192 /* PFSTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSTools.swift; sourceTree = "<group>"; };
 		26F949AE1EDEC21700E81192 /* SSASideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSASideMenu.swift; sourceTree = "<group>"; };
-		26FB9DA51F7578D600C659DB /* LBXScanNetAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LBXScanNetAnimation.h; path = Source/LBXScan/UI/LBXScanNetAnimation.h; sourceTree = SOURCE_ROOT; };
-		26FB9DA61F7578D600C659DB /* LBXScanVideoZoomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LBXScanVideoZoomView.m; path = Source/LBXScan/UI/LBXScanVideoZoomView.m; sourceTree = SOURCE_ROOT; };
-		26FB9DA71F7578D600C659DB /* LBXScanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LBXScanView.h; path = Source/LBXScan/UI/LBXScanView.h; sourceTree = SOURCE_ROOT; };
-		26FB9DA81F7578D600C659DB /* LBXScanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LBXScanView.m; path = Source/LBXScan/UI/LBXScanView.m; sourceTree = SOURCE_ROOT; };
-		26FB9DA91F7578D700C659DB /* LBXScanNetAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LBXScanNetAnimation.m; path = Source/LBXScan/UI/LBXScanNetAnimation.m; sourceTree = SOURCE_ROOT; };
-		26FB9DAA1F7578D700C659DB /* LBXScanViewStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LBXScanViewStyle.h; path = Source/LBXScan/UI/LBXScanViewStyle.h; sourceTree = SOURCE_ROOT; };
-		26FB9DAB1F7578D700C659DB /* LBXScanLineAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LBXScanLineAnimation.h; path = Source/LBXScan/UI/LBXScanLineAnimation.h; sourceTree = SOURCE_ROOT; };
-		26FB9DAC1F7578D700C659DB /* CodeScan.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = CodeScan.bundle; path = Source/LBXScan/UI/CodeScan.bundle; sourceTree = SOURCE_ROOT; };
-		26FB9DAD1F7578D700C659DB /* LBXScanVideoZoomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LBXScanVideoZoomView.h; path = Source/LBXScan/UI/LBXScanVideoZoomView.h; sourceTree = SOURCE_ROOT; };
-		26FB9DAE1F7578D700C659DB /* LBXScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LBXScanViewController.m; path = Source/LBXScan/UI/LBXScanViewController.m; sourceTree = SOURCE_ROOT; };
-		26FB9DAF1F7578D700C659DB /* LBXScanViewStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LBXScanViewStyle.m; path = Source/LBXScan/UI/LBXScanViewStyle.m; sourceTree = SOURCE_ROOT; };
-		26FB9DB01F7578D700C659DB /* LBXScanLineAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LBXScanLineAnimation.m; path = Source/LBXScan/UI/LBXScanLineAnimation.m; sourceTree = SOURCE_ROOT; };
-		26FB9DB11F7578D800C659DB /* LBXScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LBXScanViewController.h; path = Source/LBXScan/UI/LBXScanViewController.h; sourceTree = SOURCE_ROOT; };
-		26FB9DBF1F7578EB00C659DB /* LBXScanNative.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LBXScanNative.h; path = Source/LBXScan/LBXNative/LBXScanNative.h; sourceTree = SOURCE_ROOT; };
-		26FB9DC01F7578EB00C659DB /* LBXScanNative.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LBXScanNative.m; path = Source/LBXScan/LBXNative/LBXScanNative.m; sourceTree = SOURCE_ROOT; };
-		26FB9DC31F75790600C659DB /* LBXScanTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LBXScanTypes.h; path = Source/LBXScan/LBXScanTypes.h; sourceTree = SOURCE_ROOT; };
-		26FB9DC41F75790600C659DB /* LBXScanTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LBXScanTypes.m; path = Source/LBXScan/LBXScanTypes.m; sourceTree = SOURCE_ROOT; };
+		26FB9DC31F75790600C659DB /* LBXScanTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LBXScanTypes.h; path = Source/LBXScanTypes.h; sourceTree = SOURCE_ROOT; };
+		26FB9DC41F75790600C659DB /* LBXScanTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LBXScanTypes.m; path = Source/LBXScanTypes.m; sourceTree = SOURCE_ROOT; };
 		26FE23821F164A63007A53DF /* Rx+PFS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Rx+PFS.swift"; sourceTree = "<group>"; };
 		5B8754000C5592E676313BE3 /* PFSNetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSNetworkService.swift; sourceTree = "<group>"; };
 		5B87570B71091E919B02607C /* PFSDomain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFSDomain.swift; sourceTree = "<group>"; };
@@ -194,7 +193,10 @@
 		262C89C61F03F33800EBDA0F /* SDK */ = {
 			isa = PBXGroup;
 			children = (
-				26AE6A711F757D6D0079A36A /* LBXScan */,
+				26AE6A791F7582D50079A36A /* LBXScan */,
+				26FB9DC31F75790600C659DB /* LBXScanTypes.h */,
+				26FB9DC41F75790600C659DB /* LBXScanTypes.m */,
+				26AE6A751F757EE00079A36A /* LBXScan.h */,
 				262C89C71F03F35D00EBDA0F /* FDStackView */,
 			);
 			name = SDK;
@@ -330,45 +332,42 @@
 			name = "Base Views";
 			sourceTree = "<group>";
 		};
-		26AE6A711F757D6D0079A36A /* LBXScan */ = {
+		26AE6A791F7582D50079A36A /* LBXScan */ = {
 			isa = PBXGroup;
 			children = (
-				26AE6A731F757D940079A36A /* LBXNative */,
-				26AE6A721F757D7E0079A36A /* UI */,
-				26FB9DC31F75790600C659DB /* LBXScanTypes.h */,
-				26FB9DC41F75790600C659DB /* LBXScanTypes.m */,
-				26AE6A751F757EE00079A36A /* LBXScan.h */,
+				26AE6A811F75835A0079A36A /* UI */,
+				26AE6A7C1F7583150079A36A /* LBXNative */,
 			);
-			path = LBXScan;
+			name = LBXScan;
 			sourceTree = "<group>";
 		};
-		26AE6A721F757D7E0079A36A /* UI */ = {
+		26AE6A7C1F7583150079A36A /* LBXNative */ = {
 			isa = PBXGroup;
 			children = (
-				26FB9DAC1F7578D700C659DB /* CodeScan.bundle */,
-				26FB9DAB1F7578D700C659DB /* LBXScanLineAnimation.h */,
-				26FB9DB01F7578D700C659DB /* LBXScanLineAnimation.m */,
-				26FB9DA51F7578D600C659DB /* LBXScanNetAnimation.h */,
-				26FB9DA91F7578D700C659DB /* LBXScanNetAnimation.m */,
-				26FB9DAD1F7578D700C659DB /* LBXScanVideoZoomView.h */,
-				26FB9DA61F7578D600C659DB /* LBXScanVideoZoomView.m */,
-				26FB9DA71F7578D600C659DB /* LBXScanView.h */,
-				26FB9DA81F7578D600C659DB /* LBXScanView.m */,
-				26FB9DB11F7578D800C659DB /* LBXScanViewController.h */,
-				26FB9DAE1F7578D700C659DB /* LBXScanViewController.m */,
-				26FB9DAA1F7578D700C659DB /* LBXScanViewStyle.h */,
-				26FB9DAF1F7578D700C659DB /* LBXScanViewStyle.m */,
+				26AE6A7D1F7583530079A36A /* LBXScanNative.h */,
+				26AE6A7E1F7583530079A36A /* LBXScanNative.m */,
 			);
-			path = UI;
+			name = LBXNative;
 			sourceTree = "<group>";
 		};
-		26AE6A731F757D940079A36A /* LBXNative */ = {
+		26AE6A811F75835A0079A36A /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				26FB9DBF1F7578EB00C659DB /* LBXScanNative.h */,
-				26FB9DC01F7578EB00C659DB /* LBXScanNative.m */,
+				26AE6A891F75839B0079A36A /* CodeScan.bundle */,
+				26AE6A881F75839B0079A36A /* LBXScanLineAnimation.h */,
+				26AE6A8D1F75839C0079A36A /* LBXScanLineAnimation.m */,
+				26AE6A821F75839A0079A36A /* LBXScanNetAnimation.h */,
+				26AE6A861F75839B0079A36A /* LBXScanNetAnimation.m */,
+				26AE6A8A1F75839C0079A36A /* LBXScanVideoZoomView.h */,
+				26AE6A831F75839A0079A36A /* LBXScanVideoZoomView.m */,
+				26AE6A841F75839B0079A36A /* LBXScanView.h */,
+				26AE6A851F75839B0079A36A /* LBXScanView.m */,
+				26AE6A8E1F75839C0079A36A /* LBXScanViewController.h */,
+				26AE6A8B1F75839C0079A36A /* LBXScanViewController.m */,
+				26AE6A871F75839B0079A36A /* LBXScanViewStyle.h */,
+				26AE6A8C1F75839C0079A36A /* LBXScanViewStyle.m */,
 			);
-			path = LBXNative;
+			name = UI;
 			sourceTree = "<group>";
 		};
 		26F949AB1EDEB20E00E81192 /* Common */ = {
@@ -423,15 +422,15 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26FB9DC11F7578EB00C659DB /* LBXScanNative.h in Headers */,
-				26AE6A771F757F210079A36A /* LBXScan.h in Headers */,
-				26FB9DB81F7578D800C659DB /* LBXScanLineAnimation.h in Headers */,
-				26FB9DB21F7578D800C659DB /* LBXScanNetAnimation.h in Headers */,
-				26FB9DBA1F7578D800C659DB /* LBXScanVideoZoomView.h in Headers */,
-				26FB9DB41F7578D800C659DB /* LBXScanView.h in Headers */,
-				26FB9DBE1F7578D800C659DB /* LBXScanViewController.h in Headers */,
-				26FB9DB71F7578D800C659DB /* LBXScanViewStyle.h in Headers */,
-				26FB9DC61F75790600C659DB /* LBXScanTypes.h in Headers */,
+				26AE6A951F75839C0079A36A /* LBXScanLineAnimation.h in Headers */,
+				26AE6A8F1F75839C0079A36A /* LBXScanNetAnimation.h in Headers */,
+				26AE6A971F75839C0079A36A /* LBXScanVideoZoomView.h in Headers */,
+				26AE6A911F75839C0079A36A /* LBXScanView.h in Headers */,
+				26AE6A9B1F75839C0079A36A /* LBXScanViewController.h in Headers */,
+				26AE6A941F75839C0079A36A /* LBXScanViewStyle.h in Headers */,
+				26AE6A7F1F7583540079A36A /* LBXScanNative.h in Headers */,
+				26AE6A9C1F7583F50079A36A /* LBXScanTypes.h in Headers */,
+				26AE6A9D1F7583F50079A36A /* LBXScan.h in Headers */,
 				262C89E21F03F37C00EBDA0F /* FDStackViewExtensions.h in Headers */,
 				262C89DC1F03F37C00EBDA0F /* FDStackView.h in Headers */,
 				262C89DA1F03F37C00EBDA0F /* FDLayoutSpacer.h in Headers */,
@@ -530,7 +529,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26FB9DB91F7578D800C659DB /* CodeScan.bundle in Resources */,
+				26AE6A961F75839C0079A36A /* CodeScan.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -586,40 +585,40 @@
 			files = (
 				2606F2F91F1FA38A002477E2 /* PFSFileManager.swift in Sources */,
 				2606F2F71F1FA369002477E2 /* PFSCheckbox.swift in Sources */,
-				26FB9DC21F7578EB00C659DB /* LBXScanNative.m in Sources */,
 				26F949AD1EDEB21F00E81192 /* PFSTools.swift in Sources */,
 				2606F2FB1F1FA391002477E2 /* PFSRealm.swift in Sources */,
-				26FB9DBC1F7578D800C659DB /* LBXScanViewStyle.m in Sources */,
 				26DAEA9E1F1D064200FC8306 /* PFSDebug.swift in Sources */,
-				26FB9DB51F7578D800C659DB /* LBXScanView.m in Sources */,
 				2688D3911EDF1BEA0072033C /* String+PFS.swift in Sources */,
-				26FB9DBB1F7578D800C659DB /* LBXScanViewController.m in Sources */,
 				269DFFDD1EA765000006BAE2 /* PFSTableViewCell.swift in Sources */,
 				263019F71EE5336B0002061E /* PFSError.swift in Sources */,
 				262C89DF1F03F37C00EBDA0F /* FDStackViewAlignmentLayoutArrangement.m in Sources */,
-				26FB9DBD1F7578D800C659DB /* LBXScanLineAnimation.m in Sources */,
 				26152D561EAA11F8001CEEE7 /* Device+PFS.swift in Sources */,
+				26AE6A931F75839C0079A36A /* LBXScanNetAnimation.m in Sources */,
 				2606F2F51F1FA34C002477E2 /* PFSTableViewController.swift in Sources */,
 				262C89E51F03F37C00EBDA0F /* FDStackViewLayoutArrangement.m in Sources */,
 				262C89E71F03F37C00EBDA0F /* FDTransformLayer.m in Sources */,
 				269DFFD11EA7585D0006BAE2 /* PFSViewController.swift in Sources */,
 				266A02591EE05E37008D17ED /* PFSPageDomain.swift in Sources */,
 				26258CE51F15162100FA318F /* PFSPickerView.swift in Sources */,
+				26AE6A981F75839C0079A36A /* LBXScanViewController.m in Sources */,
 				269DFFD91EA75A8F0006BAE2 /* PCCWFoundationSwift.swift in Sources */,
+				26AE6A901F75839C0079A36A /* LBXScanVideoZoomView.m in Sources */,
 				2606F2FD1F1FA39D002477E2 /* Operators.swift in Sources */,
 				262C89E31F03F37C00EBDA0F /* FDStackViewExtensions.m in Sources */,
-				26FB9DB31F7578D800C659DB /* LBXScanVideoZoomView.m in Sources */,
 				263019F51EE526C50002061E /* PFSDataRepository.swift in Sources */,
 				262C89D91F03F37C00EBDA0F /* FDGapLayoutGuide.m in Sources */,
+				26AE6A991F75839C0079A36A /* LBXScanViewStyle.m in Sources */,
 				26FE23831F164A63007A53DF /* Rx+PFS.swift in Sources */,
 				268ECAF51EAA06E400BF55A2 /* PFSModel.swift in Sources */,
 				26D37AA61F62E9EE00A81930 /* URL+PFS.swift in Sources */,
-				26FB9DB61F7578D800C659DB /* LBXScanNetAnimation.m in Sources */,
 				5B875FD7C1A7CCD97AEB074C /* PFSNetworkService.swift in Sources */,
 				5B875154112FDE6DBD7A698B /* DispatchQueue+PFS.swift in Sources */,
+				26AE6A801F7583540079A36A /* LBXScanNative.m in Sources */,
 				262C89E11F03F37C00EBDA0F /* FDStackViewDistributionLayoutArrangement.m in Sources */,
 				262C89DB1F03F37C00EBDA0F /* FDLayoutSpacer.m in Sources */,
+				26AE6A9A1F75839C0079A36A /* LBXScanLineAnimation.m in Sources */,
 				26F949AF1EDEC21700E81192 /* SSASideMenu.swift in Sources */,
+				26AE6A921F75839C0079A36A /* LBXScanView.m in Sources */,
 				5B875A46A8BE6E6C44554E76 /* PFSDomain.swift in Sources */,
 				262C89C31F03F26B00EBDA0F /* UIView+Inspectable.swift in Sources */,
 				263019F01EE522600002061E /* PFSViewModel.swift in Sources */,
@@ -627,7 +626,6 @@
 				263019FD1EE5403E0002061E /* PFSExchageRootSegue.swift in Sources */,
 				262C89DD1F03F37C00EBDA0F /* FDStackView.m in Sources */,
 				26D37AA81F62EA1200A81930 /* Dictionary+PFS.swift in Sources */,
-				26AE6A741F757EB40079A36A /* CodeScan.bundle in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
