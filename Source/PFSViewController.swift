@@ -148,7 +148,7 @@ extension UIViewController: NVActivityIndicatorViewable {
         }
     }
     
-    open func pfs_viewDidLoad()  {
+    @objc open func pfs_viewDidLoad()  {
         self.pfs_viewDidLoad()
         disposeBag = DisposeBag()
     }
