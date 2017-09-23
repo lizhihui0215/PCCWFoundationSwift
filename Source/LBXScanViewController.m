@@ -28,19 +28,19 @@
     self.view.backgroundColor = [UIColor blackColor];
     
 
-    switch (_libraryType) {
-        case SLT_Native:
-            self.title = @"native";
-            break;
-        case SLT_ZXing:
-            self.title = @"ZXing";
-            break;
-        case SLT_ZBar:
-            self.title = @"ZBar";
-            break;
-        default:
-            break;
-    }
+//    switch (_libraryType) {
+//        case SLT_Native:
+//            self.title = @"native";
+//            break;
+//        case SLT_ZXing:
+//            self.title = @"ZXing";
+//            break;
+//        case SLT_ZBar:
+//            self.title = @"ZBar";
+//            break;
+//        default:
+//            break;
+//    }
 }
 
 - (void)viewDidAppear:(BOOL)animated
