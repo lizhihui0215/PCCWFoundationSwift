@@ -15,9 +15,8 @@
 
 
 
-#ifdef LBXScan_Define_Native
 #import "LBXScanNative.h" //原生扫码封装
-#endif
+
 
 #ifdef LBXScan_Define_ZXing
 #import "ZXingWrapper.h" //ZXing扫码封装
@@ -104,13 +103,12 @@ typedef NS_ENUM(NSInteger, SCANCODETYPE) {
 
 #pragma mark -----  扫码使用的库对象 -------
 
-#ifdef LBXScan_Define_Native
 /**
  @brief  扫码功能封装对象
  */
 @property (nonatomic,strong) LBXScanNative* scanObj;
 
-#endif
+
 
 
 #ifdef LBXScan_Define_ZXing

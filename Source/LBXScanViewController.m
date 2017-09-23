@@ -90,9 +90,8 @@
     switch (_libraryType) {
         case SLT_Native:
         {
-#ifdef LBXScan_Define_Native
             [_scanObj startScan];
-#endif
+
         }
             break;
         case SLT_ZXing:
@@ -136,7 +135,6 @@
         {
 
             
-#ifdef LBXScan_Define_Native
             
             if (!_scanObj )
             {
@@ -162,7 +160,6 @@
                 [_scanObj setNeedCaptureImage:_isNeedScanImage];
             }
             [_scanObj startScan];
-#endif
 
         }
             break;
@@ -273,9 +270,8 @@
     switch (_libraryType) {
         case SLT_Native:
         {
-#ifdef LBXScan_Define_Native
             [_scanObj stopScan];
-#endif
+
         }
             break;
         case SLT_ZXing:
@@ -319,9 +315,8 @@
     switch (_libraryType) {
         case SLT_Native:
         {
-#ifdef LBXScan_Define_Native
             [_scanObj changeTorch];
-#endif
+
         }
             break;
         case SLT_ZXing:
@@ -384,7 +379,6 @@
     switch (_libraryType) {
         case SLT_Native:
         {
-#ifdef LBXScan_Define_Native
             if ([[[UIDevice currentDevice]systemVersion]floatValue] >= 8.0)
             {
                 [LBXScanNative recognizeImage:image success:^(NSArray<LBXScanResult *> *array) {
@@ -395,7 +389,6 @@
             {
                 [self showError:@"native低于ios8.0系统不支持识别图片条码"];
             }
-#endif
         }
             break;
         case SLT_ZXing:
