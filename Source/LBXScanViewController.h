@@ -11,9 +11,8 @@
 #import "LBXScanTypes.h"
 
 //UI
-#ifdef LBXScan_Define_UI
 #import "LBXScanView.h"
-#endif
+
 
 
 #ifdef LBXScan_Define_Native
@@ -97,9 +96,9 @@ typedef NS_ENUM(NSInteger, SCANCODETYPE) {
 /**
  *  界面效果参数
  */
-#ifdef LBXScan_Define_UI
+//#ifdef LBXScan_Define_UI
 @property (nonatomic, strong) LBXScanViewStyle *style;
-#endif
+//#endif
 
 
 
@@ -139,9 +138,8 @@ typedef NS_ENUM(NSInteger, SCANCODETYPE) {
  @brief  扫码区域视图,二维码一般都是框
  */
 
-#ifdef LBXScan_Define_UI
 @property (nonatomic,strong) LBXScanView* qRScanView;
-#endif
+
 
 
 

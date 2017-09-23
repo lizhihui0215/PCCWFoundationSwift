@@ -243,20 +243,20 @@
 				TargetAttributes = {
 					26573A711EA74C7000BB56D2 = {
 						CreatedOnToolsVersion = 8.3.1;
-						DevelopmentTeam = 5F56XN57QC;
+						DevelopmentTeam = 5R5G2D4E69;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					26573A851EA74C7000BB56D2 = {
 						CreatedOnToolsVersion = 8.3.1;
-						DevelopmentTeam = 5F56XN57QC;
+						DevelopmentTeam = 5R5G2D4E69;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 26573A711EA74C7000BB56D2;
 					};
 					26573A901EA74C7000BB56D2 = {
 						CreatedOnToolsVersion = 8.3.1;
-						DevelopmentTeam = 5F56XN57QC;
+						DevelopmentTeam = 5R5G2D4E69;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 26573A711EA74C7000BB56D2;
@@ -589,7 +589,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 5F56XN57QC;
+				DEVELOPMENT_TEAM = 5R5G2D4E69;
 				INFOPLIST_FILE = Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pccw.foundation.swift.Demo;
@@ -605,7 +605,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 5F56XN57QC;
+				DEVELOPMENT_TEAM = 5R5G2D4E69;
 				INFOPLIST_FILE = Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pccw.foundation.swift.Demo;
@@ -620,7 +620,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 5F56XN57QC;
+				DEVELOPMENT_TEAM = 5R5G2D4E69;
 				INFOPLIST_FILE = DemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pccw.foundation.swift.DemoTests;
@@ -636,7 +636,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 5F56XN57QC;
+				DEVELOPMENT_TEAM = 5R5G2D4E69;
 				INFOPLIST_FILE = DemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pccw.foundation.swift.DemoTests;
@@ -651,7 +651,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = 5F56XN57QC;
+				DEVELOPMENT_TEAM = 5R5G2D4E69;
 				INFOPLIST_FILE = DemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pccw.foundation.swift.DemoUITests;
@@ -666,7 +666,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = 5F56XN57QC;
+				DEVELOPMENT_TEAM = 5R5G2D4E69;
 				INFOPLIST_FILE = DemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pccw.foundation.swift.DemoUITests;

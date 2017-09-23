@@ -11,43 +11,7 @@ import RxSwift
 import RxCocoa
 import Result
 
-enum APITarget: PFSTargetType {
-    var headers: [String : String] {
-        return ["xx" : "xx"]
-    }
 
-    
-    case test
-    
-    var baseURL: URL {
-        return URL(string: "http://baidu.com")!
-    }
-    var path: String {
-        return ""
-    }
-    var method: Moya.Method {
-        return .post
-    }
-    var parameters: [String: Any]? {
-        
-        //        {"currentPage":1,"pageSize":10,"queryObj":{}}
-        return ["page" : ["currentPage" : 1,
-                          "pageSize" : 10,
-                          "queryObj": ""]]
-    }
-    var parameterEncoding: ParameterEncoding {
-        return JSONEncoding.default
-    }
-    var sampleData: Data {
-        return Data()
-    }
-    var task: Task {
-        return .request
-    }
-    var validate: Bool {
-        return false
-    }
-}
 
 class XXXDomain: PFSPageDomain {
     
@@ -70,45 +34,7 @@ class LoginDomain: PFSDomain {
 
 class LoginViewModel<T :PFSLoginAction>: PFSViewModel<T, LoginDomain> {
     
-    func test(username: String, password: String) -> Driver<Bool> {
-        
-        
-        let a = username.notNul(message: "用户名不能为空")
-        
-        let b = username.min(length: 3, message: "用户名不能小于3位")
-        
-        let c = username.max(length: 8, message: "用户名不能大于8位")
-        
-        
-        let d = password.notNul(message: "密码不能为空")
-        
-        let e = password.min(length: 3, message: "密码不能小于3位")
-        
-        let f = password.max(length: 8, message: "密码不能大于8位")
-        
-        
-        let h = Observable.just("hhhhhh")
-        
-        
-        let j = Driver.just("jjjjjj")
-        
-        
-        let fff = PFSValidate.of(a,b,c,d,e,f)
-        
-        fff.flatMapLatest {
-            return (self.action?.alert(result: $0))!
-            }.flatMapLatest { _ in
-                return j
-            }.drive(onNext: {
-                print($0)
-            }, onCompleted: {
-                
-            }) {
-                
-        }
-        
-        return Driver.just(true)
-    }
+   
 }
 
 extension LoginViewController: PFSLoginAction {
@@ -145,7 +71,6 @@ class LoginViewController: PFSViewController  {
             print(cc)
         }
         
-        self.viewModel.test(username: "123456789", password: "xxxx")
         
     }
     

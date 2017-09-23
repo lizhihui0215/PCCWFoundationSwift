@@ -7,6 +7,16 @@
 //
 
 import UIKit
+import PCCWFoundationSwift
+
+class ScanViewController: LBXScanViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.style = LBXScanViewStyle()
+    }
+}
 
 class SecondViewController: UIViewController {
 

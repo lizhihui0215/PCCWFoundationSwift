@@ -58,9 +58,8 @@
             
         }else{
             
-#ifdef LBXScan_Define_UI
             [_qRScanView stopDeviceReadying];
-#endif
+
             
             [self showError:@"   请到设置隐私中开启本程序相机权限   "];
         }
@@ -72,7 +71,6 @@
 //绘制扫描区域
 - (void)drawScanView
 {
-#ifdef LBXScan_Define_UI
     
     if (!_qRScanView)
     {
@@ -84,7 +82,7 @@
         [self.view addSubview:_qRScanView];
     }
     [_qRScanView startDeviceReadyingWithText:_cameraInvokeMsg];
-#endif
+
 }
 
 - (void)reStartDevice
@@ -223,10 +221,9 @@
             break;
     }
     
-#ifdef LBXScan_Define_UI
     [_qRScanView stopDeviceReadying];
     [_qRScanView startScanAnimation];
-#endif
+
     
     self.view.backgroundColor = [UIColor clearColor];
 }
@@ -267,9 +264,8 @@
  
     [self stopScan];
     
-#ifdef LBXScan_Define_UI
     [_qRScanView stopScanAnimation];
-#endif
+
 }
 
 - (void)stopScan
