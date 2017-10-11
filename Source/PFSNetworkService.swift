@@ -26,7 +26,15 @@ public class PFSResponseMappableObject<T: Mappable>: Mappable {
     
     public func mapping(map: Map)  {
         message <- map[PFSNetworkServiceStatic.__message]
-        code <- (map[PFSNetworkServiceStatic.__code], transform)
+        
+        let codeType = map.JSON[PFSNetworkServiceStatic.__code]
+        
+        if codeType is Int {
+            code <- (map[PFSNetworkServiceStatic.__code], transform)
+        }else {
+            code <- map[PFSNetworkServiceStatic.__code]
+        }
+        
         result <- map[PFSNetworkServiceStatic.__result]
     }
 }
@@ -41,7 +49,13 @@ public class PFSResponseNil: Mappable {
     
     public func mapping(map: Map) {
         message <- map[PFSNetworkServiceStatic.__message]
-        code <- (map[PFSNetworkServiceStatic.__code], transform)
+        let codeType = map.JSON[PFSNetworkServiceStatic.__code]
+        
+        if codeType is Int {
+            code <- (map[PFSNetworkServiceStatic.__code], transform)
+        }else {
+            code <- map[PFSNetworkServiceStatic.__code]
+        }
     }
 }
 
@@ -59,7 +73,14 @@ public class PFSResponseObject<T>: Mappable {
     
     public func mapping(map: Map)  {
         message <- map[PFSNetworkServiceStatic.__message]
-        code <- (map[PFSNetworkServiceStatic.__code], transform)
+        let codeType = map.JSON[PFSNetworkServiceStatic.__code]
+        
+        if codeType is Int {
+            code <- (map[PFSNetworkServiceStatic.__code], transform)
+        }else {
+            code <- map[PFSNetworkServiceStatic.__code]
+        }
+        
         result <- map[PFSNetworkServiceStatic.__result]
     }
 }
@@ -77,7 +98,14 @@ public class PFSResponseArray<T>: Mappable {
     
     public func mapping(map: Map)  {
         message <- map[PFSNetworkServiceStatic.__message]
-        code <- (map[PFSNetworkServiceStatic.__code], transform)
+        let codeType = map.JSON[PFSNetworkServiceStatic.__code]
+        
+        if codeType is Int {
+            code <- (map[PFSNetworkServiceStatic.__code], transform)
+        }else {
+            code <- map[PFSNetworkServiceStatic.__code]
+        }
+        
         result <- map[PFSNetworkServiceStatic.__result]
     }
 }
@@ -95,7 +123,14 @@ public class PFSResponseMappableArray<T: Mappable>: Mappable {
     
     public func mapping(map: Map)  {
         message <- map[PFSNetworkServiceStatic.__message]
-        code <- (map[PFSNetworkServiceStatic.__code], transform)
+        let codeType = map.JSON[PFSNetworkServiceStatic.__code]
+        
+        if codeType is Int {
+            code <- (map[PFSNetworkServiceStatic.__code], transform)
+        }else {
+            code <- map[PFSNetworkServiceStatic.__code]
+        }
+        
         result <- map[PFSNetworkServiceStatic.__result]
     }
 }
