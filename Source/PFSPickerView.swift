@@ -36,8 +36,10 @@ public class PFSPickerView<T :PFSPickerViewItem>: UIView, UIPickerViewDelegate, 
         return self.dataSource.count
     }
     
-    public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?{
-        return self.dataSource[row].title
+    public func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        let label = UILabel()
+        label.text = self.dataSource[row].title
+        return label
     }
     
     convenience init(height: Float = 260, items: [T]) {
