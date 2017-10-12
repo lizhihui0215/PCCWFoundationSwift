@@ -39,6 +39,7 @@ public class PFSPickerView<T :PFSPickerViewItem>: UIView, UIPickerViewDelegate, 
     public func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         let label = UILabel()
         label.text = self.dataSource[row].title
+        label.textAlignment = .center
         return label
     }
     
