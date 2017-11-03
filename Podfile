@@ -77,8 +77,15 @@ target 'PCCWFoundationSwift' do
     
     post_install do |installer|
         installer.pods_project.targets.each do |target|
-            target.build_configurations.each do |config|
-                config.build_settings['SWIFT_VERSION'] = '3.2'
+            swift4 = Array['CryptoSwift', 'RSKGrowingTextView', 'RSKPlaceholderTextView']
+            if swift4.include? target.name then
+                target.build_configurations.each do |config|
+                    config.build_settings['SWIFT_VERSION'] = '4.0'
+                end
+                else
+                target.build_configurations.each do |config|
+                    config.build_settings['SWIFT_VERSION'] = '3.2'
+                end
             end
         end
     end
