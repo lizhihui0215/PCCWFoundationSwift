@@ -14,7 +14,7 @@ public func debug<T>(_ identifier: String? = "", file: String = #file, model: T,
     let formatter = DateFormatter()
     
     formatter.dateFormat = dateFormat
-    if (content?.characters.count)! > 0 {
+    if (content?.count)! > 0 {
         content = "- \(String(describing: content))"
     }
     

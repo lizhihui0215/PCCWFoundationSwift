@@ -76,7 +76,7 @@ extension String {
 
     public func notNull(message: String) -> VResult {
         let result: VResult = VResult {
-            if self.characters.count <= 0 {
+            if self.count <= 0 {
                 throw error(message: message)
             }
             
@@ -88,7 +88,7 @@ extension String {
     
     public func same(message: String, _ same: String) -> VResult {
         let result: VResult = VResult {
-            if self.characters.count <= 0, self != same {
+            if self.count <= 0, self != same {
                 throw error(message: message)
             }
             
@@ -114,9 +114,9 @@ extension String {
     
     public func min(length: Int, message: String, isContain: Bool = false) -> VResult {
         let result: VResult = VResult {
-            if isContain, self.characters.count <= length {
+            if isContain, self.count <= length {
                 throw error(message: message)
-            }else if self.characters.count < length {
+            }else if self.count < length {
                 throw error(message: message)
             }
             
@@ -128,9 +128,9 @@ extension String {
     
     public func max(length: Int, message: String, isContain: Bool = false) -> VResult {
         let result: VResult = VResult {
-            if isContain, self.characters.count >= length {
+            if isContain, self.count >= length {
                 throw error(message: message)
-            }else if self.characters.count > length {
+            }else if self.count > length {
                 throw error(message: message)
             }
             

@@ -320,16 +320,11 @@ public struct SOAPEncoding: ParameterEncoding {
         var urlRequest = try urlRequest.asURLRequest()
         
         guard parameters != nil else { return urlRequest }
-        do {
-            if urlRequest.value(forHTTPHeaderField: "Content-Type") == nil {
-                urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
-            }
-            
-            urlRequest.httpBody = "data".data(using: .utf8)
+        if urlRequest.value(forHTTPHeaderField: "Content-Type") == nil {
+            urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
         }
-        catch {
-            throw AFError.parameterEncodingFailed(reason: .jsonEncodingFailed(error: error))
-        }
+        
+        urlRequest.httpBody = "data".data(using: .utf8)
         
         return urlRequest
     }
