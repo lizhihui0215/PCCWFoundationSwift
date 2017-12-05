@@ -76,6 +76,17 @@ open class PFSRealm {
         return PFSRealm.realm.objects(T.self).filter(predicate).first
     }
     
+    @discardableResult
+    public func save<T: Object>(objs: [T]) -> Result<[T], MoyaError> {
+        do {
+            try PFSRealm.realm.write { PFSRealm.realm.add(objs) }
+        } catch let error {
+            return Result(error: MoyaError.underlying(error, nil))
+        }
+        
+        return Result(value: objs)
+    }
+    
     public func clean() throws{
         try PFSRealm.realm.write { PFSRealm.realm.deleteAll() }
        
