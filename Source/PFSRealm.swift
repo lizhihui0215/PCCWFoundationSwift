@@ -72,7 +72,8 @@ open class PFSRealm {
     }
     
     public func object<T: Object>(_ predicateFormat: String, _ args: Any...) -> T? {
-        return PFSRealm.realm.objects(T.self).filter(predicateFormat, args).first
+        let predicate = NSPredicate(format: predicateFormat, argumentArray: args)
+        return PFSRealm.realm.objects(T.self).filter(predicate).first
     }
     
     public func clean() throws{

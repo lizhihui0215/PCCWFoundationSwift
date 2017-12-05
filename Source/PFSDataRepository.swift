@@ -82,7 +82,7 @@ open class PFSDataRepository {
 
     public func handlerError<T>(response: Single<PFSResponseMappableArray<T>>) -> Driver<Result<[T], MoyaError>> {
         return response.map { response in
-            return Result {
+            return Result {                
                 if response.code != "0" {
                     throw error(message: response.message, code: response.code, userInfo: ["response" : response])
                 }
