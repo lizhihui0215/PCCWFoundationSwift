@@ -163,7 +163,7 @@ public class PFSNetworkServiceStatic{
 
 public class PFSNetworkService<API: PFSTargetType>: PFSNetworkServiceStatic {
     
-    let provider: RxMoyaProvider<API>
+    let provider: MoyaProvider<API>
 
     public static var shared: PFSNetworkService {
         get {
@@ -204,7 +204,7 @@ public class PFSNetworkService<API: PFSTargetType>: PFSNetworkServiceStatic {
 
 
     public override init(){
-        provider = RxMoyaProvider<API>(endpointClosure: PFSNetworkService.defaultEndpointMapping,
+        provider = MoyaProvider<API>(endpointClosure: PFSNetworkService.defaultEndpointMapping,
                                        requestClosure: MoyaProvider.defaultRequestMapping,
                                        plugins: [NetworkLoggerPlugin(verbose: true, responseDataFormatter: JSONResponseDataFormatter)],
                                        trackInflights: false)

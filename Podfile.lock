@@ -1,54 +1,54 @@
 PODS:
-  - Alamofire (4.5.1)
-  - CryptoSwift (0.8.0)
-  - DeviceKit (1.4.0)
-  - IQKeyboardManagerSwift (5.0.5)
-  - KeychainAccess (3.1.0)
+  - Alamofire (4.7.2)
+  - CryptoSwift (0.9.0)
+  - DeviceKit (1.7.0)
+  - IQKeyboardManagerSwift (6.0.3)
+  - KeychainAccess (3.1.1)
   - Kingfisher (3.13.1)
-  - KissXML (5.2.0)
-  - MJRefresh (3.1.15)
-  - Moya (9.0.0):
-    - Moya/Core (= 9.0.0)
-  - Moya-ObjectMapper/Core (2.4.2):
-    - Moya (~> 9.0)
-    - ObjectMapper (~> 2.2)
-  - Moya-ObjectMapper/RxSwift (2.4.2):
+  - KissXML (5.2.2)
+  - MJRefresh (3.1.15.3)
+  - Moya (10.0.2):
+    - Moya/Core (= 10.0.2)
+  - Moya-ObjectMapper/Core (2.5):
+    - Moya (~> 10.0.0)
+    - ObjectMapper (~> 3.0.0)
+  - Moya-ObjectMapper/RxSwift (2.5):
     - Moya-ObjectMapper/Core
     - Moya/RxSwift
-    - RxSwift (~> 3.3)
-  - Moya/Core (9.0.0):
+    - RxSwift (~> 4.0.0)
+  - Moya/Core (10.0.2):
     - Alamofire (~> 4.1)
     - Result (~> 3.0)
-  - Moya/RxSwift (9.0.0):
+  - Moya/RxSwift (10.0.2):
     - Moya/Core
-    - RxSwift (~> 3.3)
-  - NVActivityIndicatorView (4.0.0):
-    - NVActivityIndicatorView/Presenter (= 4.0.0)
-  - NVActivityIndicatorView/Presenter (4.0.0)
-  - ObjectMapper (2.2.9)
-  - ObjectMapper+Realm (0.5):
+    - RxSwift (~> 4.0)
+  - NVActivityIndicatorView (4.2.1):
+    - NVActivityIndicatorView/Presenter (= 4.2.1)
+  - NVActivityIndicatorView/Presenter (4.2.1)
+  - ObjectMapper (3.0.0)
+  - "ObjectMapper+Realm (0.5)":
     - ObjectMapper
     - RealmSwift
-  - Realm (2.10.2):
-    - Realm/Headers (= 2.10.2)
-  - Realm/Headers (2.10.2)
-  - RealmSwift (2.10.2):
-    - Realm (= 2.10.2)
+  - Realm (3.5.0):
+    - Realm/Headers (= 3.5.0)
+  - Realm/Headers (3.5.0)
+  - RealmSwift (3.5.0):
+    - Realm (= 3.5.0)
   - Result (3.2.4)
   - RSKGrowingTextView (3.0.0):
     - RSKPlaceholderTextView (= 3.0.0)
   - RSKPlaceholderTextView (3.0.0)
-  - RxCocoa (3.6.1):
-    - RxSwift (~> 3.6)
-  - RxRealm (0.7.2):
-    - RealmSwift (~> 2)
-    - RxSwift (~> 3)
-  - RxSwift (3.6.1)
+  - RxCocoa (4.1.2):
+    - RxSwift (~> 4.0)
+  - RxRealm (0.7.5):
+    - RealmSwift (~> 3.0)
+    - RxSwift (~> 4.0)
+  - RxSwift (4.0.0)
   - SnapKit (3.2.0)
   - Toaster (2.1.1)
-  - TZImagePickerController (1.9.3)
-  - UIColor_Hex_Swift (3.0.2)
-  - WebViewJavascriptBridge (6.0.2)
+  - TZImagePickerController (2.1.1)
+  - UIColor_Hex_Swift (4.0.1)
+  - WebViewJavascriptBridge (6.0.3)
 
 DEPENDENCIES:
   - CryptoSwift
@@ -60,7 +60,7 @@ DEPENDENCIES:
   - MJRefresh
   - Moya-ObjectMapper/RxSwift
   - NVActivityIndicatorView
-  - ObjectMapper+Realm
+  - "ObjectMapper+Realm"
   - RealmSwift
   - RSKGrowingTextView
   - RxCocoa
@@ -72,34 +72,63 @@ DEPENDENCIES:
   - UIColor_Hex_Swift
   - WebViewJavascriptBridge
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - CryptoSwift
+    - DeviceKit
+    - IQKeyboardManagerSwift
+    - KeychainAccess
+    - Kingfisher
+    - KissXML
+    - MJRefresh
+    - Moya
+    - Moya-ObjectMapper
+    - NVActivityIndicatorView
+    - ObjectMapper
+    - "ObjectMapper+Realm"
+    - Realm
+    - RealmSwift
+    - Result
+    - RSKGrowingTextView
+    - RSKPlaceholderTextView
+    - RxCocoa
+    - RxRealm
+    - RxSwift
+    - SnapKit
+    - Toaster
+    - TZImagePickerController
+    - UIColor_Hex_Swift
+    - WebViewJavascriptBridge
+
 SPEC CHECKSUMS:
-  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
-  CryptoSwift: f81907430ebbe38b8404b4f6fb40f3c576a8755f
-  DeviceKit: fa74d97499660e88081718b16688e19217595dba
-  IQKeyboardManagerSwift: ee393093cfb41069a72584a8f599ba5519a7febe
-  KeychainAccess: 94c5540b32eabf7bc32bfb976a268e8ea05fd6da
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  CryptoSwift: bca8c5b653dcc2d9734409242a070ff53bafac86
+  DeviceKit: 6a5bdeb103c03757bb94aef1ccb01e08bc8ef4ee
+  IQKeyboardManagerSwift: 04e8679f85e496bb2c474eeb9284052f1b3c391c
+  KeychainAccess: 7bd430028059754a3debab3cfc0bd1fc7fb85df3
   Kingfisher: ed9707a409cc47fddafbcd12a43a9757e3600af5
-  KissXML: 1c1eeeb6b94e4522cd2f2373e5d0d03c9227738f
-  MJRefresh: 9af70f5f9327a2cf87f0fb5929f35fcc2fa638ea
-  Moya: cf5e6ee93af526532f92614004b8ad2ea60fd845
-  Moya-ObjectMapper: 96cde46cc673000dc45dde7c476b2d53d59f0159
-  NVActivityIndicatorView: 54c9b93b6f25a4f467512680c0c90c09a1095cf2
-  ObjectMapper: 63cfe41bc6f8e7c8f44344c49901b8ae7de14c52
-  ObjectMapper+Realm: 3188789fb77c189c7a83cb625333a607eb61a08f
-  Realm: 0ef72b837fb67e9f4b098bac771ddd72c7fdbb69
-  RealmSwift: 07a9ae0505091eda6b2ee7c190c3786d6e90a7b0
+  KissXML: 4418f32138aec43797891845d682b00fc8cd4677
+  MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
+  Moya: 2b0531a9fef318e0bc484030c3db1e6f279ccb66
+  Moya-ObjectMapper: 167adf69db0298bf3a19ea05cb9a16ee117c8ef5
+  NVActivityIndicatorView: 8068ba3ad39cb44cbaab25d89ff2546b3f092681
+  ObjectMapper: 92230db59bf8f341a5c3a3cf0b9fbdde3cf0d87f
+  "ObjectMapper+Realm": 3188789fb77c189c7a83cb625333a607eb61a08f
+  Realm: 0378021c424e4e2bd6a0e63b27881e929d9b9ad1
+  RealmSwift: 3322562622fda2ad596985ead4d8d8be30cf838c
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
   RSKGrowingTextView: 6bcc9d4565ce4a66de4b7c42875439bde99dab21
   RSKPlaceholderTextView: 0ce73a19998e236323b3f1f16bf4a4e4a76c2c28
-  RxCocoa: 84a08739ab186248c7f31ce4ee92d6f8a947d690
-  RxRealm: 9cf5c15c5312fc770aaa542a360cffec4916e63a
-  RxSwift: f9de85ea20cd2f7716ee5409fc13523dc638e4e4
+  RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
+  RxRealm: a6c6c0a07cb61f34209969ca6657734edfdfff30
+  RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
   Toaster: a6c9532de1ded8105e77376f7dffeb2e12b46dbb
-  TZImagePickerController: 079ab986018c22793462e531045a75e366b18252
-  UIColor_Hex_Swift: 95f718452092a3efc8a827dffd2c04d3237be02d
-  WebViewJavascriptBridge: 791ee0e26d1bf15efe5fb7fb9666a71a19b89d77
+  TZImagePickerController: 788184b04158006b25ffdbccbb550bfc193e9d9c
+  UIColor_Hex_Swift: c5ff88470499383b8fd85302d59344bb24ba9436
+  WebViewJavascriptBridge: 7f5bc4d3581e672e8f32bd0f812d54bc69bb8e29
 
 PODFILE CHECKSUM: e11b2f6373bc6cfd9b97e0e1f760aac97cfc4c83
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.5.2

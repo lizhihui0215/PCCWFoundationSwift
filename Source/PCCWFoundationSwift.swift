@@ -16,6 +16,6 @@ public func setup()  {
         swizzling(target: UIViewController.self,
                   originalSelector:#selector(UIViewController.viewDidLoad),
                   swizzledSelector: #selector(UIViewController.pfs_viewDidLoad))
-        IQKeyboardManager.sharedManager().enable = true
+        IQKeyboardManager.shared.enable = true
     }
 }

@@ -184,7 +184,6 @@
 				26573A701EA74C7000BB56D2 /* Resources */,
 				269DFFD61EA7594E0006BAE2 /* Embed Frameworks */,
 				873DBCA304AD610E35B958D8 /* [CP] Embed Pods Frameworks */,
-				9C3E69597EC1EA4F309619E6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -377,21 +376,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-PCCWFoundationSwift-Demo/Pods-PCCWFoundationSwift-Demo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9C3E69597EC1EA4F309619E6 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-PCCWFoundationSwift-Demo/Pods-PCCWFoundationSwift-Demo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F4A94F30FF76B4C9887F12AC /* [CP] Check Pods Manifest.lock */ = {
