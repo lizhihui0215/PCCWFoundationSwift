@@ -1,10 +1,10 @@
 PODS:
   - Alamofire (4.7.2)
-  - CryptoSwift (0.9.0)
+  - CryptoSwift (0.8.3)
   - DeviceKit (1.7.0)
   - IQKeyboardManagerSwift (6.0.3)
   - KeychainAccess (3.1.1)
-  - Kingfisher (3.13.1)
+  - Kingfisher (4.8.0)
   - KissXML (5.2.2)
   - MJRefresh (3.1.15.3)
   - Moya (10.0.2):
@@ -44,18 +44,18 @@ PODS:
     - RealmSwift (~> 3.0)
     - RxSwift (~> 4.0)
   - RxSwift (4.0.0)
-  - SnapKit (3.2.0)
+  - SnapKit (4.0.0)
   - Toaster (2.1.1)
-  - TZImagePickerController (2.1.1)
+  - TZImagePickerController (2.1.4)
   - UIColor_Hex_Swift (4.0.1)
   - WebViewJavascriptBridge (6.0.3)
 
 DEPENDENCIES:
-  - CryptoSwift
+  - CryptoSwift (~> 0.8.3)
   - DeviceKit
   - IQKeyboardManagerSwift
   - KeychainAccess
-  - Kingfisher (~> 3.13.1)
+  - Kingfisher
   - KissXML
   - MJRefresh
   - Moya-ObjectMapper/RxSwift
@@ -66,14 +66,14 @@ DEPENDENCIES:
   - RxCocoa
   - RxRealm
   - RxSwift
-  - SnapKit (~> 3.2.0)
+  - SnapKit
   - Toaster
   - TZImagePickerController
   - UIColor_Hex_Swift
   - WebViewJavascriptBridge
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - CryptoSwift
     - DeviceKit
@@ -103,11 +103,11 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
-  CryptoSwift: bca8c5b653dcc2d9734409242a070ff53bafac86
+  CryptoSwift: 033efc3523865d19cc6ab6612fa17a62613b5dfa
   DeviceKit: 6a5bdeb103c03757bb94aef1ccb01e08bc8ef4ee
   IQKeyboardManagerSwift: 04e8679f85e496bb2c474eeb9284052f1b3c391c
   KeychainAccess: 7bd430028059754a3debab3cfc0bd1fc7fb85df3
-  Kingfisher: ed9707a409cc47fddafbcd12a43a9757e3600af5
+  Kingfisher: 976d828df2b24834c6a3f2fc4d82cdbd26552be1
   KissXML: 4418f32138aec43797891845d682b00fc8cd4677
   MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
   Moya: 2b0531a9fef318e0bc484030c3db1e6f279ccb66
@@ -123,12 +123,12 @@ SPEC CHECKSUMS:
   RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
   RxRealm: a6c6c0a07cb61f34209969ca6657734edfdfff30
   RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
-  SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   Toaster: a6c9532de1ded8105e77376f7dffeb2e12b46dbb
-  TZImagePickerController: 788184b04158006b25ffdbccbb550bfc193e9d9c
+  TZImagePickerController: 2a8f41ba058e215bc9b699ade241fdbcc910c2bd
   UIColor_Hex_Swift: c5ff88470499383b8fd85302d59344bb24ba9436
   WebViewJavascriptBridge: 7f5bc4d3581e672e8f32bd0f812d54bc69bb8e29
 
-PODFILE CHECKSUM: e11b2f6373bc6cfd9b97e0e1f760aac97cfc4c83
+PODFILE CHECKSUM: cb9af9340f3f51eff00708ccde56ee588dd705cb
 
-COCOAPODS: 1.5.2
+COCOAPODS: 1.5.0

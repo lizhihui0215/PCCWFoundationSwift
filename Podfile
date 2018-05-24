@@ -11,7 +11,7 @@ def libraries
     pod 'NVActivityIndicatorView'
     
     # https://github.com/SnapKit/SnapKit
-    pod 'SnapKit', '~> 3.2.0'
+    pod 'SnapKit'
     
     # https://github.com/hackiftekhar/IQKeyboardManager
     pod 'IQKeyboardManagerSwift'
@@ -48,7 +48,7 @@ def libraries
     #  pod 'SKPhotoBrowser'
     
     # https://github.com/onevcat/Kingfisher
-    pod 'Kingfisher', '~> 3.13.1'
+    pod 'Kingfisher'
     
     #  https://github.com/banchichen/TZImagePickerController
     pod 'TZImagePickerController'
@@ -62,7 +62,7 @@ def libraries
     pod 'Toaster'
     
     # https://github.com/krzyzanowskim/CryptoSwift 未添加
-    pod 'CryptoSwift'
+    pod 'CryptoSwift', '~> 0.8.3'
 
     # https://github.com/marcuswestin/WebViewJavascriptBridge
     pod 'WebViewJavascriptBridge'
@@ -77,16 +77,20 @@ target 'PCCWFoundationSwift' do
     
     post_install do |installer|
         installer.pods_project.targets.each do |target|
-            swift4 = Array['CryptoSwift', 'RSKGrowingTextView', 'RSKPlaceholderTextView']
-            if swift4.include? target.name then
-                target.build_configurations.each do |config|
-                    config.build_settings['SWIFT_VERSION'] = '4.0'
-                end
-                else
-                target.build_configurations.each do |config|
-                    config.build_settings['SWIFT_VERSION'] = '3.2'
-                end
+            target.build_configurations.each do |config|
+                config.build_settings['SWIFT_VERSION'] = '4.0'
             end
+#
+#            swift4 = Array['RealmSwift','NVActivityIndicatorView','CryptoSwift', 'RSKGrowingTextView', 'RSKPlaceholderTextView']
+#            if swift4.include? target.name then
+#                target.build_configurations.each do |config|
+#                    config.build_settings['SWIFT_VERSION'] = '4.0'
+#                end
+#                else
+#                target.build_configurations.each do |config|
+#                    config.build_settings['SWIFT_VERSION'] = '3.2'
+#                end
+#            end
         end
     end
     

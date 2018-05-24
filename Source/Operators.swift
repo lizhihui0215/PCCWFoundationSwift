@@ -143,7 +143,7 @@ public extension UIControl {
             .startWith(getter(existingSelf))
         }
         
-        return ControlProperty(values: values, valueSink: UIBindingObserver(UIElement: control, binding: { (control, value) in
+        return ControlProperty(values: values, valueSink: Binder(control, binding: { (control, value) in
             setter(control, value)
         }))
     }

@@ -16,7 +16,7 @@ public func swizzling(target: AnyClass,originalSelector : Selector, swizzledSele
     let originalMethod = class_getInstanceMethod(target, originalSelector)
     let swizzledMethod = class_getInstanceMethod(target, swizzledSelector)
     
-    method_exchangeImplementations(originalMethod, swizzledMethod)
+    method_exchangeImplementations(originalMethod!, swizzledMethod!)
 }
 
 public func basicType<N>(_ field: N) -> Bool {
