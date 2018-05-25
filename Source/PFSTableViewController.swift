@@ -46,16 +46,7 @@ extension UITableView {
     }
 }
 
-
-
-extension PFSTableViewController: RMTableViewRefresh{
-    
-   open func footerRefreshingFor(tableView: UITableView) {}
-    
-   open func headerRefreshingFor(tableView: UITableView) {}
-}
-
-open class PFSTableViewController: PFSViewController {
+open class PFSTableViewController: PFSViewController,RMTableViewRefresh {
     
     @IBOutlet public var tableViews: [UITableView]!
     
@@ -84,7 +75,9 @@ open class PFSTableViewController: PFSViewController {
         }
     }
     
+    open func footerRefreshingFor(tableView: UITableView) {}
     
+    open func headerRefreshingFor(tableView: UITableView) {}
 
     /*
     // MARK: - Navigation
